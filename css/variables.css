@@ -1,0 +1,22 @@
+:root {
+    --title-size-1: 2rem;
+    --title-size-2: 3rem;
+
+    --text-size-1: 0.5rem;
+    --text-size-2: 0.7rem;
+    --text-size-3: 1rem;
+    --text-size-4: 1.2rem;
+    --text-size-5: 1.5rem;
+
+    --text-width-1: 300;
+    --text-width-2: 500;
+    --text-width-3: 700;
+    --text-width-4: 900;
+
+    --color-1: #2828cc;
+    --dark-1: #000;
+    --dark-2: #0007;
+    --dark-3: #0004;
+    --dark-4: #0001;
+    --white-1: #fff;
+}

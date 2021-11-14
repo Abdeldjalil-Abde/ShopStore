@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    height: 300vh;
+
+    overflow-x: hidden;
+}
+
+.top-par {
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+
+    background: var(--color-2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+
+    transition: 0.5s;
+}
+.top-par.scrolled {
+    box-shadow: 0px 5px 20px #0005;
+}
+
+.top-par .icon {
+    width: 10%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-par .icon h2 {
+    font-size: var(--title-size-1);
+}
+
+.top-par .desc {
+    font-size: var(--text-size-1);
+    font-weight: var(--text-width-3);
+    color: var(--dark-1);
+}
+
+.top-par .links {
+    padding: 10px;
+    padding-left: 150px;
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-par .links a {
+    font-size: var(--text-size-3);
+    font-weight: var(--text-width-3);
+    color: #000;
+
+    position: relative;
+}
+.top-par .links a::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 3px;
+    background: var(--color-1);
+
+    position: absolute;
+    bottom: -20%;
+
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.top-par .links a:hover {
+    color: var(--color-1);
+    /* border-bottom: 2px solid #2828cc; */
+}
+.top-par .links a:hover::after {
+    transform: scale(1);
+}
+
+.top-par .sign {
+    width: 15%;
+    height: 100%;
+
+    justify-self: flex-end;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-par .sign a {
+    padding: 15px 20px;
+    width: 47%;
+    height: 80%;
+    border: 2px solid #000;
+    border-radius: 30%;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.top-par .sign a span {
+    font-size: var(--text-size-2);
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+
+    position: absolute;
+    z-index: 5;
+
+    transition: 0.5s;
+}
+
+.top-par .sign a::after {
+    content: "";
+    display: block;
+
+    width: 200%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    position: absolute;
+
+    transform: scale(0);
+    transition: 0.5s;
+}
+.top-par .sign a:nth-child(1)::after {
+    background: orangered;
+}
+.top-par .sign a:nth-child(2)::after {
+    background: orange;
+}
+
+.top-par .sign a:hover span {
+    color: var(--white-1);
+}
+.top-par .sign a:hover::after {
+    transform: scale(1);
+}
