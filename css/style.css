@@ -1,7 +1,9 @@
-.button-1 {
+
+
+.button-style-1 {
     position: relative;
 }
-.button-1::after {
+.button-style-1::after {
     content: "";
     display: block;
 
@@ -15,12 +17,12 @@
     transform: scale(0);
     transition: 0.5s;
 }
-.button-1:hover,
-.button-1.click {
+.button-style-1:hover,
+.button-style-1.click {
     color: var(--blue-1);
 }
-.button-1:hover::after,
-.button-1.click::after {
+.button-style-1:hover::after,
+.button-style-1.click::after {
     transform: scale(1);
 }
 
