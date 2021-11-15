@@ -61,7 +61,7 @@ body {
 .top-par .links {
     padding: 10px;
     padding-left: 150px;
-    width: 50%;
+    width: 30%;
     height: 100%;
 
     display: flex;
@@ -70,7 +70,7 @@ body {
 }
 
 .top-par .links a {
-    font-size: var(--text-size-3);
+    font-size: var(--text-size-4);
     font-weight: var(--text-width-3);
     color: #000;
 
@@ -93,7 +93,6 @@ body {
 
 .top-par .links a:hover {
     color: var(--blue-1);
-    /* border-bottom: 2px solid #2828cc; */
 }
 .top-par .links a:hover::after {
     transform: scale(1);
