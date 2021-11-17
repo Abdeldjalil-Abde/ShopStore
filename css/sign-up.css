@@ -1,0 +1,190 @@
+* {
+    width: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-1);
+}
+li {
+    list-style: none;
+}
+a {
+    color: var(--dark-1);
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--gray-1);
+
+    overflow-x: hidden;
+}
+
+section.log-in {
+    margin: 50px auto;
+
+    max-width: 850px;
+    width: 80vw;
+    height: 80vh;
+    box-shadow: 0px 1px 5px #000;
+
+    display: flex;
+}
+
+section.log-in .left,
+section.log-in .right {
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+section.log-in .right {
+    background-color: var(--blue-2);
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.top-par {
+    /* padding: 10px 20px; */
+    width: 100%;
+    height: 50px;
+}
+
+.top-par ul {
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top-par ul li {
+    width: max-content;
+    font-size: var(--text-size-4);
+    font-weight: var(--text-weight-4);
+}
+
+.right .sign-with-txt {
+    margin-top: 50px;
+
+    width: 100%;
+
+    font-size: var(--text-size-5);
+    text-align: center;
+}
+
+.right .sign-with {
+    margin-top: 40px;
+    padding: 0 10px;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.right .sign-with a {
+    padding: 7px;
+
+    width: 45%;
+    background: var(--white-2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right .sign-with a img{
+    width: 25px;
+    aspect-ratio: 1;
+}
+
+.right .sign-with a span {
+    width: max-content;
+
+    font-size: var(--text-size-2);
+    font-weight: var(--text-weight-3);
+
+    transition: 0.3s;
+}
+.right .sign-with a:hover span {
+    color: var(--blue-0);
+}
+
+.left {
+    background: var(--white-1);
+}
+
+.left .create-account-txt {
+    margin: 20px 0;
+
+    width: 100%;
+
+    font-size: var(--text-size-6);
+    text-align: center;
+}
+
+.left .input-form {
+    margin: 10px auto 0;
+    padding: 20px;
+
+    width: 90%;
+}
+
+.left .input-form .input {
+    margin-bottom: 20px;
+
+    width: 100%;
+    height: 40px;
+}
+
+.left .accept-rolls-box {
+    margin-top: -10px;
+    padding: 5px 45px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left .accept-rolls-box input {
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.left .accept-rolls-box span {
+    width: max-content;
+    font-size: var(--text-size-2);
+}
+.left .accept-rolls-box span a {
+    text-decoration: underline;
+    color: var(--blue-1);
+}
+
+.left .submit {
+    margin: 20px 50%;
+    padding: 10px 20px;
+
+    width: max-content;
+    background: var(--blue-3);
+    border: none;
+
+    font-size: var(--text-size-5);
+    color: var(--white-1);
+
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+.left .submit:active{
+    color: var(--purple-1);
+    transform: translateX(-50%) scale(0.9);
+
+}

@@ -11,12 +11,15 @@
     --text-size-3: 1rem;
     --text-size-4: 1.2rem;
     --text-size-5: 1.5rem;
+    --text-size-6: 1.7rem;
+    --text-size-7: 2rem;
 
     --text-weight-1: 300;
     --text-weight-2: 500;
     --text-weight-3: 700;
     --text-weight-4: 900;
 
+    --blue-0: #0000ff;
     --blue-1: #0f0fcf;
     --blue-2: #2264d180;
     --blue-3: #2264d1;

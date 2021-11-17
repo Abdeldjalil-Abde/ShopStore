@@ -50,7 +50,7 @@ section.log-in .right {
 
 .top-par ul {
     padding: 0;
-    
+
     width: 100%;
     height: 100%;
 
@@ -171,18 +171,22 @@ section.log-in .right {
     display: flex;
 }
 
-.left .user-info .submit-box a {
+.left .user-info .submit-box a,
+.left .user-info .submit-box button {
     margin-left: 20px;
 
     width: 40%;
     height: 100%;
     border-radius: 5px;
 
+    font-size: var(--text-size-4);
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .left .user-info .submit-box .log {
+    border: none;
     background-color: var(--blue-3);
     color: var(--white-1);
 }
