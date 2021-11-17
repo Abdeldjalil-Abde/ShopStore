@@ -22,6 +22,11 @@
     --blue-3: #2264d1;
     --blue-4: #2264d180;
 
+    --purple-1: #800080;
+    --purple-2: #8c16aa;
+    --purple-3: #591769;
+    --purple-4: #340141;
+
     --green-1: #00ff00;
     --green-2: #00bd00;
     --green-3: #008800;
@@ -43,6 +48,11 @@
 
     --gray-1: #ede9e9;
     --gray-2: #808080;
+    --gray-3: #999090;
 
     --white-1: #fff;
+    --white-2: #ffff;
+    --white-3: #fffa;
+    --white-4: #fff5;
+    --white-5: #fff1;
 }
