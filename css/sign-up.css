@@ -100,7 +100,7 @@ section.log-in .right {
     align-items: center;
 }
 
-.right .sign-with a img{
+.right .sign-with a img {
     width: 25px;
     aspect-ratio: 1;
 }
@@ -158,6 +158,8 @@ section.log-in .right {
 .left .accept-rolls-box input {
     width: 20px;
     aspect-ratio: 1;
+
+    cursor: pointer;
 }
 
 .left .accept-rolls-box span {
@@ -179,12 +181,12 @@ section.log-in .right {
 
     font-size: var(--text-size-5);
     color: var(--white-1);
+    cursor: pointer;
 
     transform: translateX(-50%);
     transition: 0.3s;
 }
-.left .submit:active{
+.left .submit:active {
     color: var(--purple-1);
     transform: translateX(-50%) scale(0.9);
-
 }

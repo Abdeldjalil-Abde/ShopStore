@@ -150,6 +150,7 @@ section.log-in .right {
     border: none;
     background: transparent;
     /* box-shadow: 0px 5px 5px #0005; */
+    cursor: pointer;
 }
 
 .left .user-info .choices .forget {
@@ -180,6 +181,7 @@ section.log-in .right {
     border-radius: 5px;
 
     font-size: var(--text-size-4);
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
