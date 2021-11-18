@@ -186,14 +186,31 @@ section.log-in .right {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: 0.2s linear;
 }
+
 .left .user-info .submit-box .log {
     border: none;
     background-color: var(--blue-3);
     color: var(--white-1);
+
+    transition: 0.1s linear;
 }
+.left .user-info .submit-box .log:hover {
+    transform: scale(0.95);
+}
+
 .left .user-info .submit-box .sign {
     border: 3px solid var(--blue-4);
+}
+.left .user-info .submit-box .sign:hover {
+    border-width: 7px;
+}
+
+.left .user-info .submit-box .log:active,
+.left .user-info .submit-box .sign:active {
+    color: var(--red-1);
 }
 
 .left .other-logs {
