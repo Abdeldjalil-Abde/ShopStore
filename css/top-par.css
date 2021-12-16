@@ -25,13 +25,15 @@ body {
     width: 100%;
     height: 100px;
 
-    background: var(--color-2);
+    background: var(--white-1);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     position: fixed;
+    z-index: 100;
+    top: 0;
 
     transition: 0.5s;
 }
@@ -61,7 +63,7 @@ body {
 .top-par .links {
     padding: 10px;
     padding-left: 150px;
-    width: 30%;
+    width: 35%;
     height: 100%;
 
     display: flex;
@@ -70,8 +72,10 @@ body {
 }
 
 .top-par .links a {
-    font-size: var(--text-size-4);
-    font-weight: var(--text-width-3);
+    width: max-content;
+
+    font-size: var(--text-size-3);
+    font-weight: var(900);
     color: #000;
 
     position: relative;
@@ -85,16 +89,18 @@ body {
     background: var(--blue-1);
 
     position: absolute;
-    bottom: -20%;
+    bottom: -30%;
 
     transform: scale(0);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
-.top-par .links a:hover {
+.top-par .links a:hover, 
+.top-par .links a.active {
     color: var(--blue-1);
 }
-.top-par .links a:hover::after {
+.top-par .links a:hover::after, 
+.top-par .links a.active::after {
     transform: scale(1);
 }
 
