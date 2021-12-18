@@ -45,6 +45,11 @@
     --orange-2: #9b2900;
     --orange-3: #5a1800;
 
+    --yellow-1: #ffff00;
+    --yellow-2: #ffff00d2;
+    --yellow-3: #ffff008a;
+    --yellow-4: #ffff0054;
+
     --dark-1: #000;
     --dark-2: #0007;
     --dark-3: #0004;
@@ -54,6 +59,8 @@
     --gray-2: #808080;
     --gray-3: #999090;
     --gray-4: #beb7b7;
+    --gray-5: #beb7b7af;
+    --gray-6: #beb7b749;
 
     --white-1: #fff;
     --white-2: #ffff;

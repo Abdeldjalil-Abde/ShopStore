@@ -23,7 +23,7 @@ body {
 .top-par {
     padding: 20px;
     width: 100%;
-    height: 100px;
+    height: 70px;
 
     background: var(--white-1);
 
@@ -38,7 +38,7 @@ body {
     transition: 0.5s;
 }
 .top-par.scrolled {
-    box-shadow: 0px 5px 20px #0005;
+    box-shadow: 0px 10px 20px #0005;
 }
 
 .top-par .icon {
@@ -63,15 +63,16 @@ body {
 .top-par .links {
     padding: 10px;
     padding-left: 150px;
-    width: 35%;
+    min-width: 35%;
     height: 100%;
 
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
 .top-par .links a {
+    margin-right: 20px;
     width: max-content;
 
     font-size: var(--text-size-3);
@@ -118,7 +119,7 @@ body {
     width: 47%;
     height: 80%;
     border: 2px solid #000;
-    border-radius: 30%;
+    border-radius: 20px;
 
     display: grid;
     place-items: center;
@@ -128,7 +129,7 @@ body {
 }
 
 .top-par .sign a span {
-    font-size: var(--text-size-3);
+    font-size: var(--text-size-2);
     font-weight: 700;
     color: #000;
     text-align: center;
