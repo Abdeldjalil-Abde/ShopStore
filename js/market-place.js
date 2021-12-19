@@ -79,14 +79,14 @@ const filterMeneContainer = document.querySelector(".filter-mene .container");
 function setFilterMene(type) {
     let typesItems = {
         clothes: [
-            "shirts",
-            "pants",
-            "shoes",
-            "coats",
-            "hats",
-            "dresses",
-            "skirts",
-            "other",
+            { name: "shirts",   logo: "../img/icon/clothe/shirt.png" },
+            { name: "pants",    logo: "../img/icon/clothe/pant.png" },
+            { name: "shoes",    logo: "../img/icon/clothe/shoes.png" },
+            { name: "coats",    logo: "../img/icon/clothe/coat.png" },
+            { name: "hats",     logo: "../img/icon/clothe/hat.png" },
+            { name: "dresses",  logo: "../img/icon/clothe/dress.png" },
+            { name: "skirts",   logo: "../img/icon/clothe/skirt.png" },
+            { name: "more",     logo: "../img/icon/more.png" },
         ],
     };
 
@@ -94,10 +94,10 @@ function setFilterMene(type) {
 
     typesItems[type].forEach((obj) => {
         items +=
-            '<a href="" class="item"><img src="../img/' +
-            obj +
-            '-logo.png" alt="" class="log" /><p class="content">' +
-            obj +
+            '<a href="" class="item"><img src="' +
+            obj["logo"] +
+            '" alt="" class="logo" /><p class="content">' +
+            obj["name"] +
             "</p></a>";
     });
 

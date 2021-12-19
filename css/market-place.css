@@ -61,8 +61,10 @@ body {
 }
 
 .filter-mene .item .logo {
-    width: 30%;
+    width: 20%;
     height: 100%;
+
+    object-fit: cover;
 }
 
 .filter-mene button.open {
@@ -212,6 +214,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: 0.3s;
 }
 
 .filter-par .filters .types li a:hover,
@@ -391,6 +395,8 @@ section.market .container .item .product-name {
 section.market .container .item .description {
     width: 90%;
     height: 30%;
+
+    font-size: var(--text-size-2);
 }
 
 section.market .container .item .description .more {
@@ -398,11 +404,12 @@ section.market .container .item .description .more {
     margin: 3px auto;
 
     text-align: center;
+    font-size: var(--text-size-3);
 }
 
 section.market .container .item .actions {
     padding: 0 10px;
-    margin-top: 10px;
+    margin-top: 25px;
 
     width: 100%;
     height: 10%;
