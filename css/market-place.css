@@ -19,7 +19,7 @@ body {
     justify-content: space-between;
 
     position: fixed;
-    top: 20%;
+    top: 12%;
     right: 100%;
     z-index: 10;
 
@@ -52,12 +52,12 @@ body {
 }
 .filter-mene .item:hover,
 .filter-mene .item.active {
-    background: var(--yellow-2);
+    background: var(--green-2);
 }
 
 .filter-mene .item .content {
     margin-left: 10px;
-    font-size: var(--text-size-3);
+    font-size: var(--text-size-2);
 }
 
 .filter-mene .item .logo {
@@ -93,9 +93,13 @@ body {
 
     width: max-content;
     font-size: var(--text-size-5);
+    text-transform: uppercase;
 
-    transform: translateX(10%) rotate(90deg);
+    transform: translate(3%, -200%) rotate(90deg);
     transform-origin: left bottom;
+}
+.filter-mene button.open:hover .content {
+    color: var(--blue-0);
 }
 
 .tools-par {
@@ -246,6 +250,8 @@ body {
 
     font-size: var(--text-size-4);
     font-weight: 900;
+
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
