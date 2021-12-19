@@ -257,8 +257,11 @@ function itemGenerator(filterType, actionType) {
         //  //
 
         // price //
+        let price = Math.floor(Math.random() * 1000) * 10;
         itemContent +=
-            '<div class="price-container"><h3>price: <br />130000</h3></div>';
+            '<div class="price-container"><h3>price: <br />' +
+            price +
+            ".00</h3></div>";
         //  //
 
         itemContent += "</div>"; // img price container open //
@@ -272,7 +275,8 @@ function itemGenerator(filterType, actionType) {
     // item description //
     itemContent += '<div class="description">'; // description open //
 
-    itemContent += '<p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius beatae vitae fuga optio nihil dolore?</p>';
+    itemContent +=
+        '<p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius beatae vitae fuga optio nihil dolore?</p>';
 
     itemContent += '<a href="" class="more">more</a>';
 
@@ -325,7 +329,8 @@ function setMarketNotFiltered(productType) {
 
         // add the items //
         for (let i = 0; i < 3; i++) {
-            let actionType = Math.floor(Math.random() * 2) == 0 ? "exchange" : "bay";
+            let actionType =
+                Math.floor(Math.random() * 2) == 0 ? "exchange" : "bay";
             marketContent += itemGenerator(filterType, actionType);
         }
         //  //
