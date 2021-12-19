@@ -49,10 +49,11 @@ body {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
+
 }
 .filter-mene .item:hover,
 .filter-mene .item.active {
-    background: var(--green-2);
+    background: var(--yellow-1);
 }
 
 .filter-mene .item .content {
@@ -144,7 +145,7 @@ body {
     color: #000;
 
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 
     transition: 0.3s;
@@ -153,9 +154,16 @@ body {
     border-color: var(--blue-0);
 }
 
+.tools-par ul li a .logo {
+    width: 20%;
+    /* height: 100%; */
+}
+
 .tools-par ul li a .content {
+    margin-left: 20px;
+
     width: max-content;
-    font-size: var(--text-size-2);
+    font-size: var(--text-size-3);
     font-weight: 700;
 }
 

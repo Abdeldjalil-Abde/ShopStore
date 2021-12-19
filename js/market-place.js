@@ -58,10 +58,25 @@ filterRightBtn.addEventListener("click", (e) => {
 
 // URL //
 function getUrlParameters() {
-    let urlStr = window.location.search.split("?")[1].split("&");
+    let urlStr = window.location.search;
+
+    if (urlStr == "") {
+        urlStr += "?";
+    }
+
+    if (!urlStr.includes("product_type")) {
+        urlStr += "&product_type=none";
+    }
+    if (!urlStr.includes("filter_type")) {
+        urlStr += "&filter_type=none";
+    }
+
+    urlStr = urlStr.split("?")[1].split("&");
 
     let urlPar = [];
     urlStr.forEach((obj) => {
+        if (obj == "") return;
+
         let name = obj.split("=")[0];
         let value = obj.split("=")[1];
         value = value.replaceAll("%22", "");
@@ -79,7 +94,12 @@ const filterMeneBtnContent = document.querySelector(
     ".filter-mene .open .content"
 );
 
-function setFilterMene(type) {
+function setSideFilter(type) {
+    if (type == "none") {
+        filterMene.style.display = "none";
+        return;
+    }
+
     let typesItems = {
         clothes: [
             { name: "none", logo: "../img/icon/none.png" },
@@ -181,6 +201,13 @@ function setFilterMene(type) {
             { name: "religious", logo: "../img/icon/book/religious-book.png" },
             { name: "more", logo: "../img/icon/more.png" },
         ],
+        phones: [
+            { name: "none", logo: "../img/icon/none.png" },
+            { name: "smart phone", logo: "../img/icon/phone/smart-phone.png" },
+            { name: "old phone", logo: "../img/icon/phone/old-phone.png" },
+            { name: "fixed phone", logo: "../img/icon/phone/fixed-phone.png" },
+            { name: "more", logo: "../img/icon/more.png" },
+        ],
     };
 
     let items = "";
@@ -246,7 +273,7 @@ urlPar.forEach((obj) => {
                 //  //
 
                 // set the side mene types //
-                setFilterMene(obj["value"]);
+                setSideFilter(obj["value"]);
                 //  //
             }
 
