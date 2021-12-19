@@ -221,13 +221,33 @@ urlPar.forEach((obj) => {
     switch (obj["name"]) {
         case "product_type":
             {
-                filterItemsLink.forEach((filter) => {
+                let productTypeIndex = 0;
+
+                // active the product type //
+                filterItemsLink.forEach((filter, index) => {
                     if (obj["value"] == filter.innerText.toLowerCase()) {
                         filter.classList.add("active");
+                        productTypeIndex = index; // get the product type index ///
+                        return;
                     }
                 });
+                //  //
 
+                // scroll the product type filter to the active type //
+                if (productTypeIndex < filterItems.length - filtersAppearNum) {
+                    itemsPointer = productTypeIndex;
+                } else {
+                    itemsPointer = filterItems.length - filtersAppearNum;
+                }
+
+                filter.style.left =
+                    -itemsPointer * (filtersFrameworkWidth / filtersAppearNum) +
+                    "px";
+                //  //
+
+                // set the side mene types //
                 setFilterMene(obj["value"]);
+                //  //
             }
 
             break;
