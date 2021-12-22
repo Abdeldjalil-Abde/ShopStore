@@ -183,11 +183,9 @@ function setSideFilter(type) {
     productTypesItems[type].forEach((obj) => {
         let linkClass = "item";
 
-        urlPar.forEach((par) => {
-            if (par["name"] == "filter_type" && par["value"] == obj["name"]) {
-                linkClass += " active";
-            }
-        });
+        if (urlPar["filter_type"] == obj["name"]) {
+            linkClass += " active";
+        }
 
         items +=
             '<a href="?product_type=' +
@@ -319,63 +317,35 @@ function setMarketFiltered(filterType) {}
 const filterItemsLink = document.querySelectorAll(
     ".filter-par .filters .types li a"
 );
+function productTypeFilterStyle(product_type) {
+    let productTypeIndex = 0;
 
-let urlPar = getUrlParameters();
-urlPar.forEach((obj) => {
-    switch (obj["name"]) {
-        case "product_type":
-            {
-                let productTypeIndex = 0;
+    // active the product type //
+    filterItemsLink.forEach((filter, index) => {
+        if (product_type == filter.innerText.toLowerCase()) {
+            filter.classList.add("active");
+            productTypeIndex = index; // get the product type index ///
+        }
+    });
+    //  //
 
-                // active the product type //
-                filterItemsLink.forEach((filter, index) => {
-                    if (obj["value"] == filter.innerText.toLowerCase()) {
-                        filter.classList.add("active");
-                        productTypeIndex = index; // get the product type index ///
-                    }
-                });
-                //  //
-
-                // scroll the product type filter to the active type //
-                if (productTypeIndex < filterItems.length - filtersAppearNum) {
-                    itemsPointer = productTypeIndex;
-                } else {
-                    itemsPointer = filterItems.length - filtersAppearNum;
-                }
-
-                filter.style.left =
-                    -itemsPointer * (filtersFrameworkWidth / filtersAppearNum) +
-                    "px";
-                //  //
-
-                // set the side mene types //
-                setSideFilter(obj["value"]);
-                //  //
-            }
-
-            break;
-
-        case "filter_type":
-            {
-                if (obj["value"] == "none") {
-                    let productType = "none";
-
-                    // get product type //
-                    urlPar.forEach((par) => {
-                        if (par["name"] == "product_type") {
-                            productType = par["value"];
-                        }
-                    });
-                    //  //
-
-                    setMarketNotFiltered(productType);
-                }
-            }
-
-            break;
-
-        default:
-            break;
+    // scroll the product type filter to the active type //
+    if (productTypeIndex < filterItems.length - filtersAppearNum) {
+        itemsPointer = productTypeIndex;
+    } else {
+        itemsPointer = filterItems.length - filtersAppearNum;
     }
-});
+
+    filter.style.left =
+        -itemsPointer * (filtersFrameworkWidth / filtersAppearNum) + "px";
+    //  //
+}
+
+productTypeFilterStyle(urlPar["product_type"]);
+setSideFilter(urlPar["product_type"]);
+
+if (urlPar["filter_type"] == "none") {
+    setMarketNotFiltered(urlPar["product_type"]);
+}
+
 //  //

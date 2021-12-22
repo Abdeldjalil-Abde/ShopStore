@@ -1,4 +1,3 @@
-
 // top par header shadow //
 let header = document.querySelector(".top-par");
 
@@ -25,10 +24,13 @@ function getUrlParameters() {
     if (!urlStr.includes("filter_type")) {
         urlStr += "&filter_type=none";
     }
+    if (!urlStr.includes("logged")) {
+        urlStr += "&logged=false";
+    }
 
     urlStr = urlStr.split("?")[1].split("&");
 
-    let urlPar = [];
+    let urlPar = {};
     urlStr.forEach((obj) => {
         if (obj == "") return;
 
@@ -38,9 +40,27 @@ function getUrlParameters() {
         value = value.replaceAll("%27", "");
         value = value.replaceAll("%20", " ");
 
-        urlPar.push({ name, value });
+        urlPar[name]=value;
     });
 
     return urlPar;
 }
 //  //
+
+// set the logged style //
+let urlPar = getUrlParameters();
+const allLinks = document.querySelectorAll("a");
+
+console.log(urlPar)
+
+// urlParameters.forEach((par) => {
+//     if (par["name"] == "logged") {
+//         if (par["value"] == "true") {
+//             header.classList.add("logged");
+//         }
+
+        
+//     }
+// });
+
+// //
