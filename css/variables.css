@@ -1,7 +1,8 @@
 :root {
     --font-1: Arial, Helvetica, sans-serif;
 
-    --title-size-1: 1rem;
+    --title-size-0: 1rem;
+    --title-size-1: 1.3rem;
     --title-size-2: 2rem;
     --title-size-3: 2.5rem;
     --title-size-4: 3rem;

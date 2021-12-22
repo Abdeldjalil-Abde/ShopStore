@@ -1,0 +1,561 @@
+body {
+    height: 100vh;
+    /* background: #0002; */
+}
+
+.top-par {
+    height: 15%;
+    border-bottom: 7px solid rgba(7, 7, 7, 0.333);
+}
+
+main {
+    margin: 110px auto;
+
+    width: 93%;
+    height: 83%;
+
+    position: relative;
+}
+
+section.visit {
+    padding: 1px;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+section.visit.hide {
+    display: none;
+}
+
+section.visit .avatar-container {
+    padding: 10px;
+
+    width: 17%;
+    height: 100%;
+}
+
+section.visit .avatar {
+    margin-top: 50px;
+
+    width: 100%;
+    aspect-ratio: 1/1.5;
+
+    position: relative;
+}
+
+section.visit .avatar::before {
+    content: "";
+    display: block;
+
+    width: 150%;
+    height: 100%;
+    border: 2px solid #0005;
+    border-radius: 20px;
+    background: linear-gradient(0deg, gray, #0002);
+
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    z-index: -5;
+}
+
+section.visit .avatar .img {
+    width: 100%;
+    height: 70%;
+    border: 7px solid #000;
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+section.visit .avatar .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.visit .avatar .user-name {
+    margin-top: 10px;
+}
+
+section.visit .avatar .user-name p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*  */
+
+section.visit .information {
+    padding: 15px 40px;
+
+    flex: 1;
+    height: 100%;
+    border: 2px solid #000a;
+    border-radius: 30px;
+    background: #fff;
+
+    display: flex;
+
+    position: relative;
+}
+
+section.visit .information .personal,
+section.visit .information .interactions {
+    padding: 30px 20px;
+    flex: 1;
+
+    text-transform: uppercase;
+
+    position: relative;
+}
+
+section.visit .information .interactions::before {
+    content: "";
+    display: block;
+
+    width: 1px;
+    height: 60%;
+    background: #000;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section.visit .information .personal > h2,
+section.visit .information .interactions > h2 {
+    font-size: var(--title-size-1);
+    font-weight: 900;
+    text-align: center;
+}
+section.visit .information .personal span {
+    font-weight: 900;
+}
+
+section.visit .information .personal > ul li,
+section.visit .information .interactions ul li {
+    margin: 20px 0;
+
+    display: flex;
+    align-items: center;
+}
+
+section.visit .information .personal > ul li p,
+section.visit .information .interactions ul li p {
+    margin-left: 20px;
+}
+
+section.visit .information .interactions {
+    display: flex;
+    flex-direction: column;
+}
+
+section.visit .information .interactions .offered {
+    margin-top: 20px;
+    width: 100%;
+    /* background: #0005; */
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+section.visit .information .interactions .offered::after {
+    content: "";
+    display: block;
+
+    width: 50%;
+    height: 1px;
+    background-color: #000;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.visit .information .interactions .offered h3 {
+    margin-bottom: 20px;
+
+    font-size: 1.012rem;
+    text-align: center;
+}
+
+section.visit .information .interactions .offered .sale,
+section.visit .information .interactions .offered .exchange {
+    margin-left: 50px;
+}
+section.visit .information .interactions .offered .sale h4,
+section.visit .information .interactions .offered .exchange h4 {
+    margin-left: -30px;
+}
+
+section.visit .information .interactions .imported {
+    margin-top: 20px;
+}
+
+section.visit .information .interactions .imported h3 {
+    font-size: 1.012rem;
+}
+
+section.visit .information .interactions .imported ul {
+    margin-left: 30px;
+}
+
+section.visit .information .action {
+    padding: 10px 20px;
+
+    width: 80%;
+    height: 25px;
+
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section.visit .information .action > *:hover {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+section.visit .information .action .edit {
+    padding: 10px 20px;
+
+    color: #000;
+    border-radius: 20px;
+    background: var(--blue-3);
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.2s;
+
+    display: none;
+}
+section.visit .information .action .edit:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+section.visit .information .action .edit:active {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+section.visit .information .action .contact {
+    padding: 10px 20px;
+
+    color: #000;
+    border-radius: 20px;
+    background: var(--blue-2);
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.2s;
+
+    display: none;
+}
+section.visit .information .action .contact:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+section.visit .information .action .contact:active {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+section.visit .information .action .edit.show,
+section.visit .information .action .contact.show {
+    display: block;
+}
+
+/*  */
+
+section.edit {
+    padding: 1px;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: none;
+}
+section.edit.show {
+    display: flex;
+}
+
+section.edit .avatar-container {
+    padding: 10px;
+
+    width: 17%;
+    height: 100%;
+}
+
+section.edit .avatar {
+    margin-top: 50px;
+
+    width: 100%;
+    aspect-ratio: 1/1.5;
+
+    position: relative;
+}
+
+section.edit .avatar::before {
+    content: "";
+    display: block;
+
+    width: 115%;
+    height: 100%;
+    border: 2px solid #0005;
+    border-radius: 20px 0 0 20px;
+    background: linear-gradient(0deg, gray, #0002);
+
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    z-index: -5;
+}
+
+section.edit .avatar .img {
+    width: 100%;
+    height: 70%;
+    border: 7px solid #000;
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+section.edit .avatar .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.edit .avatar .user-name {
+    margin-top: 10px;
+    width: 100%;
+}
+
+section.edit .avatar .user-name input {
+    margin: 0 auto;
+    padding: 2px;
+
+    width: 108%;
+    border: 3px solid #0009;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+
+    font-size: var(--text-size-4);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*  */
+
+section.edit .information {
+    padding: 15px 40px;
+
+    flex: 1;
+    height: 100%;
+    border: 2px solid #000a;
+    border-radius: 30px;
+    background: var(--gray-6);
+
+    display: flex;
+
+    position: relative;
+}
+section.edit .information.show {
+    display: flex;
+}
+
+section.edit .information .personal,
+section.edit .information .interactions {
+    padding: 30px 20px;
+    flex: 1;
+
+    text-transform: uppercase;
+
+    position: relative;
+}
+
+section.edit .information .interactions::before {
+    content: "";
+    display: block;
+
+    width: 1px;
+    height: 60%;
+    background: #000;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section.edit .information .personal > h2,
+section.edit .information .interactions > h2 {
+    font-size: var(--title-size-1);
+    font-weight: 900;
+    text-align: center;
+}
+
+section.edit .information .personal span {
+    width: max-content;
+    font-weight: 900;
+}
+
+section.edit .information .personal input {
+    padding: 2px 10px;
+
+    width: 180px;
+    border: 2px solid #000a;
+    border-radius: 7px;
+
+    font-size: var(--text-size-4);
+
+    display: flex;
+    align-items: center;
+}
+
+section.edit .information .personal .bio {
+    display: flex;
+    flex-direction: column;
+}
+section.edit .information .personal .bio textarea {
+    padding: 5px;
+
+    width: 100%;
+    height: 90px;
+
+    font-size: var(--text-size-3);
+
+    resize: none;
+}
+
+section.edit .information .personal > ul li,
+section.edit .information .interactions ul li {
+    margin: 20px 0;
+
+    display: flex;
+    align-items: center;
+}
+
+section.edit .information .personal > ul li {
+    justify-content: space-between;
+}
+
+section.edit .information .personal > ul li p,
+section.edit .information .interactions ul li p {
+    margin-left: 20px;
+}
+
+section.edit .information .interactions {
+    display: flex;
+    flex-direction: column;
+}
+
+section.edit .information .interactions .offered {
+    margin-top: 20px;
+    width: 100%;
+    /* background: #0005; */
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+section.edit .information .interactions .offered::after {
+    content: "";
+    display: block;
+
+    width: 50%;
+    height: 1px;
+    background-color: #000;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.edit .information .interactions .offered h3 {
+    margin-bottom: 20px;
+
+    font-size: 1.012rem;
+    text-align: center;
+}
+
+section.edit .information .interactions .offered .sale,
+section.edit .information .interactions .offered .exchange {
+    margin-left: 50px;
+}
+section.edit .information .interactions .offered .sale h4,
+section.edit .information .interactions .offered .exchange h4 {
+    margin-left: -30px;
+}
+
+section.edit .information .interactions .imported {
+    margin-top: 20px;
+}
+
+section.edit .information .interactions .imported h3 {
+    font-size: 1.012rem;
+}
+
+section.edit .information .interactions .imported ul {
+    margin-left: 30px;
+}
+
+section.edit .information .action {
+    padding: 10px 20px;
+
+    width: 80%;
+    height: 25px;
+
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section.edit .information .action .save {
+    padding: 10px 20px;
+
+    color: #000;
+    border-radius: 20px;
+    background: var(--blue-2);
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.2s;
+}
+section.edit .information .action .save:hover {
+    background: var(--blue-3);
+}
+section.edit .information .action .save:active {
+    transform: translate(-50%, -50%) scale(0.9);
+}
