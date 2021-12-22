@@ -40,7 +40,7 @@ function getUrlParameters() {
         value = value.replaceAll("%27", "");
         value = value.replaceAll("%20", " ");
 
-        urlPar[name]=value;
+        urlPar[name] = value;
     });
 
     return urlPar;
@@ -51,15 +51,12 @@ function getUrlParameters() {
 let urlPar = getUrlParameters();
 const allLinks = document.querySelectorAll("a");
 
-console.log(urlPar)
-
 // urlParameters.forEach((par) => {
 //     if (par["name"] == "logged") {
 //         if (par["value"] == "true") {
 //             header.classList.add("logged");
 //         }
 
-        
 //     }
 // });
 
