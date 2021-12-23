@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Axe Cap | Add Product</title>
+
+        <link rel="stylesheet" href="../css/variables.css" />
+        <link rel="stylesheet" href="../css/top-par.css" />
+        <link rel="stylesheet" href="../css/add-product.css" />
+    </head>
+    <body>
+        <header class="top-par">
+            <div class="icon">
+                <h2>Axe Cap</h2>
+            </div>
+
+            <div class="desc">
+                <p>Trade or buy your items easy with our website</p>
+            </div>
+
+            <ul class="links">
+                <li><a href="home.htm">Home</a></li>
+                <li><a class="active" href="#">Market Place</a></li>
+                <li><a href="#">About US</a></li>
+            </ul>
+
+            <div class="sign">
+                <a href="./log-in.htm"><span>Sign-In</span> </a>
+                <a href="./sign-up.htm"><span>Sign-Up</span></a>
+            </div>
+
+            <a href="profile.htm" class="user-avatar">
+                <div class="user-name">
+                    <p>User Name</p>
+                </div>
+
+                <div class="img">
+                    <img src="../img/user-avatar.png" alt="" />
+                </div>
+            </a>
+        </header>
+
+        <div class="tools-par">
+            <ul>
+                <li>
+                    <a href="">
+                        <img
+                            class="logo"
+                            src="../img/icon/tools-par/purchases.png"
+                            alt=""
+                        />
+                        <p class="content">My Purchases</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img
+                            class="logo"
+                            src="../img/icon/tools-par/my-products.png"
+                            alt=""
+                        />
+                        <p class="content">My Products</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img
+                            class="logo"
+                            src="../img/icon/tools-par/add-product.png"
+                            alt=""
+                        />
+                        <p class="content">Add Products</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <main>
+            <div class="label">
+                <h2>Add Product</h2>
+            </div>
+
+            <div class="left">
+                <ul>
+                    <li>
+                        <span>product name:</span>
+                        <div class="input">
+                            <input type="text" />
+                        </div>
+                    </li>
+                    <li>
+                        <span>Type:</span>
+                        <div class="input">
+                            <input type="text" />
+                        </div>
+                    </li>
+                    <li>
+                        <span>Color:</span>
+                        <div class="input">
+                            <input type="text" placeholder="color1" />
+                            <input type="text" placeholder="color2" />
+                            <input type="text" placeholder="color3" />
+                        </div>
+                    </li>
+                    <li>
+                        <span>Main Picture:</span>
+                        <div class="input">
+                            <input type="text" placeholder="img 1" />
+                            <button>Chose File</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Other Pictures:</span>
+                        <div class="input">
+                            <input type="text" placeholder="img 2" />
+                            <input type="text" placeholder="img 3" />
+                            <input type="text" placeholder="img 4" />
+                        </div>
+                    </li>
+                    <li>
+                        <span>Quality</span>
+                        <div class="input">
+                            <input type="number" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <div class="container">
+                    <div class="des">
+                        <span>Description</span>
+                        <textarea
+                            name=""
+                            id=""
+                            cols="30"
+                            rows="10"
+                            placeholder="ENTER DESCRIPTION"
+                        ></textarea>
+                    </div>
+
+                    <div class="action-type">
+                        <span>Chose What You Want:</span>
+
+                        <div class="type">
+                            <div class="input">
+                                <input type="radio" name="act" checked />
+                                <label>Sell</label>
+                            </div>
+                            <div class="input">
+                                <input type="radio" name="act" id="" />
+                                <label>Exchange</label>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <span>Price</span>
+                            <input type="text" placeholder="Enter Price" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action">
+                <button class="reset">Reset</button>
+                <button class="add">Add</button>
+            </div>
+        </main>
+
+        <script src="../js/app.js"></script>
+        <script src="../js/add-product.js"></script>
+    </body>
+</html>

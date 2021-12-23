@@ -1,0 +1,407 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.tools-par {
+    padding: 1% 3%;
+    margin: 100px auto 0;
+
+    width: 100%;
+    height: 20px;
+    background: var(--white-2);
+
+    transition: 0.3s;
+}
+
+.tools-par ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tools-par ul li {
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tools-par ul li a {
+    padding: 5% 7%;
+
+    width: 70%;
+    height: 70%;
+    border: 2px solid var(--blue-4);
+    border-radius: 20px;
+    background: var(--blue-x);
+
+    font-weight: 900;
+    color: #000;
+
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+    transition: 0.3s;
+}
+.tools-par ul li a:hover {
+    border-color: var(--blue-0);
+}
+
+.tools-par ul li a .logo {
+    width: 15%;
+    /* height: 100%; */
+}
+
+.tools-par ul li a .content {
+    margin-left: 20px;
+
+    width: max-content;
+    font-size: var(--text-size-3);
+    font-weight: 700;
+}
+
+main {
+    margin: 25px auto;
+
+    width: 95%;
+    height: 80%;
+    background: #0003;
+
+    position: relative;
+}
+
+main {
+    margin: 15px auto;
+
+    width: 95%;
+    height: 77%;
+    background: #0003;
+
+    position: relative;
+
+    display: flex;
+
+    position: relative;
+}
+
+main .label {
+    width: 40%;
+    height: 60px;
+    border-radius: 0 0 50px 50px;
+    background: #0005;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .label h2 {
+    font-size: var(--title-size-3);
+    text-transform: uppercase;
+}
+
+main .left {
+    width: 60%;
+    height: 100%;
+
+    position: relative;
+}
+main .left::after {
+    content: "";
+    display: block;
+
+    width: 1px;
+    height: 50%;
+    background: #000;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main .left ul {
+    margin: 100px auto;
+
+    width: 80%;
+    height: 75%;
+    /* background: #0006; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .left ul li {
+    margin-bottom: 10px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+main .left ul li span {
+    padding: 5px 10px;
+
+    border: 3px solid #0009;
+    border-radius: 20px;
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .left ul li .input {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+main .left ul li:nth-child(1) .input input,
+main .left ul li:nth-child(2) .input input {
+    padding: 5px;
+
+    width: 100%;
+    height: 100%;
+
+    border: 3px solid #0008;
+    outline: none;
+    border-radius: 15px;
+
+    font-size: 1.5rem;
+}
+
+main .left ul li:nth-child(3) .input input,
+main .left ul li:nth-child(5) .input input {
+    padding: 5px;
+
+    width: 30%;
+    height: 100%;
+
+    border: 3px solid #0008;
+    outline: none;
+    border-radius: 15px;
+
+    font-size: 1.5rem;
+}
+
+main .left ul li:nth-child(4) .input input {
+    padding: 5px;
+
+    flex: 1;
+    height: 100%;
+
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 15px 0 0 15px;
+
+    font-size: 1.5rem;
+}
+main .left ul li:nth-child(4) .input button {
+    padding: 5px;
+
+    width: 30%;
+    height: 100%;
+
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 0 15px 15px 0;
+
+    font-size: 1.5rem;
+}
+
+main .left ul li:nth-child(6) .input input {
+    padding: 5px 15px;
+
+    width: 30%;
+    height: 100%;
+
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 15px;
+
+    font-size: 1.5rem;
+}
+
+main .right {
+    flex: 1;
+    height: 100%;
+}
+
+main .right .container {
+    margin: 100px auto 0;
+
+    width: 90%;
+    height: 70%;
+}
+
+main .right .container .des {
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .right .container .des span {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+
+    width: max-content;
+    border: 1px solid #000;
+    border-radius: 10px;
+
+    font-size: var(--text-size-4);
+    font-weight: 700;
+}
+
+main .right .container .des textarea {
+    padding: 10px;
+    flex: 1;
+
+    border: 1px solid #000;
+    border-radius: 10px;
+
+    font-size: var(--text-size-4);
+}
+
+main .right .container .action-type {
+    margin-top: 10px;
+
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .right .container .action-type > span {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+
+    width: max-content;
+
+    font-size: var(--text-size-4);
+    font-weight: 700;
+}
+
+main .right .container .action-type .type {
+    margin-left: 70px;
+
+    height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* main .right .container .action-type .type .input input {
+    width: 50px;
+} */
+
+main .right .container .action-type .type .input label {
+    margin-left: 10px;
+
+    font-size: var(--text-size-4);
+    text-transform: uppercase;
+}
+
+main .right .container .action-type .price {
+    margin-top: 30px;
+
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+}
+main .right .container .action-type .price.hide {
+    display: none;
+}
+
+main .right .container .action-type .price span {
+    padding: 5px 10px;
+
+    width: max-content;
+    border: 1px solid #000;
+    border-radius: 10px;
+
+    font-size: var(--text-size-4);
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .right .container .action-type .price input {
+    padding: 5px 15px;
+    margin-left: 10px;
+
+    flex: 1;
+    height: 100%;
+
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 15px;
+
+    font-size: 1.5rem;
+}
+
+main .action {
+    padding: 0 20px;
+
+    width: 100%;
+    height: 50px;
+
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .action button {
+    padding: 5px 10px;
+
+    width: 100px;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+
+    font-size: var(--text-size-3);
+    font-weight: 700;
+    /* color: #fff9; */
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+main .action button:active {
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+main .action button.reset {
+    background: var(--red-2);
+}
+main .action button.add {
+    background: var(--green-2);
+}
