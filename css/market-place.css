@@ -49,7 +49,6 @@ body {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-
 }
 .filter-mene .item:hover,
 .filter-mene .item.active {
@@ -105,10 +104,10 @@ body {
 
 .tools-par {
     padding: 1% 3%;
-    margin: 110px auto 0;
+    margin: 100px auto 0;
 
     width: 100%;
-    height: 50px;
+    height: 20px;
     background: var(--white-2);
 
     transition: 0.3s;
@@ -133,10 +132,10 @@ body {
 }
 
 .tools-par ul li a {
-    padding: 7% 10%;
+    padding: 5% 7%;
 
-    width: 80%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
     border: 2px solid var(--blue-4);
     border-radius: 20px;
     background: var(--blue-x);
@@ -150,12 +149,13 @@ body {
 
     transition: 0.3s;
 }
-.tools-par ul li a:hover {
+.tools-par ul li a:hover,
+.tools-par ul li a.active {
     border-color: var(--blue-0);
 }
 
 .tools-par ul li a .logo {
-    width: 20%;
+    width: 15%;
     /* height: 100%; */
 }
 
