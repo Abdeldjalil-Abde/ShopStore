@@ -9,7 +9,7 @@ body {
 
 .tools-par {
     padding: 1% 3%;
-    margin: 100px auto 0;
+    margin: 90px auto 0;
 
     width: 100%;
     height: 20px;
@@ -87,7 +87,8 @@ main {
 
     width: 95%;
     height: 77%;
-    background: #0003;
+    border-radius: 30px;
+    background: #0002;
 
     position: relative;
 
