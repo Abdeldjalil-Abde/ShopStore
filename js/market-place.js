@@ -244,7 +244,7 @@ function itemGenerator(filterType, actionType) {
     itemContent +=
         '<p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius beatae vitae fuga optio nihil dolore?</p>';
 
-    itemContent += '<a href="" class="more">more</a>';
+    itemContent += '<a href="product.htm" class="more">more</a>';
 
     itemContent += "</div>"; // description close //
     //  //
