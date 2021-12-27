@@ -305,7 +305,7 @@ function setMarketNotFiltered(productType) {
         //  //
 
         // close the type container //
-        marketContent += '<a href="" class="view-all">View All</a></div>';
+        marketContent += `<a href="?product_type=${productType}&&filter_type=${filterType["name"]}" class="view-all">View All</a></div>`;
         //  //
     });
 
@@ -341,7 +341,7 @@ function setMarketFiltered(filterType) {
     //  //
 
     // close the type container //
-    marketContent += '<a href="" class="view-all">View All</a></div>';
+    marketContent += '</div>';
     //  //
 
     market.innerHTML = marketContent;
