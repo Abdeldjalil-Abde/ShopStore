@@ -19,7 +19,7 @@ function getUrlParameters() {
     }
 
     if (!urlStr.includes("product_type")) {
-        urlStr += "&product_type=none";
+        urlStr += "&product_type=clothes";
     }
     if (!urlStr.includes("filter_type")) {
         urlStr += "&filter_type=none";

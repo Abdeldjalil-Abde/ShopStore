@@ -312,7 +312,41 @@ function setMarketNotFiltered(productType) {
     market.innerHTML = marketContent;
 }
 
-function setMarketFiltered(filterType) {}
+function setMarketFiltered(filterType) {
+    let marketContent = "";
+
+    if (filterType == "none" || filterType == "more") {
+        return;
+    }
+
+    // open the type container //
+    marketContent +=
+        '<div class="items"><div class="type"><h2>' +
+        filterType +
+        "</h2></div>";
+    //  //
+
+    // the items //
+    marketContent += '<div class="container">'; // adding open //
+
+    // add the items //
+    for (let i = 0; i < 12; i++) {
+        let actionType =
+            Math.floor(Math.random() * 2) == 0 ? "exchange" : "bay";
+        marketContent += itemGenerator(filterType, actionType);
+    }
+    //  //
+
+    marketContent += "</div>"; // adding close //
+    //  //
+
+    // close the type container //
+    marketContent += '<a href="" class="view-all">View All</a></div>';
+    //  //
+
+    market.innerHTML = marketContent;
+    market.classList.add("filtered");
+}
 
 const filterItemsLink = document.querySelectorAll(
     ".filter-par .filters .types li a"
@@ -346,6 +380,9 @@ setSideFilter(urlPar["product_type"]);
 
 if (urlPar["filter_type"] == "none") {
     setMarketNotFiltered(urlPar["product_type"]);
+} else {
+    console.log("filter");
+    setMarketFiltered(urlPar["filter_type"]);
 }
 
 //  //
