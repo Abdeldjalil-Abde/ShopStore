@@ -51,13 +51,8 @@ function getUrlParameters() {
 let urlPar = getUrlParameters();
 const allLinks = document.querySelectorAll("a");
 
-// urlParameters.forEach((par) => {
-//     if (par["name"] == "logged") {
-//         if (par["value"] == "true") {
-//             header.classList.add("logged");
-//         }
-
-//     }
-// });
+if (urlPar["logged"] == "true") {
+    header.classList.add("logged");
+}
 
 // //
