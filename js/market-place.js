@@ -164,7 +164,7 @@ function setSideFilter(type) {
     items +=
         '<a href="?product_type=' +
         type +
-        '&filter_type=all" class="item"' +
+        '&filter_type=all" class="item' +
         (urlPar["filter_type"] == "all" ? " active" : "") + // light the selected element //
         '"><img src="../img/icon/all.png" alt="" class="logo" /><p class="content">all</p></a>';
     //  //
@@ -191,7 +191,7 @@ function setSideFilter(type) {
     items +=
         '<a href="?product_type=' +
         type +
-        '&filter_type=more" class="item"' +
+        '&filter_type=more" class="item' +
         (urlPar["filter_type"] == "more" ? " active" : "") + // light the selected element //
         '"><img src="../img/icon/more.png" alt="" class="logo" /><p class="content">more</p></a>';
     //  //
