@@ -229,13 +229,22 @@ body {
 
     transition: 0.3s;
 }
-
 .filter-par .filters .types li a:hover,
 .filter-par .filters .types li a.active {
     background: #80808055;
 }
 .filter-par .filters .types li a:active {
     color: var(--blue-0);
+}
+
+.filter-par .filters .types li a img {
+    width: 20px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.filter-par .filters .types li a span {
+    margin-left: 5px;
 }
 
 .filter-par .left,
