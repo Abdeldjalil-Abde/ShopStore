@@ -12,7 +12,6 @@ filterMene.addEventListener("click", (e) => {
     toolsPar.classList.toggle("mene-opened");
     market.classList.toggle("mene-opened");
 });
-
 //  //
 
 // filter par style //
@@ -53,7 +52,6 @@ filterRightBtn.addEventListener("click", (e) => {
             -itemsPointer * (filtersFrameworkWidth / filtersAppearNum) + "px";
     }
 });
-
 //  //
 
 // URL //
@@ -64,7 +62,6 @@ const filterMeneBtnContent = document.querySelector(
 
 let productTypesItems = {
     clothes: [
-        { name: "none", logo: "../img/icon/none.png" },
         { name: "shirts", logo: "../img/icon/clothe/shirt.png" },
         { name: "pants", logo: "../img/icon/clothe/pant.png" },
         { name: "shoes", logo: "../img/icon/clothe/shoes.png" },
@@ -72,27 +69,21 @@ let productTypesItems = {
         { name: "hats", logo: "../img/icon/clothe/hat.png" },
         { name: "dresses", logo: "../img/icon/clothe/dress.png" },
         { name: "skirts", logo: "../img/icon/clothe/skirt.png" },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
     tools: [
-        { name: "none", logo: "../img/icon/none.png" },
         { name: "hammer", logo: "../img/icon/tool/hammer.png" },
         { name: "painting", logo: "../img/icon/tool/painting.png" },
         { name: "saw", logo: "../img/icon/tool/saw.png" },
         { name: "screw driver", logo: "../img/icon/tool/screw-driver.png" },
         { name: "shovel", logo: "../img/icon/tool/shovel.png" },
         { name: "wrench", logo: "../img/icon/tool/wrench.png" },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
     vehicles: [
-        { name: "none", logo: "../img/icon/none.png" },
         { name: "car", logo: "../img/icon/vehicle/car.png" },
         { name: "motorcycle", logo: "../img/icon/vehicle/motorcycle.png" },
         { name: "bike", logo: "../img/icon/vehicle/bike.png" },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
     "car parts": [
-        { name: "none", logo: "../img/icon/none.png" },
         {
             name: "car engine",
             logo: "../img/icon/car parts/car-engine.png",
@@ -119,10 +110,8 @@ let productTypesItems = {
             name: "car structure",
             logo: "../img/icon/car parts/car-structure.png",
         },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
     electrics: [
-        { name: "none", logo: "../img/icon/none.png" },
         { name: "tv", logo: "../img/icon/electric/tv.png" },
         {
             name: "air-conditioner",
@@ -134,10 +123,8 @@ let productTypesItems = {
         { name: "light", logo: "../img/icon/electric/light.png" },
         { name: "oven", logo: "../img/icon/electric/oven.png" },
         { name: "stove", logo: "../img/icon/electric/stove.png" },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
     furniture: [
-        { name: "none", logo: "../img/icon/none.png" },
         { name: "bed", logo: "../img/icon/furniture/bed.png" },
         { name: "chair", logo: "../img/icon/furniture/chair.png" },
         { name: "closet", logo: "../img/icon/furniture/closet.png" },
@@ -145,30 +132,23 @@ let productTypesItems = {
         { name: "pillow", logo: "../img/icon/furniture/pillow.png" },
         { name: "sofa", logo: "../img/icon/furniture/sofa.png" },
         { name: "table", logo: "../img/icon/furniture/table.png" },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
     building: [
-        { name: "none", logo: "../img/icon/none.png" },
         { name: "cement", logo: "../img/icon/building/cement.png" },
         { name: "paint", logo: "../img/icon/building/paint.png" },
         { name: "electrical", logo: "../img/icon/building/electrical.png" },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
     books: [
-        { name: "none", logo: "../img/icon/none.png" },
         { name: "student", logo: "../img/icon/book/student-book.png" },
         { name: "language", logo: "../img/icon/book/language-book.png" },
         { name: "novel", logo: "../img/icon/book/novel.png" },
         { name: "children", logo: "../img/icon/book/children-book.png" },
         { name: "religious", logo: "../img/icon/book/religious-book.png" },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
     phones: [
-        { name: "none", logo: "../img/icon/none.png" },
         { name: "smart phone", logo: "../img/icon/phone/smart-phone.png" },
         { name: "old phone", logo: "../img/icon/phone/old-phone.png" },
         { name: "fixed phone", logo: "../img/icon/phone/fixed-phone.png" },
-        { name: "more", logo: "../img/icon/more.png" },
     ],
 };
 
@@ -180,26 +160,41 @@ function setSideFilter(type) {
 
     let items = "";
 
+    // the all filter //
+    items +=
+        '<a href="?product_type=' +
+        type +
+        '&filter_type=all" class="item"' +
+        (urlPar["filter_type"] == "all" ? " active" : "") + // light the selected element //
+        '"><img src="../img/icon/all.png" alt="" class="logo" /><p class="content">all</p></a>';
+    //  //
+
+    // the rest filters //
     productTypesItems[type].forEach((obj) => {
-        let linkClass = "item";
-
-        if (urlPar["filter_type"] == obj["name"]) {
-            linkClass += " active";
-        }
-
         items +=
             '<a href="?product_type=' +
             type +
             "&filter_type=" +
             obj["name"] +
             '" class="' +
-            linkClass +
+            "item" +
+            (urlPar["filter_type"] == obj["name"] ? " active" : "") + // light the selected element //
             '"><img src="' +
             obj["logo"] +
             '" alt="" class="logo" /><p class="content">' +
             obj["name"] +
             "</p></a>";
     });
+    //  //
+
+    // the all filter //
+    items +=
+        '<a href="?product_type=' +
+        type +
+        '&filter_type=more" class="item"' +
+        (urlPar["filter_type"] == "more" ? " active" : "") + // light the selected element //
+        '"><img src="../img/icon/more.png" alt="" class="logo" /><p class="content">more</p></a>';
+    //  //
 
     filterMeneContainer.innerHTML = items;
     filterMeneBtnContent.innerHTML = type;
@@ -279,7 +274,7 @@ function setMarketNotFiltered(productType) {
     let marketContent = "";
 
     productTypesItems[productType].forEach((filterType) => {
-        if (filterType["name"] == "none" || filterType["name"] == "more") {
+        if (filterType["name"] == "all" || filterType["name"] == "more") {
             return;
         }
 
@@ -315,7 +310,7 @@ function setMarketNotFiltered(productType) {
 function setMarketFiltered(filterType) {
     let marketContent = "";
 
-    if (filterType == "none" || filterType == "more") {
+    if (filterType == "all" || filterType == "more") {
         return;
     }
 
@@ -341,7 +336,7 @@ function setMarketFiltered(filterType) {
     //  //
 
     // close the type container //
-    marketContent += '</div>';
+    marketContent += "</div>";
     //  //
 
     market.innerHTML = marketContent;
@@ -378,10 +373,9 @@ function productTypeFilterStyle(product_type) {
 productTypeFilterStyle(urlPar["product_type"]);
 setSideFilter(urlPar["product_type"]);
 
-if (urlPar["filter_type"] == "none") {
+if (urlPar["filter_type"] == "all") {
     setMarketNotFiltered(urlPar["product_type"]);
 } else {
-    console.log("filter");
     setMarketFiltered(urlPar["filter_type"]);
 }
 

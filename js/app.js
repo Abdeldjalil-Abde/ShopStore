@@ -22,7 +22,7 @@ function getUrlParameters() {
         urlStr += "&product_type=clothes";
     }
     if (!urlStr.includes("filter_type")) {
-        urlStr += "&filter_type=none";
+        urlStr += "&filter_type=all";
     }
     if (!urlStr.includes("logged")) {
         urlStr += "&logged=false";
