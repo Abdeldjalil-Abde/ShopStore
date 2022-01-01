@@ -246,12 +246,18 @@ main {
     text-transform: uppercase;
 }
 
-.right ul li input {
+.right ul li p {
+    display: block;
     padding: 3px 5px;
 
     width: 60%;
+    border: 2px solid #000;
+    border-radius: 10px;
 
     font-size: var(--text-size-4);
+
+    display: flex;
+    align-items: center;
 }
 
 .right ul li.des {
@@ -263,10 +269,12 @@ main {
     width: 45%;
 }
 
-.right ul li.des textarea {
+.right ul li.des p {
     margin-top: 5px;
     padding: 5px;
 
+    width: 100%;
+    /* aspect-ratio: 1/0.5; */
     background: transparent;
 
     font-size: var(--text-size-4);
