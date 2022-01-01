@@ -191,9 +191,9 @@ function setSideFilter(type) {
     items +=
         '<a href="?product_type=' +
         type +
-        '&filter_type=more" class="item' +
-        (urlPar["filter_type"] == "more" ? " active" : "") + // light the selected element //
-        '"><img src="../img/icon/more.png" alt="" class="logo" /><p class="content">more</p></a>';
+        '&filter_type=other" class="item' +
+        (urlPar["filter_type"] == "other" ? " active" : "") + // light the selected element //
+        '"><img src="../img/icon/other.png" alt="" class="logo" /><p class="content">other</p></a>';
     //  //
 
     filterMeneContainer.innerHTML = items;
