@@ -34,35 +34,21 @@ section.visit.hide {
 }
 
 section.visit .avatar-container {
-    padding: 10px;
-
     width: 17%;
     height: 100%;
 }
 
 section.visit .avatar {
     margin-top: 50px;
+    padding: 3px;
 
     width: 100%;
     aspect-ratio: 1/1.5;
-
-    position: relative;
-}
-
-section.visit .avatar::before {
-    content: "";
-    display: block;
-
-    width: 150%;
-    height: 100%;
     border: 2px solid #0005;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     background: linear-gradient(0deg, gray, #0002);
 
-    position: absolute;
-    left: -10%;
-    top: -10%;
-    z-index: -5;
+    position: relative;
 }
 
 section.visit .avatar .img {
@@ -81,10 +67,11 @@ section.visit .avatar .img img {
 }
 
 section.visit .avatar .user-name {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 section.visit .avatar .user-name p {
+    font-size: var(--text-size-4);
     text-align: center;
     text-transform: uppercase;
 }
@@ -302,7 +289,7 @@ section.edit.show {
 }
 
 section.edit .avatar-container {
-    padding: 10px;
+    /* padding: 10px; */
 
     width: 17%;
     height: 100%;
@@ -310,42 +297,62 @@ section.edit .avatar-container {
 
 section.edit .avatar {
     margin-top: 50px;
+    padding: 3px;
 
     width: 100%;
     aspect-ratio: 1/1.5;
-
-    position: relative;
-}
-
-section.edit .avatar::before {
-    content: "";
-    display: block;
-
-    width: 115%;
-    height: 100%;
     border: 2px solid #0005;
-    border-radius: 20px 0 0 20px;
     background: linear-gradient(0deg, gray, #0002);
 
-    position: absolute;
-    left: -10%;
-    top: -10%;
-    z-index: -5;
+    position: relative;
 }
 
 section.edit .avatar .img {
     width: 100%;
     height: 70%;
-    border: 7px solid #000;
+    border: 3px solid #000;
     border-radius: 50%;
 
     overflow: hidden;
+
+    position: relative;
 }
 
 section.edit .avatar .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+section.edit .avatar .img input[type="file"] {
+    display: none;
+}
+section.edit .avatar .img label {
+    display: block;
+
+    width: 100%;
+    height: 40px;
+    background: #000a;
+
+    font-size: 1rem;
+    text-align: center;
+    color: #fffa;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.edit .avatar .img:hover label {
+    transform: translateY(0);
+}
+section.edit .avatar .img:hover label:hover {
+    color: #fff;
 }
 
 section.edit .avatar .user-name {
@@ -357,8 +364,9 @@ section.edit .avatar .user-name input {
     margin: 0 auto;
     padding: 2px;
 
-    width: 108%;
+    width: 100%;
     border: 3px solid #0009;
+    border-right: none;
     border-radius: 10px 0 0 10px;
     outline: none;
 
