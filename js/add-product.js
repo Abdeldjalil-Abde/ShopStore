@@ -258,3 +258,33 @@ productTypeCloseBtn.addEventListener("click", () => {
 //  //
 
 //  //
+
+// product quality //
+const qualityStars = document.querySelectorAll(
+    "li.quality .input .stars .star"
+);
+const qualityValue = document.querySelector(
+    "li.quality .input input.quality-value"
+);
+
+qualityStars.forEach((obj, index) => {
+    obj.addEventListener("click", () => {
+        // turn off all stars //
+        qualityStars.forEach((star) => {
+            star.classList.remove("active");
+        });
+        //  //
+
+        // turn on //
+        for (let i = 0; i <= index; i++) {
+            qualityStars[i].classList.add("active");
+        }
+        //  //
+
+        // set the input value //
+        qualityValue.setAttribute("value", index + 1);
+        //  //
+    });
+});
+
+//  //

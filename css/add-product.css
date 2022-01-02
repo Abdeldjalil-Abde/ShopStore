@@ -193,6 +193,7 @@ main .left ul li:nth-child(1) .input input {
     font-size: 1.5rem;
 }
 
+/*  */
 main .left ul li.product-type {
     height: 50px;
 }
@@ -247,6 +248,8 @@ main .left ul li.product-type .input .change {
     justify-content: center;
     align-items: center;
 
+    cursor: pointer;
+
     transition: 0.3s;
 }
 main .left ul li.product-type .input .change:hover {
@@ -257,6 +260,62 @@ main .left ul li.product-type .input .change:active {
     /* color: var(--blue-3); */
     font-size: var(--text-size-2);
 }
+/*  */
+
+/*  */
+main .left ul li.quality {
+    height: 50px;
+}
+
+main .left ul li.quality .input {
+}
+
+main .left ul li.quality .input .stars {
+    margin: 0 auto;
+    padding: 15px 20px;
+
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    background: #000a;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .left ul li.quality .input .stars .star {
+    width: 40px;
+    aspect-ratio: 1;
+
+    background: #fff;
+
+    clip-path: polygon(
+        50% 0,
+        65% 35%,
+        100% 35%,
+        70% 60%,
+        90% 100%,
+        50% 80%,
+        10% 100%,
+        30% 60%,
+        0% 35%,
+        35% 35%
+    );
+
+    cursor: pointer;
+    transition: 0.1s;
+}
+main .left ul li.quality .input .stars .star:hover {
+    background: #ffff0067;
+}
+main .left ul li.quality .input .stars .star:active {
+    transform: scale(0.8);
+}
+main .left ul li.quality .input .stars .star.active {
+    background: yellow;
+}
+/*  */
 
 main .left ul li:nth-child(3) .input input,
 main .left ul li:nth-child(5) .input input {
