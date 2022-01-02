@@ -152,6 +152,7 @@ main .left ul {
 main .left ul li {
     margin-bottom: 10px;
     width: 100%;
+    height: 40px;
 
     display: flex;
     justify-content: space-between;
@@ -179,8 +180,7 @@ main .left ul li .input {
     justify-content: space-between;
 }
 
-main .left ul li:nth-child(1) .input input,
-main .left ul li:nth-child(2) .input input {
+main .left ul li:nth-child(1) .input input {
     padding: 5px;
 
     width: 100%;
@@ -191,6 +191,71 @@ main .left ul li:nth-child(2) .input input {
     border-radius: 15px;
 
     font-size: 1.5rem;
+}
+
+main .left ul li.product-type {
+    height: 50px;
+}
+
+main .left ul li.product-type .input {
+    width: 70%;
+    height: 100%;
+    /* border: 3px solid #0008; */
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+main .left ul li.product-type .input .type {
+    padding: 5px;
+
+    width: 70%;
+    height: 100%;
+    border: 3px solid #0008;
+    border-right: 3px solid #000;
+    border-radius: 10px 0 0 10px;
+
+    display: flex;
+}
+
+main .left ul li.product-type .input .type img {
+    width: 30%;
+    height: 100%;
+    object-fit: contain;
+}
+
+main .left ul li.product-type .input .type span {
+    margin-left: 10px;
+
+    border: none;
+}
+
+main .left ul li.product-type .input .change {
+    flex: 1;
+    height: 100%;
+    border: 3px solid #0008;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    background: none;
+
+    font-size: var(--text-size-3);
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+main .left ul li.product-type .input .change:hover {
+    background: var(--blue-3);
+    color: #fff;
+}
+main .left ul li.product-type .input .change:active {
+    /* color: var(--blue-3); */
+    font-size: var(--text-size-2);
 }
 
 main .left ul li:nth-child(3) .input input,
@@ -411,3 +476,125 @@ main .action button.reset {
 main .action button.add {
     background: var(--green-2);
 }
+
+/* product type window */
+.product-type-window {
+    padding: 30px 25px;
+
+    width: 60vw;
+    height: 70vh;
+    border-radius: 20px;
+    background: #000a;
+
+    overflow: hidden;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.5s;
+}
+.product-type-window.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.product-type-window .product-type,
+.product-type-window .filter-type {
+    padding: 10px;
+
+    width: 100%;
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    position: relative;
+}
+.product-type-window .product-type::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 3px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0px 10px,
+        #fff 10px 30px
+    );
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.product-type-window .type {
+    /* margin: 0 20px; */
+    padding: 10px;
+
+    width: 23%;
+    aspect-ratio: 3/1;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+
+    transition: 0.3s;
+}
+.product-type-window .type:hover,
+.product-type-window .type.active {
+    background: var(--blue-3);
+    color: #fff;
+}
+.product-type-window .type:active {
+    transform: scale(0.9);
+}
+
+.product-type-window .type .logo {
+    width: 30%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.product-type-window .type .content {
+    margin-left: 10px;
+    width: max-content;
+
+    font-size: var(--text-size-3);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.product-type-window button.close {
+    padding: 10px;
+
+    border: none;
+    border-radius: 0 0 0 10px;
+    outline: none;
+
+    font-weight: 900;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    transition: 0.3s;
+}
+.product-type-window button.close:hover {
+    background: red;
+    color: #fff;
+}
+.product-type-window button.close:active {
+    background: #fff;
+    color: #000;
+}
+/*  */

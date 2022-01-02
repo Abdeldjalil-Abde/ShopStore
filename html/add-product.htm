@@ -77,6 +77,51 @@
             </ul>
         </div>
 
+        <div class="product-type-window">
+            <div class="product-type">
+                <button class="type active">
+                    <img src="../img/icon/product type/clothes.png" alt="" class="logo" />
+                    <span class="content">clothes</span>
+                </button>
+                <button class="type">
+                    <img src="../img/icon/product type/tools.png" alt="" class="logo" />
+                    <span class="content">tools</span>
+                </button>
+                <button class="type">
+                    <img src="../img/icon/product type/vehicles.png" alt="" class="logo" />
+                    <span class="content">vehicles</span>
+                </button>
+                <button class="type">
+                    <img src="../img/icon/product type/car parts.png" alt="" class="logo" />
+                    <span class="content">car parts</span>
+                </button>
+                <button class="type">
+                    <img src="../img/icon/product type/phones.png" alt="" class="logo" />
+                    <span class="content">phones</span>
+                </button>
+                <button class="type">
+                    <img src="../img/icon/product type/electrics.png" alt="" class="logo" />
+                    <span class="content">electrics</span>
+                </button>
+                <button class="type">
+                    <img src="../img/icon/product type/furniture.png" alt="" class="logo" />
+                    <span class="content">furniture</span>
+                </button>
+                <button class="type">
+                    <img src="../img/icon/product type/building.png" alt="" class="logo" />
+                    <span class="content">building</span>
+                </button>
+                <button class="type">
+                    <img src="../img/icon/product type/books.png" alt="" class="logo" />
+                    <span class="content">books</span>
+                </button>
+            </div>
+
+            <div class="filter-type"></div>
+
+            <button class="close">X</button>
+        </div>
+
         <main>
             <div class="label">
                 <h2>Add Product</h2>
@@ -90,10 +135,26 @@
                             <input type="text" />
                         </div>
                     </li>
-                    <li>
-                        <span>Type:</span>
+                    <li class="product-type">
+                        <span>Product Type:</span>
                         <div class="input">
-                            <input type="text" />
+                            <div class="type">
+                                <img src="../img/icon/product type/clothes.png" alt="" />
+                                <span>Clothes</span>
+                            </div>
+
+                            <button class="change">Change Type</button>
+
+                            <input class="product-type-input"
+                                type="hidden"
+                                name="product_type"
+                                value="clothes"
+                            />
+                            <input class="filter-type-input"
+                                type="hidden"
+                                name="filter_type"
+                                value="other"
+                            />
                         </div>
                     </li>
                     <li>
