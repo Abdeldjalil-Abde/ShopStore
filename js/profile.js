@@ -19,13 +19,13 @@ if (urlPar["profile_action"] == "owner visit") {
 const img_input = document.querySelector(".edit .avatar .img input");
 const profileImg = document.querySelector(".edit .avatar .img img");
 
-main_img_input.addEventListener("change", () => {
+img_input.addEventListener("change", () => {
     const reader = new FileReader();
 
     reader.addEventListener("load", () => {
-        mainImg.setAttribute("src", reader.result);
+        profileImg.setAttribute("src", reader.result);
     });
 
-    reader.readAsDataURL(main_img_input.files[0]);
+    reader.readAsDataURL(img_input.files[0]);
 });
 //  //
