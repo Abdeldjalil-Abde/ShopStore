@@ -1,6 +1,7 @@
 body {
     height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    /* overflow: hidden; */
 }
 
 .top-par {
@@ -73,20 +74,10 @@ body {
 }
 
 main {
-    margin: 25px auto;
-
-    width: 95%;
-    height: 80%;
-    background: #0003;
-
-    position: relative;
-}
-
-main {
     margin: 15px auto;
 
     width: 95%;
-    height: 77%;
+    /* height: 77%; */
     border-radius: 30px;
     background: #0002;
 
@@ -139,7 +130,7 @@ main .left::after {
 }
 
 main .left ul {
-    margin: 100px auto;
+    margin: 80px auto;
 
     width: 80%;
     height: 75%;
@@ -150,7 +141,8 @@ main .left ul {
 }
 
 main .left ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+
     width: 100%;
     height: 40px;
 
@@ -267,9 +259,6 @@ main .left ul li.quality {
     height: 50px;
 }
 
-main .left ul li.quality .input {
-}
-
 main .left ul li.quality .input .stars {
     margin: 0 auto;
     padding: 15px 20px;
@@ -369,19 +358,7 @@ main .left ul li:nth-child(6) .input input {
     font-size: 1.5rem;
 }
 
-main .right {
-    flex: 1;
-    height: 100%;
-}
-
-main .right .container {
-    margin: 100px auto 0;
-
-    width: 90%;
-    height: 70%;
-}
-
-main .right .container .des {
+main .left .des {
     width: 100%;
     height: 150px;
 
@@ -389,29 +366,34 @@ main .right .container .des {
     flex-direction: column;
 }
 
-main .right .container .des span {
+main .left .des span {
     padding: 5px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 
     width: max-content;
     border: 1px solid #000;
-    border-radius: 10px;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
 
     font-size: var(--text-size-4);
     font-weight: 700;
 }
 
-main .right .container .des textarea {
+main .left .des textarea {
     padding: 10px;
+
+    width: 100%;
     flex: 1;
 
     border: 1px solid #000;
-    border-radius: 10px;
+    border-radius: 0 10px 10px;
 
     font-size: var(--text-size-4);
+
+    resize: none;
 }
 
-main .right .container .action-type {
+main .left .action-type {
     margin-top: 10px;
 
     width: 100%;
@@ -421,7 +403,7 @@ main .right .container .action-type {
     flex-direction: column;
 }
 
-main .right .container .action-type > span {
+main .left .action-type > span {
     padding: 5px 10px;
     margin-bottom: 10px;
 
@@ -431,8 +413,8 @@ main .right .container .action-type > span {
     font-weight: 700;
 }
 
-main .right .container .action-type .type {
-    margin-left: 70px;
+main .left .action-type .type {
+    margin-left: 0px;
 
     height: 40px;
 
@@ -441,18 +423,20 @@ main .right .container .action-type .type {
     justify-content: space-between;
 }
 
-/* main .right .container .action-type .type .input input {
-    width: 50px;
-} */
+main .left .action-type .type .input {
+    margin-bottom: 10px;
 
-main .right .container .action-type .type .input label {
-    margin-left: 10px;
+    justify-content: flex-start;
+}
+
+main .left .action-type .type .input label {
+    margin-left: -20px;
 
     font-size: var(--text-size-4);
     text-transform: uppercase;
 }
 
-main .right .container .action-type .price {
+main .left .action-type .price {
     margin-top: 30px;
 
     width: 100%;
@@ -460,11 +444,11 @@ main .right .container .action-type .price {
 
     display: flex;
 }
-main .right .container .action-type .price.hide {
-    display: none;
+main .left .action-type .price.hide {
+    opacity: 0;
 }
 
-main .right .container .action-type .price span {
+main .left .action-type .price span {
     padding: 5px 10px;
 
     width: max-content;
@@ -479,7 +463,7 @@ main .right .container .action-type .price span {
     align-items: center;
 }
 
-main .right .container .action-type .price input {
+main .left .action-type .price input {
     padding: 5px 15px;
     margin-left: 10px;
 
@@ -493,6 +477,264 @@ main .right .container .action-type .price input {
     font-size: 1.5rem;
 }
 
+/*  */
+main .right {
+    padding: 70px 10px 0;
+    flex: 1;
+}
+
+main .right .main-picture {
+    padding: 5px;
+
+    width: 100%;
+    /* height: 150px; */
+    border-radius: 20px;
+    background: #0003;
+}
+
+main .right .main-picture h2 {
+    text-align: center;
+}
+
+main .right .main-picture .img {
+    margin: 10px auto;
+    padding: 2px;
+
+    width: 50%;
+    aspect-ratio: 1/0.7;
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    background: #0001;
+
+    overflow: hidden;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+main .right .main-picture .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: center;
+}
+
+main .right .main-picture .img input {
+    display: none;
+}
+main .right .main-picture .img label {
+    display: block;
+
+    width: 100%;
+    height: 40px;
+    background: #000a;
+
+    font-size: 1rem;
+    text-align: center;
+    color: #fffa;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .right .main-picture .img:hover label {
+    transform: translateY(0);
+}
+main .right .main-picture .img:hover label:hover {
+    color: #fff;
+}
+main .right .main-picture .img:hover label:active {
+    font-size: 0.8rem;
+}
+
+main .right .main-picture .img .delete {
+    padding: 3px 0 0 3px;
+
+    width: 35px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    background: #fffa;
+
+    cursor: pointer;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+
+    transition: 0.3s;
+}
+main .right .main-picture .img:hover .delete.set {
+    transform: translateX(0);
+}
+main .right .main-picture .img .delete.set:hover {
+    background: red;
+}
+main .right .main-picture .img .delete.set:active {
+    transform: scale(0.9);
+}
+/*  */
+
+/*  */
+main .right .other-pictures-input {
+    display: none;
+}
+
+main .right .other-pictures {
+    margin-top: 20px;
+    padding: 5px;
+
+    width: 100%;
+    border-radius: 20px;
+    background: #0003;
+}
+
+main .right .other-pictures h2 {
+    font-size: var(--title-size-3);
+    text-align: center;
+}
+
+main .right .other-pictures .container {
+    padding: 3px;
+    margin-top: 10px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main .right .other-pictures .container > * {
+    margin: 0 5px;
+}
+
+main .right .other-pictures .container .add {
+    margin-bottom: 10px;
+
+    width: 23%;
+    aspect-ratio: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    opacity: 0.7;
+
+    transition: 0.3s;
+}
+main .right .other-pictures .container .add:hover {
+    opacity: 1;
+}
+main .right .other-pictures .container .add:active {
+    transform: scale(0.9);
+}
+
+main .right .other-pictures .container .add img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .right .other-pictures .container .pic {
+    margin-bottom: 10px;
+    /* padding: 2px; */
+
+    width: 20%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: #0007;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+main .right .other-pictures .container .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .right .other-pictures .container .pic label.change {
+    display: block;
+
+    width: 100%;
+    height: 30px;
+    background: #000a;
+
+    font-size: 1rem;
+    text-align: center;
+    color: #fffa;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .right .other-pictures .container .pic:hover label.change {
+    transform: translateY(0);
+}
+main .right .other-pictures .container .pic:hover label.change:hover {
+    color: #fff;
+}
+main .right .other-pictures .container .pic:hover label.change:active {
+    font-size: 0.8rem;
+}
+
+main .right .other-pictures .container .pic .delete {
+    width: 25px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    background: #fffa;
+
+    cursor: pointer;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+
+    transition: 0.3s;
+}
+main .right .other-pictures .container .pic:hover .delete {
+    transform: translateX(0);
+}
+main .right .other-pictures .container .pic .delete:hover {
+    background: red;
+}
+main .right .other-pictures .container .pic .delete:active {
+    transform: scale(0.9);
+}
+/*  */
+
+/*  */
 main .action {
     padding: 0 20px;
 
@@ -501,13 +743,14 @@ main .action {
 
     position: absolute;
     left: 0;
-    bottom: 30px;
+    bottom: 5px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 main .action button {
+    margin: 0 10px;
     padding: 5px 10px;
 
     width: 100px;
@@ -535,6 +778,7 @@ main .action button.reset {
 main .action button.add {
     background: var(--green-2);
 }
+/*  */
 
 /* product type window */
 .product-type-window {

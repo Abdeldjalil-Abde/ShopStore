@@ -206,21 +206,6 @@
                             <input type="text" placeholder="color3" />
                         </div>
                     </li>
-                    <li>
-                        <span>Main Picture:</span>
-                        <div class="input">
-                            <input type="text" placeholder="img 1" />
-                            <button>Chose File</button>
-                        </div>
-                    </li>
-                    <li>
-                        <span>Other Pictures:</span>
-                        <div class="input">
-                            <input type="text" placeholder="img 2" />
-                            <input type="text" placeholder="img 3" />
-                            <input type="text" placeholder="img 4" />
-                        </div>
-                    </li>
                     <li class="quality">
                         <span>Quality</span>
                         <div class="input">
@@ -239,12 +224,7 @@
                             />
                         </div>
                     </li>
-                </ul>
-            </div>
-
-            <div class="right">
-                <div class="container">
-                    <div class="des">
+                    <li class="des">
                         <span>Description</span>
                         <textarea
                             name=""
@@ -253,26 +233,70 @@
                             rows="10"
                             placeholder="ENTER DESCRIPTION"
                         ></textarea>
-                    </div>
-
-                    <div class="action-type">
+                    </li>
+                    <li class="action-type">
                         <span>Chose What You Want:</span>
 
                         <div class="type">
-                            <div class="input">
-                                <input type="radio" name="act" checked />
-                                <label>Sell</label>
-                            </div>
-                            <div class="input">
-                                <input type="radio" name="act" id="" />
+                            <div class="input exchange">
+                                <input type="radio" name="act" id="" checked />
                                 <label>Exchange</label>
+                            </div>
+                            <div class="input bay">
+                                <input type="radio" name="act" />
+                                <label>Sell</label>
                             </div>
                         </div>
 
-                        <div class="price">
+                        <div class="price hide">
                             <span>Price</span>
                             <input type="text" placeholder="Enter Price" />
                         </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <div class="main-picture">
+                    <h2>Main Picture</h2>
+
+                    <div class="img">
+                        <img src="../img/icon/image.png" alt="" />
+
+                        <div class="delete">
+                            <img src="../img/icon/delete.png" alt="" />
+                        </div>
+
+                        <label for="main-pic-input">Select Image</label>
+                        <input
+                            class="file"
+                            type="file"
+                            id="main-pic-input"
+                            accept="image/png, image/jpg"
+                        />
+
+                        <input class="isSet" type="hidden" value="false" />
+                    </div>
+                </div>
+
+                <div class="other-pictures-input">
+                    <input
+                        class="counter"
+                        type="hidden"
+                        name="other_pictures_num"
+                        value="0"
+                    />
+
+                    <input class="file" type="file" id="img1" />
+                </div>
+
+                <div class="other-pictures">
+                    <h2>Other Pictures</h2>
+
+                    <div class="container">
+                        <label class="add" for="img1">
+                            <img src="../img/icon/add.png" alt="" />
+                        </label>
                     </div>
                 </div>
             </div>
