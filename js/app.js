@@ -9,11 +9,13 @@ window.addEventListener("scroll", (e) => {
         header.classList.remove("scrolled");
     }
 
-    if (window.scrollY > 200) {
-        goUpArrow.classList.add("show");
-    } else {
-        goUpArrow.classList.remove("show");
-    }
+    if (goUpArrow != undefined) {
+        if (window.scrollY > 200) {
+            goUpArrow.classList.add("show");
+        } else {
+            goUpArrow.classList.remove("show");
+        }
+    } 
 });
 //  //
 

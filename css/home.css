@@ -1,3 +1,7 @@
+html {
+    /* scroll-behavior: smooth; */
+}
+
 main {
     margin: 50px auto;
     /* padding: 20px; */
@@ -306,12 +310,14 @@ main .titles-par::before {
     transform: translateX(-50%);
 }
 
-main .titles-par .title a {
+main .titles-par .title span {
     padding: 7px 0;
+
+    cursor: pointer;
 
     position: relative;
 }
-main .titles-par .title a::after {
+main .titles-par .title span::after {
     content: "";
     display: block;
 
@@ -326,12 +332,12 @@ main .titles-par .title a::after {
     transform: scale(0);
     transition: 0.3s;
 }
-
-main .titles-par .title a:hover::after {
+main .titles-par .title span.active::after ,
+main .titles-par .title span:hover::after {
     transform: scale(1);
 }
 
-main .titles-par .title a {
+main .titles-par .title span {
     font-size: var(--text-size-4);
     font-weight: 700;
     color: #000;
@@ -398,13 +404,12 @@ main .container section.miscellaneous .type span {
     color: #000;
 }
 /*  */
-
 main .container section.security {
     margin: 50px auto;
 
     width: 90%;
-    /* aspect-ratio: 2/1; */
-    background: #0009;
+    height: 100vh;
+    background: #fff3;
 
     display: flex;
     justify-content: space-between;
