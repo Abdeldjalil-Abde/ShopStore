@@ -19,7 +19,7 @@ html {
 body {
     width: 100vw;
     min-height: 100vh;
-    height: 300vh;
+    /* height: 300vh; */
 
     overflow-x: hidden;
 }

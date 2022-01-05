@@ -15,7 +15,7 @@ a {
 body {
     width: 100vw;
     min-height: 100vh;
-    background: var(--gray-1);
+    /* background: var(--gray-1); */
 
     overflow-x: hidden;
 }
@@ -42,13 +42,13 @@ section.log-in .right {
     background-color: var(--blue-2);
 }
 
-.top-par {
+section.log-in .top-par {
     /* padding: 10px 20px; */
     width: 100%;
     height: 50px;
 }
 
-.top-par ul {
+section.log-in .top-par ul {
     padding: 0;
 
     width: 100%;
@@ -59,11 +59,20 @@ section.log-in .right {
     align-items: center;
 }
 
-.top-par ul li {
+section.log-in .top-par ul li {
     width: max-content;
     font-size: var(--text-size-4);
-    font-weight: var(--text-weight-4);
+    /* font-weight: var(--text-weight-4); */
 }
+
+section.log-in .top-par ul li a{
+    color: #fff;
+}
+section.log-in .top-par ul li a::after{
+    border-radius: 10px;
+    background: #fff;
+}
+/*  */
 
 .left {
     background: var(--white-1);

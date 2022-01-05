@@ -22,7 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-section.log-in {
+section.sign-up {
     margin: 50px auto;
 
     max-width: 850px;
@@ -33,14 +33,14 @@ section.log-in {
     display: flex;
 }
 
-section.log-in .left,
-section.log-in .right {
+section.sign-up .left,
+section.sign-up .right {
     padding: 10px;
     width: 50%;
     height: 100%;
 }
 
-section.log-in .right {
+section.sign-up .right {
     background-color: var(--blue-2);
 
     display: flex;
@@ -48,13 +48,13 @@ section.log-in .right {
     /* justify-content: space-between; */
 }
 
-.top-par {
+section.sign-up .top-par {
     /* padding: 10px 20px; */
     width: 100%;
     height: 50px;
 }
 
-.top-par ul {
+section.sign-up .top-par ul {
     padding: 0;
 
     width: 100%;
@@ -65,10 +65,18 @@ section.log-in .right {
     align-items: center;
 }
 
-.top-par ul li {
+section.sign-up .top-par ul li {
     width: max-content;
     font-size: var(--text-size-4);
-    font-weight: var(--text-weight-4);
+    /* font-weight: var(--text-weight-4); */
+}
+
+section.sign-up .top-par ul li a{
+    color: #fff;
+}
+section.sign-up .top-par ul li a::after{
+    border-radius: 10px;
+    background: #fff;
 }
 /*  */
 

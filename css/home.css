@@ -285,6 +285,26 @@ main .titles-par {
     justify-content: space-between;
     align-items: center;
 }
+main .titles-par::before {
+    content: "";
+    display: block;
+
+    width: 80%;
+    height: 1px;
+    background: #000;
+
+    content: "";
+    display: block;
+
+    width: 80%;
+    height: 1px;
+    background: #000;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 main .titles-par .title a {
     padding: 7px 0;

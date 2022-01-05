@@ -75,9 +75,9 @@ section.visit .avatar .user-name p {
     text-align: center;
     text-transform: uppercase;
 }
-
 /*  */
 
+/*  */
 section.visit .information {
     padding: 15px 40px;
 
@@ -85,7 +85,7 @@ section.visit .information {
     height: 100%;
     border: 2px solid #000a;
     border-radius: 30px;
-    background: #fff;
+    background: #fffd;
 
     display: flex;
 
@@ -267,9 +267,9 @@ section.visit .information .action .edit.show,
 section.visit .information .action .contact.show {
     display: block;
 }
-
 /*  */
 
+/*  */
 section.edit {
     padding: 1px;
 
@@ -301,8 +301,9 @@ section.edit .avatar {
 
     width: 100%;
     aspect-ratio: 1/1.5;
-    border: 2px solid #0005;
-    background: linear-gradient(0deg, gray, #0002);
+    /* border: 2px solid #0005; */
+    border-radius: 20px 0 0 20px;
+    background: linear-gradient(0deg, gray, #0007);
 
     position: relative;
 }
@@ -384,7 +385,7 @@ section.edit .information {
     height: 100%;
     border: 2px solid #000a;
     border-radius: 30px;
-    background: var(--gray-6);
+    background: #fff9;
 
     display: flex;
 

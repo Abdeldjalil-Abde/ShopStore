@@ -1,5 +1,8 @@
 body {
-    height: 100vh;
+    padding: 1px;
+    padding-bottom: 20vh;
+
+    /* height: 100vh; */
     min-height: 100vh;
     /* background: linear-gradient(-135deg, #0003, #0009); */
 
@@ -16,7 +19,7 @@ body {
 
     width: 100%;
     height: 20px;
-    background: var(--white-2);
+    /* background: var(--white-2); */
 
     transition: 0.3s;
 }
@@ -46,7 +49,7 @@ body {
     height: 70%;
     border: 2px solid var(--blue-4);
     border-radius: 20px;
-    background: var(--blue-x);
+    background: #fff;
 
     font-weight: 900;
     color: #000;
@@ -83,11 +86,11 @@ main {
     border-radius: 30px;
     background: linear-gradient(
         125deg,
-        #00F7FF,
-        #00BEC6,
-        #1DB1FF,
-        #8485EA,
-        #AF52AE
+        #00F7FFaa,
+        #00BEC6aa,
+        #1DB1FFaa,
+        #8485EAaa,
+        #AF52AEaa
     );
 
     position: relative;

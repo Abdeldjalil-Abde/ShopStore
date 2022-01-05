@@ -14,7 +14,7 @@ main {
     height: 85%;
     border: 1px solid #000;
     border-radius: 10px;
-    background-color: #0001;
+    background-color: #fff9;
 
     display: flex;
 
@@ -58,7 +58,7 @@ main {
 
     width: 2px;
     height: 60%;
-    background: #0005;
+    background: #000;
 
     position: absolute;
     right: 0;
