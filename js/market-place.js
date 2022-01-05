@@ -15,8 +15,8 @@ filterMene.addEventListener("click", (e) => {
 //  //
 
 // filter par style //
-const filterLeftBtn = document.querySelector(".filter-par .left button");
-const filterRightBtn = document.querySelector(".filter-par .right button");
+const filterLeftBtn = document.querySelector(".filter-par .left");
+const filterRightBtn = document.querySelector(".filter-par .right");
 
 const filterFramework = document.querySelector(".filter-par .filters");
 const filter = document.querySelector(".filter-par .filters .types");
@@ -39,17 +39,41 @@ let itemsPointer = 0;
 
 filterLeftBtn.addEventListener("click", (e) => {
     if (itemsPointer > 0) {
+        // move to left //
         itemsPointer--;
         filter.style.left =
             -itemsPointer * (filtersFrameworkWidth / filtersAppearNum) + "px";
+        //  //
+
+        // enable the right button //
+        filterRightBtn.classList.remove("disable");
+        //  //
+
+        // disable the left button if hit the edge //
+        if (!(itemsPointer > 0)) {
+            filterLeftBtn.classList.add("disable");
+        }
+        //  //
     }
 });
 
 filterRightBtn.addEventListener("click", (e) => {
     if (itemsPointer < filterItems.length - filtersAppearNum) {
+        // move to right //
         itemsPointer++;
         filter.style.left =
             -itemsPointer * (filtersFrameworkWidth / filtersAppearNum) + "px";
+        //  //
+
+        // enable the left button //
+        filterLeftBtn.classList.remove("disable");
+        //  //
+
+        // disable the right button if hit the edge //
+        if (!(itemsPointer < filterItems.length - filtersAppearNum)) {
+            filterRightBtn.classList.add("disable");
+        }
+        //  //
     }
 });
 //  //
@@ -368,6 +392,18 @@ function productTypeFilterStyle(product_type) {
     filter.style.left =
         -itemsPointer * (filtersFrameworkWidth / filtersAppearNum) + "px";
     //  //
+
+    // disable the left button if hit the edge //
+    if (!(itemsPointer > 0)) {
+        filterLeftBtn.classList.add("disable");
+    }
+    //  //
+
+    // disable the right button if hit the edge //
+    if (!(itemsPointer < filterItems.length - filtersAppearNum)) {
+        filterRightBtn.classList.add("disable");
+    }
+    //  //
 }
 
 productTypeFilterStyle(urlPar["product_type"]);
@@ -378,5 +414,4 @@ if (urlPar["filter_type"] == "all") {
 } else {
     setMarketFiltered(urlPar["filter_type"]);
 }
-
 //  //

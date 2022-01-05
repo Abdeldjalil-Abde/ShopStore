@@ -1,9 +1,4 @@
-:root{
-    --background-1: var(--gray-1);
-    --background-2: var(--white-1);
-    --background-3: var(--blue-2);
-    --background-4: var(--gray-1);
-}
+
 
 * {
     width: 0;
@@ -32,7 +27,7 @@ section.log-in {
 
     max-width: 850px;
     width: 80vw;
-    height: 80vh;
+    height: 90vh;
     box-shadow: 0px 1px 5px #000;
 
     display: flex;
@@ -75,6 +70,7 @@ section.log-in .right {
     font-size: var(--text-size-4);
     font-weight: var(--text-weight-4);
 }
+/*  */
 
 .right .sign-with-txt {
     margin-top: 50px;

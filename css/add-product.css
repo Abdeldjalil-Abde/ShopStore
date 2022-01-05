@@ -1,6 +1,8 @@
 body {
     height: 100vh;
     min-height: 100vh;
+    /* background: linear-gradient(-135deg, #0003, #0009); */
+
     /* overflow: hidden; */
 }
 
@@ -79,13 +81,50 @@ main {
     width: 95%;
     /* height: 77%; */
     border-radius: 30px;
-    background: #0002;
+    background: linear-gradient(
+        125deg,
+        #00F7FF,
+        #00BEC6,
+        #1DB1FF,
+        #8485EA,
+        #AF52AE
+    );
 
     position: relative;
 
     display: flex;
 
     position: relative;
+
+    isolation: isolate;
+
+    overflow: hidden;
+}
+
+main::before,
+main::after {
+    content: "";
+    display: block;
+
+    width: 300%;
+    aspect-ratio: 1;
+    border: 30px solid #bcbcff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-80%, -10%);
+
+    z-index: -5;
+}
+main::before{
+    transform: translate(-80%, -10%);
+
+}
+main::after{
+    transform: translate(-81%, -9%);
+
 }
 
 main .label {
@@ -110,7 +149,7 @@ main .label h2 {
 }
 
 main .left {
-    width: 60%;
+    width: 50%;
     height: 100%;
 
     position: relative;
@@ -172,15 +211,25 @@ main .left ul li .input {
     justify-content: space-between;
 }
 
-main .left ul li:nth-child(1) .input input {
+main .left ul li.product-name .input {
+    flex: 1;
+}
+
+main .left ul li.product-name span {
+    border: 2px solid #000d;
+    border-radius: 20px 0 0 20px;
+}
+
+main .left ul li.product-name .input input {
     padding: 5px;
 
     width: 100%;
     height: 100%;
 
-    border: 3px solid #0008;
+    border: 2px solid #000d;
+    border-left: none;
     outline: none;
-    border-radius: 15px;
+    border-radius: 0 20px 20px 0;
 
     font-size: 1.5rem;
 }
@@ -190,11 +239,17 @@ main .left ul li.product-type {
     height: 50px;
 }
 
+main .left ul li.product-type > span {
+    width: 40%;
+
+    border: 3px solid #0008;
+    border-radius: 20px 0 0 20px;
+}
+
 main .left ul li.product-type .input {
-    width: 70%;
+    /* width: 70%; */
+    flex: 1;
     height: 100%;
-    /* border: 3px solid #0008; */
-    border-radius: 15px;
 
     display: flex;
     align-items: center;
@@ -203,11 +258,12 @@ main .left ul li.product-type .input {
 main .left ul li.product-type .input .type {
     padding: 5px;
 
-    width: 70%;
+    /* width: 70%; */
+    flex: 1;
     height: 100%;
     border: 3px solid #0008;
     border-right: 3px solid #000;
-    border-radius: 10px 0 0 10px;
+    /* border-radius: 10px 0 0 10px; */
 
     display: flex;
 }
@@ -219,17 +275,22 @@ main .left ul li.product-type .input .type img {
 }
 
 main .left ul li.product-type .input .type span {
-    margin-left: 10px;
+    margin-left: 0px;
 
     border: none;
+
+    font-size: var(--text-size-4);
+    text-transform: capitalize;
 }
 
 main .left ul li.product-type .input .change {
-    flex: 1;
+    padding: 5px;
+
+    width: max-content;
     height: 100%;
     border: 3px solid #0008;
     border-left: none;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 20px 20px 0;
     outline: none;
     background: none;
 
@@ -259,13 +320,18 @@ main .left ul li.quality {
     height: 50px;
 }
 
+main .left ul li.quality .input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 main .left ul li.quality .input .stars {
-    margin: 0 auto;
     padding: 15px 20px;
 
-    width: 80%;
+    width: 70%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 20px 0 0 20px;
     background: #000a;
 
     display: flex;
@@ -274,7 +340,7 @@ main .left ul li.quality .input .stars {
 }
 
 main .left ul li.quality .input .stars .star {
-    width: 40px;
+    width: 13%;
     aspect-ratio: 1;
 
     background: #fff;
@@ -304,54 +370,36 @@ main .left ul li.quality .input .stars .star:active {
 main .left ul li.quality .input .stars .star.active {
     background: yellow;
 }
+
+main .left ul li.quality .input .content {
+    flex: 1;
+    height: 100%;
+    border: 2px solid #000a;
+    border-radius: 0 20px 20px 0;
+    background: #0003;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .left ul li.quality .input .content p {
+    font-size: var(--text-size-4);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 1px #000;
+    color: red;
+}
 /*  */
 
-main .left ul li:nth-child(3) .input input,
-main .left ul li:nth-child(5) .input input {
+/*  */
+main .left ul li.product-color .input input {
     padding: 5px;
 
     width: 30%;
     height: 100%;
 
     border: 3px solid #0008;
-    outline: none;
-    border-radius: 15px;
-
-    font-size: 1.5rem;
-}
-
-main .left ul li:nth-child(4) .input input {
-    padding: 5px;
-
-    flex: 1;
-    height: 100%;
-
-    border: 1px solid #000;
-    outline: none;
-    border-radius: 15px 0 0 15px;
-
-    font-size: 1.5rem;
-}
-main .left ul li:nth-child(4) .input button {
-    padding: 5px;
-
-    width: 30%;
-    height: 100%;
-
-    border: 1px solid #000;
-    outline: none;
-    border-radius: 0 15px 15px 0;
-
-    font-size: 1.5rem;
-}
-
-main .left ul li:nth-child(6) .input input {
-    padding: 5px 15px;
-
-    width: 30%;
-    height: 100%;
-
-    border: 1px solid #000;
     outline: none;
     border-radius: 15px;
 
@@ -409,12 +457,12 @@ main .left .action-type > span {
 
     width: max-content;
 
-    font-size: var(--text-size-4);
-    font-weight: 700;
+    font-size: var(--text-size-9);
+    font-weight: 900;
 }
 
 main .left .action-type .type {
-    margin-left: 0px;
+    margin-left: 50px;
 
     height: 40px;
 
@@ -426,14 +474,21 @@ main .left .action-type .type {
 main .left .action-type .type .input {
     margin-bottom: 10px;
 
+    width: 50%;
+    height: 100%;
+
+    display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 main .left .action-type .type .input label {
-    margin-left: -20px;
+    margin-left: 10px;
 
     font-size: var(--text-size-4);
     text-transform: uppercase;
+
+    cursor: pointer;
 }
 
 main .left .action-type .price {
@@ -484,15 +539,23 @@ main .right {
 }
 
 main .right .main-picture {
-    padding: 5px;
+    margin: 0 auto;
+    padding: 15px;
 
-    width: 100%;
+    width: 80%;
     /* height: 150px; */
     border-radius: 20px;
-    background: #0003;
+    background: #638fd1;
+
+    box-shadow: 
+        -6px -6px 15px transparent,
+        6px 6px 15px #000,
+        inset 6px 6px 15px #000,
+        inset -6px -6px 15px transparent;
 }
 
 main .right .main-picture h2 {
+    font-size: var(--title-size-3);
     text-align: center;
 }
 
@@ -500,7 +563,7 @@ main .right .main-picture .img {
     margin: 10px auto;
     padding: 2px;
 
-    width: 50%;
+    width: 55%;
     aspect-ratio: 1/0.7;
     /* border: 1px solid #000; */
     border-radius: 20px;
@@ -594,12 +657,19 @@ main .right .other-pictures-input {
 }
 
 main .right .other-pictures {
-    margin-top: 20px;
+    margin: 20px auto 0;
     padding: 5px;
 
-    width: 100%;
+    width: 80%;
     border-radius: 20px;
-    background: #0003;
+    /* background: #0003; */
+    background: #638fd1;
+
+    box-shadow: 
+        -6px -6px 15px transparent,
+        6px 6px 15px #000,
+        inset 6px 6px 15px #000,
+        inset -6px -6px 15px transparent;
 }
 
 main .right .other-pictures h2 {
@@ -743,7 +813,7 @@ main .action {
 
     position: absolute;
     left: 0;
-    bottom: 5px;
+    bottom: 25px;
 
     display: flex;
     justify-content: flex-end;

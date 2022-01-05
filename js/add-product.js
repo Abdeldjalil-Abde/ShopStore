@@ -253,6 +253,7 @@ productTypeCloseBtn.addEventListener("click", () => {
 const qualityStars = document.querySelectorAll(
     "li.quality .input .stars .star"
 );
+const qualityContent = document.querySelector("li.quality .input .content p");
 const qualityValue = document.querySelector(
     "li.quality .input input.quality-value"
 );
@@ -268,6 +269,48 @@ qualityStars.forEach((obj, index) => {
         // turn on //
         for (let i = 0; i <= index; i++) {
             qualityStars[i].classList.add("active");
+        }
+        //  //
+
+        // set the content //
+        switch (index) {
+            case 0:
+                {
+                    qualityContent.innerHTML = "bad";
+                    qualityContent.style.color = "red";
+                }
+                break;
+
+            case 1:
+                {
+                    qualityContent.innerHTML = "medium";
+                    qualityContent.style.color = "yellow";
+                }
+                break;
+
+            case 2:
+                {
+                    qualityContent.innerHTML = "good";
+                    qualityContent.style.color = "green";
+                }
+                break;
+
+            case 3:
+                {
+                    qualityContent.innerHTML = "very good";
+                    qualityContent.style.color = "lime";
+                }
+                break;
+
+            case 4:
+                {
+                    qualityContent.innerHTML = "excellent";
+                    qualityContent.style.color = "blue";
+                }
+                break;
+
+            default:
+                break;
         }
         //  //
 

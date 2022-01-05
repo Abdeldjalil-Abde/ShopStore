@@ -278,10 +278,12 @@ body {
 
     transition: 0.1s;
 }
+.filter-par .left.disable button,
+.filter-par .right.disable button ,
 .filter-par .left button:active,
 .filter-par .right button:active {
     opacity: 0.5;
-    transform: scale(0.8);
+    transform: scale(0.7);
 }
 
 section.market {

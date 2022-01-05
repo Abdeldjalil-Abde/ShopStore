@@ -27,8 +27,8 @@
             </ul>
 
             <div class="sign">
-                <a href="./log-in.htm"><span>Sign-In</span> </a>
-                <a href="./sign-up.htm"><span>Sign-Up</span></a>
+                <a href="./log-in.htm"><span>Log In</span> </a>
+                <a href="./sign-up.htm"><span>Sign Up</span></a>
             </div>
 
             <a href="profile.htm" class="user-avatar">
@@ -165,14 +165,24 @@
 
             <div class="left">
                 <ul>
-                    <li>
-                        <span>product name:</span>
+                    <li class="product-name">
+                        <span>product name</span>
                         <div class="input">
-                            <input type="text" />
+                            <input type="text" placeholder="Enter your product name..." />
                         </div>
                     </li>
+                    <li class="des">
+                        <span>Description</span>
+                        <textarea
+                            name=""
+                            id=""
+                            cols="30"
+                            rows="10"
+                            placeholder="talk a little about your product..."
+                        ></textarea>
+                    </li>
                     <li class="product-type">
-                        <span>Product Type:</span>
+                        <span>Product Type</span>
                         <div class="input">
                             <div class="type">
                                 <img
@@ -198,7 +208,7 @@
                             />
                         </div>
                     </li>
-                    <li>
+                    <li class="product-color">
                         <span>Color:</span>
                         <div class="input">
                             <input type="text" placeholder="color1" />
@@ -210,11 +220,15 @@
                         <span>Quality</span>
                         <div class="input">
                             <div class="stars">
+                                <div class="star active"></div>
                                 <div class="star"></div>
                                 <div class="star"></div>
                                 <div class="star"></div>
                                 <div class="star"></div>
-                                <div class="star"></div>
+                            </div>
+
+                            <div class="content">
+                                <p>bad</p>
                             </div>
 
                             <input
@@ -224,27 +238,17 @@
                             />
                         </div>
                     </li>
-                    <li class="des">
-                        <span>Description</span>
-                        <textarea
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="10"
-                            placeholder="ENTER DESCRIPTION"
-                        ></textarea>
-                    </li>
                     <li class="action-type">
-                        <span>Chose What You Want:</span>
+                        <span>Chose What You Want</span>
 
                         <div class="type">
                             <div class="input exchange">
-                                <input type="radio" name="act" id="" checked />
-                                <label>Exchange</label>
+                                <input type="radio" name="act" id="act-type-exchange" checked />
+                                <label for="act-type-exchange">Exchange</label>
                             </div>
                             <div class="input bay">
-                                <input type="radio" name="act" />
-                                <label>Sell</label>
+                                <input type="radio" name="act" id="act-type-bay" />
+                                <label for="act-type-bay">Sell</label>
                             </div>
                         </div>
 
@@ -291,7 +295,7 @@
                 </div>
 
                 <div class="other-pictures">
-                    <h2>Other Pictures</h2>
+                    <h2>Extra Pictures</h2>
 
                     <div class="container">
                         <label class="add" for="img1">

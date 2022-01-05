@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100vw;
     min-height: 100vh;
@@ -25,7 +29,7 @@ body {
     width: 100%;
     height: 70px;
 
-    background: var(--white-1);
+    background: #84a1be;
 
     display: flex;
     justify-content: space-between;
@@ -39,19 +43,6 @@ body {
 }
 .top-par.scrolled {
     box-shadow: 0px 10px 20px #0005;
-}
-
-.top-par .icon {
-    width: 10%;
-    height: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.top-par .icon h2 {
-    font-size: var(--title-size-1);
 }
 
 .top-par .desc {
@@ -113,7 +104,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.top-par.logged .sign{
+.top-par.logged .sign {
     display: none;
 }
 
@@ -157,10 +148,10 @@ body {
     transition: 0.5s;
 }
 .top-par .sign a:nth-child(1)::after {
-    background: orangered;
+    background: var(--green-3);
 }
 .top-par .sign a:nth-child(2)::after {
-    background: orange;
+    background: var(--blue-3);
 }
 
 .top-par .sign a:hover span {
@@ -175,7 +166,7 @@ body {
     padding: 3px;
 
     min-width: 10%;
-    height:180%;
+    height: 180%;
     border: 2px solid #000a;
     border-radius: 10px;
 
@@ -185,7 +176,7 @@ body {
 
     display: none;
 }
-.top-par.logged .user-avatar{
+.top-par.logged .user-avatar {
     display: flex;
 }
 
@@ -215,5 +206,99 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+/*  */
+
+/*  */
+.top-par .go-up {
+    padding: 2px;
+
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #0004;
+
+    position: fixed;
+    left: 50%;
+    bottom: 1%;
+    transform: translateX(-50%);
+
+    cursor: pointer;
+    color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    opacity: 0;
+    pointer-events: none;
+}
+.top-par .go-up:hover {
+    width: 100px;
+    border-radius: 30px;
+    background-color: #0007;
+}
+
+.top-par .go-up.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.top-par .go-up::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    inset: 0;
+
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.top-par .go-up:hover::before {
+    transition-delay: 0.3s;
+    background: lime;
+}
+
+.top-par .go-up .logo {
+    font-size: 3rem;
+
+    transition: 0.3s;
+}
+.top-par .go-up:hover .logo {
+    transform: translateX(-300%);
+}
+
+.top-par .go-up .content {
+    padding: 1px;
+    width: 60px;
+
+    transition: 0.3s;
+
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-par .go-up:hover .content {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.top-par .go-up .content span {
+    width: 100%;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    /* color: #fff; */
 }
 /*  */
