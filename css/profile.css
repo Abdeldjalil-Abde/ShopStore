@@ -228,7 +228,7 @@ section.visit .information .action .edit {
 
     transition: 0.2s;
 
-    display: none;
+    /* display: none; */
 }
 section.visit .information .action .edit:hover {
     transform: translate(-50%, -50%) scale(1.1);
@@ -254,7 +254,7 @@ section.visit .information .action .contact {
 
     transition: 0.2s;
 
-    display: none;
+    /* display: none; */
 }
 section.visit .information .action .contact:hover {
     transform: translate(-50%, -50%) scale(1.1);
@@ -282,7 +282,7 @@ section.edit {
     left: 0;
     top: 0;
 
-    display: none;
+    /* display: none; */
 }
 section.edit.show {
     display: flex;
