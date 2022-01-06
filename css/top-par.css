@@ -217,12 +217,12 @@ body {
     height: 60px;
     border: 1px solid #000;
     border-radius: 50%;
-    background-color: #0004;
+    background: #fff4;
 
     position: fixed;
-    left: 50%;
+    right: 1%;
     bottom: 1%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
 
     cursor: pointer;
     color: #000;

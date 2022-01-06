@@ -12,6 +12,11 @@ filterMene.addEventListener("click", (e) => {
     toolsPar.classList.toggle("mene-opened");
     market.classList.toggle("mene-opened");
 });
+
+window.addEventListener("scroll",()=>{
+    filterMene.classList.remove("active");
+    market.classList.remove("mene-opened");
+})
 //  //
 
 // filter par style //

@@ -86,11 +86,11 @@ main {
     border-radius: 30px;
     background: linear-gradient(
         125deg,
-        #00F7FFaa,
-        #00BEC6aa,
-        #1DB1FFaa,
-        #8485EAaa,
-        #AF52AEaa
+        #00f7ffaa,
+        #00bec6aa,
+        #1db1ffaa,
+        #8485eaaa,
+        #af52aeaa
     );
 
     position: relative;
@@ -106,7 +106,7 @@ main {
 
 main::before,
 main::after {
-    content: "";
+    /* content: ""; */
     display: block;
 
     width: 300%;
@@ -121,20 +121,18 @@ main::after {
 
     z-index: -5;
 }
-main::before{
+main::before {
     transform: translate(-80%, -10%);
-
 }
-main::after{
+main::after {
     transform: translate(-81%, -9%);
-
 }
 
 main .label {
     width: 40%;
     height: 60px;
     border-radius: 0 0 50px 50px;
-    background: #0005;
+    background: #fff5;
 
     position: absolute;
     top: 0;
@@ -269,6 +267,7 @@ main .left ul li.product-type .input .type {
     /* border-radius: 10px 0 0 10px; */
 
     display: flex;
+    justify-content: center;
 }
 
 main .left ul li.product-type .input .type img {
@@ -287,7 +286,7 @@ main .left ul li.product-type .input .type span {
 }
 
 main .left ul li.product-type .input .change {
-    padding: 5px;
+    padding: 10px;
 
     width: max-content;
     height: 100%;
@@ -295,7 +294,7 @@ main .left ul li.product-type .input .change {
     border-left: none;
     border-radius: 0 20px 20px 0;
     outline: none;
-    background: none;
+    background: #fff6;
 
     font-size: var(--text-size-3);
     font-weight: 700;
@@ -321,6 +320,13 @@ main .left ul li.product-type .input .change:active {
 /*  */
 main .left ul li.quality {
     height: 50px;
+
+    justify-content: start;
+}
+
+main .left ul li.quality span {
+    /* border: none; */
+    border-radius: 20px 0 0 20px;
 }
 
 main .left ul li.quality .input {
@@ -334,7 +340,7 @@ main .left ul li.quality .input .stars {
 
     width: 70%;
     height: 100%;
-    border-radius: 20px 0 0 20px;
+    /* border-radius: 20px 0 0 20px; */
     background: #000a;
 
     display: flex;
@@ -396,6 +402,18 @@ main .left ul li.quality .input .content p {
 /*  */
 
 /*  */
+main .left ul li.product-color span {
+    padding: 10px 20px 10px 0;
+
+    border: none;
+
+    font-size: var(--text-size-4);
+}
+
+main .left ul li.product-color .input  {
+    flex:1;
+}
+
 main .left ul li.product-color .input input {
     padding: 5px;
 
@@ -403,6 +421,7 @@ main .left ul li.product-color .input input {
     height: 100%;
 
     border: 3px solid #0008;
+    border:none;
     outline: none;
     border-radius: 15px;
 
@@ -459,9 +478,11 @@ main .left .action-type > span {
     margin-bottom: 10px;
 
     width: max-content;
+    border: none;
 
-    font-size: var(--text-size-9);
+    font-size: var(--text-size-6);
     font-weight: 900;
+    text-decoration: underline;
 }
 
 main .left .action-type .type {
@@ -494,6 +515,60 @@ main .left .action-type .type .input label {
     cursor: pointer;
 }
 
+main .left .action-type .type .input .radio-container {
+    padding: 0;
+
+    width: 20px;
+    aspect-ratio: 1;
+    border: 2px solid #000;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+main .left .action-type .type .input .radio-container input {
+    /* display: none; */
+    opacity: 0;
+}
+main
+    .left
+    .action-type
+    .type
+    .input
+    .radio-container
+    input:checked
+    + .check-mark {
+    display: block;
+}
+
+main .left .action-type .type .input .radio-container .check-mark {
+    padding: 0;
+
+    width: 100%;
+    aspect-ratio: 1;
+    border: none;
+    /* background: #0f0; */
+
+    filter: blur(3px);
+
+    position: absolute;
+
+    display: none;
+}
+main .left .action-type .type .input.exchange .radio-container .check-mark {
+    background: #00f;
+}
+main .left .action-type .type .input.bay .radio-container .check-mark {
+    background: #0f0;
+}
+
+main .left .action-type .type .input .radio-container {
+}
+
 main .left .action-type .price {
     margin-top: 30px;
 
@@ -501,6 +576,7 @@ main .left .action-type .price {
     height: 150px;
 
     display: flex;
+    justify-content: start;
 }
 main .left .action-type .price.hide {
     opacity: 0;
@@ -510,8 +586,9 @@ main .left .action-type .price span {
     padding: 5px 10px;
 
     width: max-content;
-    border: 1px solid #000;
-    border-radius: 10px;
+    /* border: 1px solid #000; */
+    border: none;
+    border-radius: 20px 0 0 20px;
 
     font-size: var(--text-size-4);
     font-weight: 700;
@@ -523,14 +600,14 @@ main .left .action-type .price span {
 
 main .left .action-type .price input {
     padding: 5px 15px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 
     flex: 1;
     height: 100%;
 
     border: 1px solid #000;
     outline: none;
-    border-radius: 15px;
+    border-radius: 20px;
 
     font-size: 1.5rem;
 }
@@ -550,11 +627,10 @@ main .right .main-picture {
     border-radius: 20px;
     background: #638fd1;
 
-    box-shadow: 
-        -6px -6px 15px transparent,
-        6px 6px 15px #000,
-        inset 6px 6px 15px #000,
-        inset -6px -6px 15px transparent;
+    box-shadow: -6px -6px 15px transparent, 6px 6px 15px #000,
+        inset 6px 6px 15px #000, inset -6px -6px 15px transparent;
+
+    cursor: pointer;
 }
 
 main .right .main-picture h2 {
@@ -668,11 +744,8 @@ main .right .other-pictures {
     /* background: #0003; */
     background: #638fd1;
 
-    box-shadow: 
-        -6px -6px 15px transparent,
-        6px 6px 15px #000,
-        inset 6px 6px 15px #000,
-        inset -6px -6px 15px transparent;
+    box-shadow: -6px -6px 15px transparent, 6px 6px 15px #000,
+        inset 6px 6px 15px #000, inset -6px -6px 15px transparent;
 }
 
 main .right .other-pictures h2 {

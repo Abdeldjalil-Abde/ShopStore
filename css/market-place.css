@@ -76,6 +76,8 @@ body {
     border-radius: 0 300px 300px 0;
     background: var(--gray-4);
 
+    cursor: pointer;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,7 +281,7 @@ body {
     transition: 0.1s;
 }
 .filter-par .left.disable button,
-.filter-par .right.disable button ,
+.filter-par .right.disable button,
 .filter-par .left button:active,
 .filter-par .right button:active {
     opacity: 0.5;
@@ -307,6 +309,7 @@ section.market {
 .tools-par.mene-opened,
 section.market.mene-opened {
     transform: translateX(var(--popup-mene));
+    /* transform: scaleX(0.8); */
 }
 section.market > * {
     margin: 0 auto;
@@ -314,7 +317,7 @@ section.market > * {
 
 section.market .items {
     padding: 5px 10px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     width: 99%;
     border-radius: 20px;
@@ -517,7 +520,8 @@ section.market .container .item.exchange .actions a.get {
     background: var(--blue-4);
 }
 section.market .container .item.bay .actions a.get {
-    background: var(--green-1);
+    /* background: var(--green-1); */
+    background: var(--orange-4);
 }
 section.market .container .item .actions a.get:hover {
     color: #9e0000;

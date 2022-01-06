@@ -4,7 +4,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Axe Cap | Add Product</title>
+
+        <title>Swap | Add Product</title>
+        <link
+            rel="shortcut icon"
+            type="image/png"
+            href="../img/icon/site logo.png"
+        />
 
         <link rel="stylesheet" href="../css/variables.css" />
         <link rel="stylesheet" href="../css/top-par.css" />
@@ -303,11 +309,11 @@
                         </div>
                     </li>
                     <li class="product-color">
-                        <span>Color:</span>
+                        <span>Color</span>
                         <div class="input">
-                            <input type="text" placeholder="color1" />
-                            <input type="text" placeholder="color2" />
-                            <input type="text" placeholder="color3" />
+                            <input type="color" value="#ffffff" />
+                            <input type="color" value="#ffffff" />
+                            <input type="color" value="#ffffff" />
                         </div>
                     </li>
                     <li class="quality">
@@ -337,20 +343,28 @@
 
                         <div class="type">
                             <div class="input exchange">
-                                <input
-                                    type="radio"
-                                    name="act"
-                                    id="act-type-exchange"
-                                    checked
-                                />
+                                <label for="" class="radio-container">
+                                    <input
+                                        type="radio"
+                                        name="act"
+                                        id="act-type-exchange"
+                                        checked
+                                    />
+                                    <span class="check-mark"></span>
+                                </label>
+
                                 <label for="act-type-exchange">Exchange</label>
                             </div>
                             <div class="input bay">
-                                <input
-                                    type="radio"
-                                    name="act"
-                                    id="act-type-bay"
-                                />
+                                <label for="" class="radio-container">
+                                    <input
+                                        type="radio"
+                                        name="act"
+                                        id="act-type-bay"
+                                    />
+                                    <span class="check-mark"></span>
+                                </label>
+
                                 <label for="act-type-bay">Sell</label>
                             </div>
                         </div>

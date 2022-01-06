@@ -16,7 +16,10 @@
     --text-size-4: 1.2rem;
     --text-size-5: 1.5rem;
     --text-size-6: 1.7rem;
-    --text-size-7: 2rem;
+    --text-size-7: 2.2rem;
+    --text-size-8: 2.5rem;
+    --text-size-9: 2.7rem;
+    --text-size-10: 3rem;
 
     --text-weight-1: 300;
     --text-weight-2: 500;
@@ -50,6 +53,7 @@
     --orange-1: #ff4500;
     --orange-2: #9b2900;
     --orange-3: #5a1800;
+    --orange-4: #ca782ca1;
 
     --yellow-1: #ffff00;
     --yellow-2: #ffff00d2;

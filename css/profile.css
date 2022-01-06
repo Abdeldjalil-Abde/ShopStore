@@ -74,6 +74,8 @@ section.visit .avatar .user-name p {
     font-size: var(--text-size-4);
     text-align: center;
     text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 3px #000;
 }
 /*  */
 
@@ -97,7 +99,7 @@ section.visit .information .interactions {
     padding: 30px 20px;
     flex: 1;
 
-    text-transform: uppercase;
+    text-transform: capitalize;
 
     position: relative;
 }
@@ -124,6 +126,8 @@ section.visit .information .interactions > h2 {
 }
 section.visit .information .personal span {
     font-weight: 900;
+
+    width: 30%;
 }
 
 section.visit .information .personal > ul li,
@@ -134,7 +138,30 @@ section.visit .information .interactions ul li {
     align-items: center;
 }
 
-section.visit .information .personal > ul li p,
+section.visit .information .personal > ul li.bio {
+    display: flex;
+    flex-direction: column;
+}
+
+section.visit .information .personal > ul li.bio span{
+    margin-left: 0;
+
+    width: max-content;
+}
+
+section.visit .information .personal > ul li p {
+    padding: 5px;
+
+    flex: 1;
+    border-radius: 5px;
+    background: #0003;
+}
+
+section.visit .information .personal > ul li.bio p {
+    width: 100%;
+    aspect-ratio: 4/1;
+}
+
 section.visit .information .interactions ul li p {
     margin-left: 20px;
 }
@@ -427,15 +454,16 @@ section.edit .information .interactions > h2 {
 }
 
 section.edit .information .personal span {
-    width: max-content;
+    width: 30%;
     font-weight: 900;
 }
 
 section.edit .information .personal input {
     padding: 2px 10px;
 
-    width: 180px;
-    border: 2px solid #000a;
+    /* width: 180px; */
+    flex: 1;
+    border: 1px solid #000a;
     border-radius: 7px;
 
     font-size: var(--text-size-4);
