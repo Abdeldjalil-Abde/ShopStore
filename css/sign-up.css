@@ -21,11 +21,11 @@ body {
 }
 
 section.sign-up {
-    margin: 50px auto;
+    margin: 10px auto;
 
     max-width: 850px;
     width: 80vw;
-    height: 90vh;
+    height: 95vh;
     box-shadow: 0px 1px 5px #000;
 
     display: flex;
@@ -152,34 +152,73 @@ section.sign-up .top-par ul li a::after {
 
 /*  */
 .left {
+    padding: 5px 10px !important;
+
     background: var(--white-1);
 }
 
-.left .create-account-txt {
-    margin: 20px 0;
+.left > .create-account-txt {
 
     width: 100%;
 
-    font-size: var(--text-size-6);
+    font-size: var(--text-size-7);
     text-align: center;
 }
 
+.left > p {
+    width: 100%;
+
+    font-family: monospace;
+    text-align: center;
+    color: #000a;
+}
+
 .left .input-form {
-    margin: 10px auto 0;
-    padding: 20px;
+    margin: -10px auto 0;
 
     width: 90%;
 }
 
 .left .input-form .input {
-    margin-bottom: 20px;
+    margin-top: 40px;
 
     width: 100%;
-    height: 40px;
+    height: 35px;
+}
+
+.left .input-form .input input{
+    font-weight: 700;
+}
+
+.left .input-form .input .error-msg {
+    width: max-content;
+
+    font-size: var(--text-size-2);
+    color: red;
+
+    text-shadow: 0px 0px 5px #f006, 0px 0px 10px #f006, 0px 0px 15px #f006,
+        0px 0px 20px #f006;
+
+    position: absolute;
+    right: 0;
+    bottom: 115%;
+
+    animation: error 6s infinite;
+}
+@keyframes error {
+    0%,60%,
+    100% {
+        text-shadow: 0px 0px 5px #f005, 0px 0px 10px #f005, 0px 0px 15px #f005,
+            0px 0px 20px #f005;
+    }
+    80% {
+        text-shadow: 0px 0px 5px #f00d, 0px 0px 10px #f00d, 0px 0px 15px #f00d,
+            0px 0px 20px #f00d;
+    }
 }
 
 .left .accept-rolls-box {
-    margin-top: -10px;
+    margin-top: 30px;
     padding: 5px 45px;
 
     width: 100%;
@@ -206,12 +245,13 @@ section.sign-up .top-par ul li a::after {
 }
 
 .left .submit {
-    margin: 20px 50%;
+    margin: 10px 50%;
     padding: 10px 20px;
 
     width: max-content;
     background: var(--blue-3);
     border: none;
+    border-radius: 5px;
 
     font-size: var(--text-size-5);
     color: var(--white-1);
@@ -219,8 +259,17 @@ section.sign-up .top-par ul li a::after {
 
     transform: translateX(-50%);
     transition: 0.3s;
+
+    pointer-events: none;
+    opacity: 0.5;
+    transform: translateX(-50%) scale(0.8);
 }
-.left .submit:active {
+.left .submit.enable {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+.left .submit.enable:active {
     color: var(--purple-1);
     transform: translateX(-50%) scale(0.9);
 }

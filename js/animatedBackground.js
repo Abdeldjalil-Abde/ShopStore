@@ -5,6 +5,13 @@ let backgroundHeight = backgroundStyle
     .getPropertyValue("height")
     .split("px")[0];
 
+// add bubbles //
+background.innerHTML = "";
+for (let i = 0; i < 20; i++) {
+    background.innerHTML += '<div class="circle"></div>';
+}
+//  //
+
 const circles = document.querySelectorAll(".animated-background .circle");
 
 let circlesNum = circles.length;
@@ -22,8 +29,12 @@ function circleAnimation(circle, index) {
     if (rest < 0) rest *= -1;
 
     if (rest < 10) {
-        newCardenas[index].x = Math.floor(Math.random() * backgroundWidth);
-        newCardenas[index].y = Math.floor(Math.random() * backgroundHeight);
+        newCardenas[index].x = Math.floor(
+            Math.random() * (backgroundWidth * 1 + 200)
+        );
+        newCardenas[index].y = Math.floor(
+            Math.random() * (backgroundHeight * 1 + 200)
+        );
 
         let duration = Math.floor(
             Math.sqrt(

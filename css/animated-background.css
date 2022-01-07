@@ -25,43 +25,53 @@ section.animated-background .circle {
 }
 
 section.animated-background .circle:nth-child(1),
-section.animated-background .circle:nth-child(11) {
+section.animated-background .circle:nth-child(11) ,
+section.animated-background .circle:nth-child(21) {
     background: orangered;
 }
 section.animated-background .circle:nth-child(2),
-section.animated-background .circle:nth-child(12) {
+section.animated-background .circle:nth-child(12) ,
+section.animated-background .circle:nth-child(22) {
     background: red;
 }
 section.animated-background .circle:nth-child(3),
-section.animated-background .circle:nth-child(13) {
+section.animated-background .circle:nth-child(13) ,
+section.animated-background .circle:nth-child(23) {
     background: green;
 }
 section.animated-background .circle:nth-child(4),
-section.animated-background .circle:nth-child(14) {
+section.animated-background .circle:nth-child(14) ,
+section.animated-background .circle:nth-child(24) {
     background: yellow;
 }
 section.animated-background .circle:nth-child(5),
-section.animated-background .circle:nth-child(15) {
+section.animated-background .circle:nth-child(15) ,
+section.animated-background .circle:nth-child(25) {
     background: blue;
 }
 section.animated-background .circle:nth-child(6),
-section.animated-background .circle:nth-child(16) {
+section.animated-background .circle:nth-child(16) ,
+section.animated-background .circle:nth-child(26) {
     background: brown;
 }
 section.animated-background .circle:nth-child(7),
-section.animated-background .circle:nth-child(17) {
+section.animated-background .circle:nth-child(17) ,
+section.animated-background .circle:nth-child(27) {
     background: #ff002b;
 }
 section.animated-background .circle:nth-child(8),
-section.animated-background .circle:nth-child(18) {
+section.animated-background .circle:nth-child(18) ,
+section.animated-background .circle:nth-child(28) {
     background: lime;
 }
 section.animated-background .circle:nth-child(9),
-section.animated-background .circle:nth-child(19) {
+section.animated-background .circle:nth-child(19) ,
+section.animated-background .circle:nth-child(29) {
     background: purple;
 }
 section.animated-background .circle:nth-child(10),
-section.animated-background .circle:nth-child(20) {
+section.animated-background .circle:nth-child(20) ,
+section.animated-background .circle:nth-child(30) {
     background: gray;
 }
 
