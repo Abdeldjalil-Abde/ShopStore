@@ -1,0 +1,331 @@
+main {
+    margin: 50px auto 0;
+    padding: 0 !important;
+
+    width: 100%;
+    padding: 10px;
+}
+
+main header {
+    padding: 5px;
+
+    width: 100%;
+    height: 120vh;
+    background: url(../img/about-us.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    overflow: hidden;
+    isolation: isolate;
+}
+main header::before {
+    content: "";
+    display: block;
+
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #000a, #0003);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -5;
+
+    animation: animate 13s infinite alternate;
+}
+@keyframes animate {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+main header > .content {
+    margin: 270px auto 0;
+
+    width: 60%;
+    padding: 5px;
+}
+
+main header .content h1 {
+    margin-bottom: 40px;
+
+    font-family: system-ui;
+    font-size: var(--title-size-9);
+    font-weight: 100;
+    letter-spacing: 1rem;
+    text-align: center;
+    color: #fff;
+
+    animation: title 10s linear infinite;
+}
+@keyframes title {
+    0%,
+    50%,
+    100% {
+        text-shadow: 0px 0px 5px #00f2, 0px 0px 10px #00f2, 0px 0px 15px #00f2,
+            0px 0px 20px #00f2, 0px 0px 25px #00f2, 0px 0px 30px #00f2,
+            0px 0px 35px #00f2, 0px 0px 40px #00f2, 0px 0px 45px #00f2,
+            0px 0px 50px #00f2, 0px 0px 55px #00f2, 0px 0px 65px #00f2;
+    }
+    75% {
+        text-shadow: 0px 0px 5px #00f9, 0px 0px 10px #00f9, 0px 0px 15px #00f9,
+            0px 0px 20px #00f9, 0px 0px 25px #00f9, 0px 0px 30px #00f9,
+            0px 0px 35px #00f9, 0px 0px 40px #00f9, 0px 0px 45px #00f9,
+            0px 0px 50px #00f9, 0px 0px 55px #00f9, 0px 0px 65px #00f9;
+    }
+}
+
+main header .content p {
+    font-family: cursive;
+    font-size: var(--text-size-4);
+    text-align: center;
+    color: #fff9;
+    text-shadow: 2px 2px 5px #000;
+}
+/*  */
+
+/*  */
+main header .statistics {
+    padding: 5px;
+    margin: 60px auto;
+
+    width: 50%;
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+main header .statistics::before {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    box-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 15px #fff,
+        0px 0px 20px #fff, 0px 0px 25px #fff, 0px 0px 30px #fff;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main header .statistics .content {
+    padding: 30px 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+main header .statistics .content::before {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 2px;
+    background: #fff;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main header .statistics .content h4 {
+    font-size: var(--text-size-7);
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+
+main header .statistics .content span {
+    margin-top: 10px;
+
+    font-size: var(--text-size-3);
+    text-align: center;
+    color: #fff9;
+    text-shadow: 2px 2px 5px #000;
+}
+/*  */
+
+/*  */
+main .contact-us {
+    width: 100%;
+    height: 400px;
+    background: #0001;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .contact-us > h2 {
+    margin: 20px 0 40px;
+
+    font-size: var(--title-size-5);
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+
+main .contact-us .container {
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+}
+
+main .contact-us .container .left {
+    width: 30%;
+    height: 100%;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .contact-us .container .left img {
+    width: 90%;
+}
+
+main .contact-us .container .right {
+    flex: 1;
+    height: 100%;
+    background: #fff7;
+}
+
+main .contact-us .container .right ul {
+    margin-top: 50px;
+    margin-left: 100px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .contact-us .container .right ul li {
+    margin: 10px 0;
+
+    font-size: var(--text-size-4);
+    font-weight: 600;
+
+    display: flex;
+}
+
+main .contact-us .container .right ul li span {
+    /* margin-right: 20px; */
+
+    width: 100px;
+}
+
+main .contact-us .container .right ul li a:hover {
+    color: #00f;
+}
+/*  */
+
+/*  */
+main .dev {
+    padding: 20px 100px 50px;
+
+    width: 100%;
+    background: #fff1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .dev > h2 {
+    margin-bottom: 50px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--title-size-5);
+    letter-spacing: 0.5rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 5px 5px 5px #000;
+}
+
+main .dev .cards {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .dev .cards .card {
+    padding: 30px 40px;
+
+    width: 250px;
+    /* aspect-ratio: 1/1.5; */
+    border-radius: 30px;
+    background: #000;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+main .dev .cards .card > * {
+    margin: 0 auto;
+}
+
+main .dev .cards .card::before,
+main .dev .cards .card::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -5;
+
+    transition: 0.5s;
+}
+main .dev .cards .card::before {
+    background: orangered;
+}
+main .dev .cards .card::after {
+    background: orange;
+}
+
+main .dev .cards .card:hover::before {
+    transform: rotate(-20deg);
+}
+main .dev .cards .card:hover::after {
+    transform: rotate(-10deg);
+}
+
+main .dev .cards .card img {
+    width: 80%;
+    border-radius: 30%;
+}
+
+main .dev .cards .card h2 {
+    margin-top: 20px;
+
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: #fff;
+}
+
+main .dev .cards .card p {
+    margin-top: 10px;
+
+    line-height: 1.7rem;
+    color: #fff;
+}
