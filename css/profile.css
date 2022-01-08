@@ -4,12 +4,12 @@ body {
 }
 
 .top-par {
-    height: 15%;
+    /* height: 15%; */
     border-bottom: 7px solid rgba(7, 7, 7, 0.333);
 }
 
 main {
-    margin: 110px auto;
+    margin: 90px auto;
 
     width: 93%;
     height: 83%;

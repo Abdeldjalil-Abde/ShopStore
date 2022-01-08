@@ -276,7 +276,7 @@ function itemGenerator(filterType, actionType) {
     // item action //
     itemContent += '<div class="actions">'; // action open //
 
-    itemContent += '<div class="owner">'; // owner open //
+    itemContent += '<a class="owner" href="profile-visit.htm">'; // owner open //
 
     // owner logo //
     itemContent +=
@@ -287,7 +287,7 @@ function itemGenerator(filterType, actionType) {
     itemContent += '<span class="name">The Owner</span>';
     //  //
 
-    itemContent += "</div>"; // owner close //
+    itemContent += "</a>"; // owner close //
 
     itemContent += '<a href="" class="get">' + actionType + "</a>"; // action button //
 

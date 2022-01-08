@@ -354,7 +354,7 @@ section.market .container {
     padding: 30px 10px;
 
     width: 100%;
-    height: 400px;
+    height: 450px;
     border-radius: 20px;
     box-shadow: inset 0px 3px 7px #0006, inset 0px -3px 7px #fff6;
 
@@ -386,7 +386,7 @@ section.market .container .item > * {
 section.market.filtered .container .item {
     margin-bottom: 30px;
 
-    aspect-ratio: 1/1.15;
+    aspect-ratio: 1/1.25;
 }
 
 .img-price-container {
@@ -466,7 +466,6 @@ section.market .container .item .description .more:hover {
 
 section.market .container .item .actions {
     padding: 0 10px;
-    margin-top: 25px;
 
     width: 100%;
     height: 10%;
@@ -477,8 +476,12 @@ section.market .container .item .actions {
 }
 
 section.market .container .item .actions .owner {
-    width: 50%;
-    height: 100%;
+    padding: 5px;
+
+    width: 60%;
+    /* height: 100%; */
+    border-radius: 10px;
+    background: #0004;
 
     display: flex;
     align-items: center;
@@ -499,10 +502,18 @@ section.market .container .item .actions .owner .logo img {
 }
 
 section.market .container .item .actions .owner .name {
-    margin-left: 3px;
+    margin-left: 5px;
 
-    width: max-content;
+    /* width: max-content; */
+    flex:1;
+
     font-size: var(--text-size-2);
+    font-weight: 700;
+    color: #000;
+}
+section.market .container .item .actions .owner:hover .name {
+    color: var(--blue-0);
+
 }
 
 section.market .container .item .actions a.get {

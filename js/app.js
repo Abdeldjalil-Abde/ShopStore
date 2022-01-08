@@ -58,7 +58,6 @@ function getUrlParameters() {
 
 // set the logged style //
 let urlPar = getUrlParameters();
-const allLinks = document.querySelectorAll("a");
 
 if (urlPar["logged"] == "true") {
     header.classList.add("logged");
