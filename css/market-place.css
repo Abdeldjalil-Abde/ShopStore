@@ -308,8 +308,8 @@ section.market {
 .filter-par.mene-opened,
 .tools-par.mene-opened,
 section.market.mene-opened {
-    transform: translateX(var(--popup-mene));
-    /* transform: scaleX(0.8); */
+    /* transform: translateX(var(--popup-mene)); */
+    transform: scaleX(0.8);
 }
 section.market > * {
     margin: 0 auto;
@@ -490,7 +490,7 @@ section.market .container .item .actions .owner {
 section.market .container .item .actions .owner .logo {
     width: 25%;
     aspect-ratio: 1;
-    border: 3px solid #000;
+    border: 2px solid #000;
     border-radius: 50%;
 
     overflow: hidden;

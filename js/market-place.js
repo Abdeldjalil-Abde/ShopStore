@@ -13,10 +13,12 @@ filterMene.addEventListener("click", (e) => {
     market.classList.toggle("mene-opened");
 });
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
     filterMene.classList.remove("active");
+    filterPar.classList.remove("mene-opened");
+    toolsPar.classList.remove("mene-opened");
     market.classList.remove("mene-opened");
-})
+});
 //  //
 
 // filter par style //
@@ -143,7 +145,7 @@ let productTypesItems = {
     electrics: [
         { name: "tv", logo: "../img/icon/electric/tv.png" },
         {
-            name: "air-conditioner",
+            name: "air conditioner",
             logo: "../img/icon/electric/air-conditioner.png",
         },
         { name: "fridge", logo: "../img/icon/electric/fridge.png" },
@@ -229,21 +231,19 @@ function setSideFilter(type) {
     filterMeneBtnContent.innerHTML = type;
 }
 
-function itemGenerator(filterType, actionType) {
+function itemGenerator(filterType, actionType, index) {
     let itemContent = "";
 
     itemContent += '<div class="item ' + actionType + '">'; // item open //
 
     // item img //
     if (actionType == "exchange") {
-        itemContent +=
-            '<div class="img"><img src="../img/img-3.jpg" alt="" /></div>';
+        itemContent += `<div class="img"><img src="../img/products/${urlPar["product_type"]}/${filterType}/${filterType} (${index}).jpg" alt="" /></div>`;
     } else {
         itemContent += '<div class="img-price-container">'; // img price container open //
 
         // img //
-        itemContent +=
-            '<div class="img"><img src="../img/img-3.jpg" alt="" /></div>';
+        itemContent += `<div class="img"><img src="../img/products/${urlPar["product_type"]}/${filterType}/${filterType} (${index}).jpg" alt="" /></div>`;
         //  //
 
         // price //
@@ -268,7 +268,7 @@ function itemGenerator(filterType, actionType) {
     itemContent +=
         '<p class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius beatae vitae fuga optio nihil dolore?</p>';
 
-    itemContent += '<a href="product.htm" class="more">more</a>';
+    itemContent += `<a href="product.htm?product_type=${urlPar["product_type"]}&filter_type=${filterType}" class="more">more</a>`; // show more //
 
     itemContent += "</div>"; // description close //
     //  //
@@ -280,7 +280,7 @@ function itemGenerator(filterType, actionType) {
 
     // owner logo //
     itemContent +=
-        '<div class="logo"><img src="../img/img-1.jpg" alt="" /></div>';
+        '<div class="logo"><img src="../img/icon/profile.png" alt="" /></div>';
     //  //
 
     // owner name //
@@ -289,7 +289,7 @@ function itemGenerator(filterType, actionType) {
 
     itemContent += "</a>"; // owner close //
 
-    itemContent += '<a href="" class="get">' + actionType + "</a>"; // action button //
+    itemContent += `<a href="product.htm?product_type=${urlPar["product_type"]}&filter_type=${filterType}" class="get">${actionType}</a>`; // action button //
 
     itemContent += "</div>"; // action close //
     //  //
@@ -321,7 +321,11 @@ function setMarketNotFiltered(productType) {
         for (let i = 0; i < 3; i++) {
             let actionType =
                 Math.floor(Math.random() * 2) == 0 ? "exchange" : "bay";
-            marketContent += itemGenerator(filterType, actionType);
+            marketContent += itemGenerator(
+                filterType["name"],
+                actionType,
+                i + 1
+            );
         }
         //  //
 
