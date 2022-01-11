@@ -1,12 +1,27 @@
 // images style //
 const imagesContainer = document.querySelector(".images-container");
 const imagesBar = document.querySelector(".images-container .images-bar");
+
+// set the images //
+let productType = urlPar["product_type"];
+let filterType = urlPar["filter_type"];
+
+imagesBar.innerHTML = "";
+for (let i = 1; i <= 3; i++) {
+    imagesBar.innerHTML += `<div class="img">
+                                <img src="../img/products/${productType}/${filterType}/${filterType} (${i}).jpg" alt="" />
+                            </div>`;
+}
+//  //
+
 const images = document.querySelectorAll(".images-container .images-bar .img");
 
 const leftBtn = document.querySelector(".images-container .left-btn");
 const rightBtn = document.querySelector(".images-container .right-btn");
 
 const imagesContainerStyle = window.getComputedStyle(imagesContainer);
+
+let actionType = urlPar["action_type"];
 
 let imagesContainerWidth = imagesContainerStyle
     .getPropertyValue("width")
@@ -48,5 +63,4 @@ if (urlPar["product_action"] == "bay") {
 } else if (urlPar["product_action"] == "exchange") {
     exchangeBtn.classList.add("show");
 }
-
 //  //
