@@ -12,7 +12,71 @@ typeBay.addEventListener("click", (e) => {
 typeExchange.addEventListener("click", (e) => {
     priceBox.classList.add("hide");
 });
+//  //
 
+// increment and decrement the price //
+const priceValue = document.querySelector(".action-type .price p");
+
+const incrementButtons = document.querySelectorAll(
+    ".action-type .price .increment-container .increment"
+);
+const decrementButtons = document.querySelectorAll(
+    ".action-type .price .decrement-container .decrement"
+);
+
+incrementButtons.forEach((obj, index) => {
+    obj.addEventListener("click", () => {
+        let value = 0;
+        switch (index) {
+            case 0:
+                value = 5;
+                break;
+            case 1:
+                value = 10;
+                break;
+            case 2:
+                value = 100;
+                break;
+            case 3:
+                value = 1000;
+                break;
+            case 4:
+                value = 10000;
+                break;
+        }
+
+        priceValue.innerHTML = priceValue.innerHTML * 1 + value;
+    });
+});
+
+decrementButtons.forEach((obj, index) => {
+    obj.addEventListener("click", () => {
+        let value = 0;
+        switch (index) {
+            case 0:
+                value = 5;
+                break;
+            case 1:
+                value = 10;
+                break;
+            case 2:
+                value = 100;
+                break;
+            case 3:
+                value = 1000;
+                break;
+            case 4:
+                value = 10000;
+                break;
+        }
+
+        priceValue.innerHTML = priceValue.innerHTML * 1 - value;
+
+        if (priceValue.innerHTML < 0) {
+            priceValue.innerHTML = "0";
+        }
+    });
+});
 //  //
 
 // product type window //
