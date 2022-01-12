@@ -35,6 +35,10 @@ const pwdConfError = document.querySelector(
     ".left .input-form .input.pwd-conf .error-msg"
 );
 
+const acceptRollsInput = document.querySelector(
+    ".left .accept-rolls-box input"
+);
+
 const submitBtn = document.querySelector(".left .submit");
 
 let formErrors = {
@@ -44,6 +48,7 @@ let formErrors = {
     mail: false,
     pwd: false,
     pwdConf: false,
+    acceptRolls: false,
 };
 
 // first name //
@@ -143,6 +148,12 @@ pwdConfInput.addEventListener("input", (e) => {
 });
 //  //
 
+// accept rolls //
+acceptRollsInput.addEventListener("click", (e) => {
+    formErrors.acceptRolls = formErrors.acceptRolls == false ? true : false;
+});
+//  //
+
 // submit button //
 setInterval(() => {
     if (
@@ -151,13 +162,14 @@ setInterval(() => {
         formErrors.phone == true &&
         formErrors.mail == true &&
         formErrors.pwd == true &&
-        formErrors.pwdConf == true
+        formErrors.pwdConf == true &&
+        formErrors.acceptRolls == true
     ) {
         submitBtn.classList.add("enable"); // enable the submit button //
     } else {
         submitBtn.classList.remove("enable"); // disable the submit button //
     }
-}, 1000);
+}, 500);
 //  //
 
 // validation functions //

@@ -123,6 +123,34 @@ section.log-in .top-par ul li a::after {
     height: 40px;
 }
 
+.left .user-info .input .error-msg {
+    width: max-content;
+
+    font-size: var(--text-size-2);
+    color: red;
+
+    text-shadow: 0px 0px 5px #f006, 0px 0px 10px #f006, 0px 0px 15px #f006,
+        0px 0px 20px #f006;
+
+    position: absolute;
+    right: 0;
+    bottom: 115%;
+
+    animation: error 6s infinite;
+}
+@keyframes error {
+    0%,
+    60%,
+    100% {
+        text-shadow: 0px 0px 5px #f005, 0px 0px 10px #f005, 0px 0px 15px #f005,
+            0px 0px 20px #f005;
+    }
+    80% {
+        text-shadow: 0px 0px 5px #f00d, 0px 0px 10px #f00d, 0px 0px 15px #f00d,
+            0px 0px 20px #f00d;
+    }
+}
+
 .left .user-info .choices {
     width: 100%;
     height: 70px;
@@ -205,8 +233,19 @@ section.log-in .top-par ul li a::after {
     color: var(--white-1);
 
     transition: 0.1s linear;
+
+    transform: scale(0.7);
+    opacity: 0.5;
+    pointer-events: none;
+
+    cursor: pointer;
 }
-.left .user-info .submit-box .log:hover {
+.left .user-info .submit-box .log.active {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+.left .user-info .submit-box .log.active:hover {
     transform: scale(0.95);
 }
 
