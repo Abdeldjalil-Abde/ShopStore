@@ -158,7 +158,6 @@ section.sign-up .top-par ul li a::after {
 }
 
 .left > .create-account-txt {
-
     width: 100%;
 
     font-size: var(--text-size-7);
@@ -186,7 +185,7 @@ section.sign-up .top-par ul li a::after {
     height: 35px;
 }
 
-.left .input-form .input input{
+.left .input-form .input input {
     font-weight: 700;
 }
 
@@ -206,7 +205,8 @@ section.sign-up .top-par ul li a::after {
     animation: error 6s infinite;
 }
 @keyframes error {
-    0%,60%,
+    0%,
+    60%,
     100% {
         text-shadow: 0px 0px 5px #f005, 0px 0px 10px #f005, 0px 0px 15px #f005,
             0px 0px 20px #f005;
@@ -245,8 +245,9 @@ section.sign-up .top-par ul li a::after {
 }
 
 .left .submit {
-    margin: 10px 50%;
+    margin: 10px auto;
     padding: 10px 20px;
+    display: block;
 
     width: max-content;
     background: var(--blue-3);
@@ -257,19 +258,18 @@ section.sign-up .top-par ul li a::after {
     color: var(--white-1);
     cursor: pointer;
 
-    transform: translateX(-50%);
     transition: 0.3s;
 
     pointer-events: none;
     opacity: 0.5;
-    transform: translateX(-50%) scale(0.8);
+    transform: scale(0.8);
 }
 .left .submit.enable {
     pointer-events: all;
     opacity: 1;
-    transform: translateX(-50%) scale(1);
+    transform: scale(1);
 }
 .left .submit.enable:active {
     color: var(--purple-1);
-    transform: translateX(-50%) scale(0.9);
+    transform: scale(0.9);
 }

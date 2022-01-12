@@ -183,6 +183,18 @@ let productTypesItems = {
     ],
 };
 
+function getProductIconLocation(productType, filterType) {
+    let location = "";
+
+    productTypesItems[productType].forEach((obj) => {
+        if (obj["name"] == filterType) {
+            location = obj["logo"];
+        }
+    });
+
+    return location;
+}
+
 function setSideFilter(type) {
     if (type == "none") {
         filterMene.style.display = "none";
@@ -309,9 +321,11 @@ function setMarketNotFiltered(productType) {
 
         // open the type container //
         marketContent +=
-            '<div class="items"><div class="type"><h2>' +
-            filterType["name"] +
-            "</h2></div>";
+            '<div class="items">' +
+            '<div class="type">' +
+            `<img src="${filterType["logo"]}" alt="" />` +
+            `<h2> ${filterType["name"]}</h2>` +
+            "</div>";
         //  //
 
         // the items //
@@ -349,19 +363,24 @@ function setMarketFiltered(filterType) {
 
     // open the type container //
     marketContent +=
-        '<div class="items"><div class="type"><h2>' +
-        filterType +
-        "</h2></div>";
+        '<div class="items">' +
+        '<div class="type">' +
+        `<img src="${getProductIconLocation(
+            urlPar["product_type"],
+            filterType
+        )}" alt="" />` +
+        `<h2> ${filterType}</h2>` +
+        "</div>";
     //  //
 
     // the items //
     marketContent += '<div class="container">'; // adding open //
 
     // add the items //
-    for (let i = 0; i < 12; i++) {
+    for (let i = 1; i <= 30; i++) {
         let actionType =
             Math.floor(Math.random() * 2) == 0 ? "exchange" : "bay";
-        marketContent += itemGenerator(filterType, actionType);
+        marketContent += itemGenerator(filterType, actionType, (i % 3) + 1);
     }
     //  //
 

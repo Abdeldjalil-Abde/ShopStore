@@ -332,14 +332,31 @@ section.market .items > * {
     margin: 5px auto;
 }
 
-section.market .items .type {
-    padding: 5px 10px;
+section.market .items .type{
+    padding: 7px 20px;
 
-    width: 100%;
+    /* width: 100%; */
     border-radius: 15px;
     background: #fff;
 
-    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section.market .items .type img{
+    width: 30px;
+    aspect-ratio: 1;
+    object-fit: contain;
+
+}
+
+section.market .items .type h2 {
+    margin-left: 20px;
+
+    text-transform: capitalize;
+    text-align: center;
 }
 
 section.market .items .view-all {
@@ -350,7 +367,7 @@ section.market.filtered .items .view-all {
 }
 
 section.market .container {
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 30px 10px;
 
     width: 100%;
@@ -505,7 +522,7 @@ section.market .container .item .actions .owner .name {
     margin-left: 5px;
 
     /* width: max-content; */
-    flex:1;
+    flex: 1;
 
     font-size: var(--text-size-2);
     font-weight: 700;
@@ -513,7 +530,6 @@ section.market .container .item .actions .owner .name {
 }
 section.market .container .item .actions .owner:hover .name {
     color: var(--blue-0);
-
 }
 
 section.market .container .item .actions a.get {
