@@ -280,6 +280,7 @@ main .titles-par {
     position: sticky;
     left: 0;
     top: 70px;
+    z-index: 10;
 
     display: flex;
     justify-content: space-between;
@@ -378,6 +379,7 @@ main .container section.intro p::first-line {
 /*  */
 main .container section.miscellaneous {
     margin: 50px auto;
+    padding: 30px;
 
     width: 90%;
     border-radius: 10px;
@@ -446,23 +448,125 @@ main .container section.miscellaneous .type span {
 /*  */
 main .container section.reviews {
     margin: 50px auto;
+    padding: 30px;
 
     width: 90%;
-    height: 50vh;
+    height: 100vh;
+    border-radius: 10px;
     background: #fff3;
 
     display: flex;
+    flex-direction: column;
+}
+
+main .container section.reviews h2 {
+    font-size: var(--title-size-4);
+    text-align: center;
+}
+
+main .container section.reviews .container {
+    margin: 50px auto;
+    padding: 10px;
+
+    width: 90%;
+    flex: 1;
+
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+}
+
+main .container section.reviews .container .item {
+    padding: 25px;
+
+    width: 32%;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff9;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .container section.reviews .container .item .evaluation {
+    margin: 0 auto;
+    padding: 5px 30px;
+
+    width: 70%;
+    border-radius: 5px;
+    background: #000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .container section.reviews .container .item .evaluation .star {
+    width: 20px;
+    aspect-ratio: 1;
+
+    clip-path: polygon(
+        50% 0,
+        65% 35%,
+        100% 35%,
+        70% 60%,
+        90% 100%,
+        50% 80%,
+        10% 100%,
+        30% 60%,
+        0% 35%,
+        35% 35%
+    );
+}
+main .container section.reviews .container .item .evaluation .star.empty {
+    background: #fff;
+}
+main .container section.reviews .container .item .evaluation .star.half {
+    background: linear-gradient(90deg, #ff0 0 50%, #fff 50% 100%);
+}
+main .container section.reviews .container .item .evaluation .star.full {
+    background: #ff0;
+}
+
+main .container section.reviews .container .item .comment {
+    padding: 10px;
+
+    border: 2px solid #0006;
+    border-radius: 20px;
+
+    font-size: var(--text-size-4);
+}
+
+main .container section.reviews .container .item .user {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+main .container section.reviews .container .item .user img {
+    width: 50px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+main .container section.reviews .container .item .user span {
+    margin-left: 10px;
+
+    font-weight: 600;
+    text-transform: capitalize;
 }
 /*  */
 
 /*  */
 main .container section.video {
     margin: 50px auto;
+    padding: 30px;
 
     width: 90%;
     height: 50vh;
+    border-radius: 10px;
     background: #fff3;
 
     display: flex;
@@ -474,7 +578,7 @@ main .container section.video {
 /*  */
 main section.contact-us {
     margin: 0 auto;
-    
+
     width: 90%;
     height: 400px;
     border-radius: 10px;
