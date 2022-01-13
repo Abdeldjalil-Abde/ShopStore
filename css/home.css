@@ -274,12 +274,13 @@ main .titles-par {
     padding: 0 100px;
 
     width: 100%;
-    height: 70px;
+    height: 50px;
     background: #fff;
 
     position: sticky;
     left: 0;
     top: 70px;
+    /* bottom: 50%; */
     z-index: 10;
 
     display: flex;
@@ -302,7 +303,7 @@ main .titles-par::before {
     background: #000;
 
     position: absolute;
-    top: 0;
+    bottom: 150%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -453,7 +454,7 @@ main .container section.reviews {
     width: 90%;
     height: 100vh;
     border-radius: 10px;
-    background: #fff3;
+    background: #fff9;
 
     display: flex;
     flex-direction: column;
@@ -562,16 +563,41 @@ main .container section.reviews .container .item .user span {
 /*  */
 main .container section.video {
     margin: 50px auto;
-    padding: 30px;
+    padding: 0px;
 
-    width: 90%;
-    height: 50vh;
+    width: 50%;
+    /* height: 50vh; */
     border-radius: 10px;
-    background: #fff3;
+    background: #fff9;
 
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main .container section.video h2 {
+    margin: 20px 0 0;
+
+    font-size: var(--title-size-4);
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+main .container section.video .container{
+    margin: 50px auto;
+    padding: 5px;
+
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container section.video .container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /*  */
 

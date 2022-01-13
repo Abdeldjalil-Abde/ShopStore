@@ -5,6 +5,9 @@ const mailError = document.querySelector(
 );
 
 const pwdInput = document.querySelector(".left .user-info .input.pwd input");
+const pwdError = document.querySelector(
+    ".left .user-info .input.pwd .error-msg"
+);
 
 const logInButton = document.querySelector(".left .user-info .submit-box .log");
 
@@ -20,16 +23,35 @@ mailInput.addEventListener("input", (e) => {
     if (test == true) {
         formErrors.mail = true; // set mail error //
         mailError.innerHTML = ""; // remove error msg //
-    } else {
+        e.target.classList.remove("error"); // set the box error style //
+    } else if (test == false) {
         formErrors.mail = false; // set mail error //
         mailError.innerHTML = "Invalid Email address"; // set error msg //
+        e.target.classList.add("error"); // remove the box error style //
+    
+    } else if (test == "mail empty") {
+        formErrors.mail = false; // set mail error //
+        mailError.innerHTML = ""; // set error msg //
+        e.target.classList.remove("error"); // remove the box error style //
     }
 });
 //  //
 
 // pwd //
 pwdInput.addEventListener("input", (e) => {
-    formErrors.pwd = e.target.value == "" ? false : true;
+    if (e.target.value.length >= 8 ) {
+        formErrors.pwd = true; // remove pwd error //
+        pwdError.innerHTML = ""; // remove error msg //
+        e.target.classList.remove("error"); // remove the box error style //
+    } else if (e.target.value.length == 0) {
+        formErrors.pwd = false; // remove pwd error //
+        pwdError.innerHTML = ""; // remove error msg //
+        e.target.classList.remove("error"); // remove the box error style //
+    } else {
+        formErrors.pwd = false; // set pwd error //
+        pwdError.innerHTML = "Password must be 8 characters at list"; // set error msg //
+        e.target.classList.add("error"); // set the box error style //
+    }
 });
 //  //
 
@@ -44,6 +66,8 @@ setInterval(() => {
 //  //
 
 function validMail(mail) {
+    if (mail == "") return "mail empty";
+
     let test = true;
 
     if (mail.includes("@")) {

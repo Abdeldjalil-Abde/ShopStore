@@ -47,7 +47,7 @@ main header::before {
 }
 
 main header > .content {
-    margin: 270px auto 0;
+    margin: 200px auto 0;
 
     width: 60%;
     padding: 5px;
@@ -266,8 +266,8 @@ main .dev .cards {
 main .dev .cards .card {
     padding: 30px 40px;
 
-    width: 250px;
-    /* aspect-ratio: 1/1.5; */
+    width: 23%;
+    height: 100%;
     border-radius: 30px;
     background: #000;
 

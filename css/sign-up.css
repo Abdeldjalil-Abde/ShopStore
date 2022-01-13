@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     background: var(--gray-1);
 
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 section.sign-up {
@@ -86,10 +86,11 @@ section.sign-up .top-par ul li a::after {
     font-size: var(--text-size-7);
     text-align: center;
     text-transform: capitalize;
+    color: #fffc;
 }
 
 .right .sign-with {
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 0 10px;
 
     width: 100%;
@@ -134,19 +135,41 @@ section.sign-up .top-par ul li a::after {
 }
 
 .right .site-logo {
-    margin: 10px auto;
+    margin: 50px auto 10px;
 
     width: 80%;
-    background: #fff6;
+    /* background: radial-gradient(#fff9, #fff3, transparent); */
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+
+    /* -webkit-box-reflect: below 1px linear-gradient(#000, transparent); */
+
+    /* overflow: hidden; */
+}
+.right .site-logo::before {
+    content: "";
+    display: block;
+
+    width: 150%;
+    aspect-ratio: 1;
+    background: radial-gradient(#fffd, transparent, transparent);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -5;
 }
 
 .right .site-logo img {
     width: 100%;
     height: 100%;
+
+    filter: drop-shadow(1px 1px 1px #000);
 }
 /*  */
 
@@ -186,7 +209,26 @@ section.sign-up .top-par ul li a::after {
 }
 
 .left .input-form .input input {
+    outline: none;
+
     font-weight: 700;
+}
+
+.left .input-form .input input.error {
+    border: 1.5px solid red;
+    box-shadow: 0px 0px 5px #f006, 0px 0px 10px #f006;
+
+    /* animation: error-box 6s infinite; */
+}
+@keyframes error-box {
+    0%,
+    60%,
+    100% {
+        box-shadow: 0px 0px 5px #f006, 0px 0px 10px #f006;
+    }
+    80% {
+        box-shadow: 0px 0px 5px #f00, 0px 0px 10px #f00;
+    }
 }
 
 .left .input-form .input .error-msg {
@@ -202,9 +244,9 @@ section.sign-up .top-par ul li a::after {
     right: 0;
     bottom: 115%;
 
-    animation: error 6s infinite;
+    animation: error-msg 6s infinite;
 }
-@keyframes error {
+@keyframes error-msg {
     0%,
     60%,
     100% {

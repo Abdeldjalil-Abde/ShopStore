@@ -44,7 +44,7 @@ const submitBtn = document.querySelector(".left .submit");
 let formErrors = {
     first: false,
     last: false,
-    phone: true,
+    phone: false,
     mail: false,
     pwd: false,
     pwdConf: false,
@@ -58,8 +58,10 @@ firstInput.addEventListener("input", (e) => {
     if (test == true) {
         formErrors.first = true; // set first error //
         firstError.innerHTML = ""; // remove error msg //
+        e.target.classList.remove("error"); // remove the error box style //
     } else {
         formErrors.first = false; // set first error //
+        e.target.classList.add("error"); // remove the error box style //
 
         if (test == "too long") {
             firstError.innerHTML = "First name too long"; // set the error msg //
@@ -80,8 +82,10 @@ lastInput.addEventListener("input", (e) => {
     if (test == true) {
         formErrors.last = true; // set last error //
         lastError.innerHTML = ""; // remove error msg //
+        e.target.classList.remove("error"); // remove the error box style //
     } else {
         formErrors.last = false; // set last error //
+        e.target.classList.add("error"); // remove the error box style //
 
         if (test == "too long") {
             lastError.innerHTML = "Last name too long"; // set the error msg //
@@ -95,6 +99,27 @@ lastInput.addEventListener("input", (e) => {
 });
 //  //
 
+// phone number //
+phoneInput.addEventListener("input", (e) => {
+    let test = validPhone(e.target.value);
+
+    if (test == true) {
+        formErrors.phone = true; // set last error //
+        phoneError.innerHTML = ""; // remove error msg //
+        e.target.classList.remove("error"); // remove the error box style //
+    } else {
+        formErrors.phone = false; // set last error //
+        e.target.classList.add("error"); // remove the error box style //
+
+        if (test == "too long") {
+            phoneError.innerHTML = "Phone number too long"; // set the error msg //
+
+            phoneInput.value = phoneInput.value.slice(0, 16);
+        }
+    }
+});
+//  //
+
 // mail //
 mailInput.addEventListener("input", (e) => {
     let test = validMail(e.target.value);
@@ -102,9 +127,11 @@ mailInput.addEventListener("input", (e) => {
     if (test == true) {
         formErrors.mail = true; // set mail error //
         mailError.innerHTML = ""; // remove error msg //
+        e.target.classList.remove("error"); // remove the error box style //
     } else {
         formErrors.mail = false; // set mail error //
         mailError.innerHTML = "Invalid Email address"; // set error msg //
+        e.target.classList.add("error"); // remove the error box style //
     }
 });
 //  //
@@ -118,8 +145,10 @@ pwdInput.addEventListener("input", (e) => {
     if (test == true) {
         formErrors.pwd = true; // set pwd error //
         pwdError.innerHTML = ""; // remove error msg //
+        e.target.classList.remove("error"); // remove the error box style //
     } else {
         formErrors.pwd = false; // set pwd error //
+        e.target.classList.add("error"); // remove the error box style //
 
         if (test == "too short") {
             pwdError.innerHTML = "Password must contain at list 8 characters"; // set error msg //
@@ -141,9 +170,11 @@ pwdConfInput.addEventListener("input", (e) => {
     if (e.target.value == pwdInput.value) {
         formErrors.pwdConf = true; // set pwdConf error //
         pwdConfError.innerHTML = ""; // remove error msg //
+        e.target.classList.remove("error"); // remove the error box style //
     } else {
         formErrors.pwdConf = false; // set pwdConf error //
         pwdConfError.innerHTML = "Password confirm not mach"; // set error msg //
+        e.target.classList.add("error"); // remove the error box style //
     }
 });
 //  //
@@ -197,6 +228,13 @@ function validName(name, nameLength = 20) {
         }
     }
     return test;
+}
+
+function validPhone(phone, phoneLength = 15) {
+    if (phone.length > phoneLength) {
+        return "too long";
+    }
+    return true;
 }
 
 function validMail(mail) {

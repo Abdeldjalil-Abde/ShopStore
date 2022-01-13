@@ -13,9 +13,10 @@
         />
 
         <link rel="stylesheet" href="../css/variables.css" />
-        <link rel="stylesheet" href="../css/top-par.css" />
         <link rel="stylesheet" href="../css/animated-logo.css" />
         <link rel="stylesheet" href="../css/animated-background.css" />
+        <link rel="stylesheet" href="../css/top-par.css" />
+        <link rel="stylesheet" href="../css/footer.css" />
         <link rel="stylesheet" href="../css/my-products.css" />
     </head>
     <body>
@@ -178,15 +179,18 @@
             <div class="title">
                 <h2>My Products</h2>
 
-                <div class="filter">
-                    <span>Type</span>
-                </div>
+                <select class="filter">
+                    <option value="">Date</option>
+                    <option value="">Name</option>
+                    <option value="">Buy</option>
+                    <option value="">Exchange</option>
+                </select>
             </div>
 
             <div class="container">
                 <div class="item exchange">
                     <div class="img">
-                        <img src="../img/img-3.jpg" alt="" />
+                        <img src="../img/products/vehicles/bike/bike (3).jpg" alt="" />
                     </div>
 
                     <h3 class="product-name">Product Name</h3>
@@ -198,7 +202,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Quia, amet.
                         </p>
-                        <a href="product.htm" class="more">more</a>
+                        <a href="product.htm?product_type=vehicles&filter_type=bike" class="more">more</a>
                     </div>
 
                     <div class="actions">
@@ -209,7 +213,7 @@
                 </div>
                 <div class="item exchange">
                     <div class="img">
-                        <img src="../img/img-3.jpg" alt="" />
+                        <img src="../img/products/tools/saw/saw (1).jpg" alt="" />
                     </div>
 
                     <h3 class="product-name">Product Name</h3>
@@ -221,7 +225,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Quia, amet.
                         </p>
-                        <a href="product.htm" class="more">more</a>
+                        <a href="product.htm?product_type=tools&filter_type=saw" class="more">more</a>
                     </div>
 
                     <div class="actions">
@@ -233,7 +237,7 @@
                 <div class="item bay">
                     <div class="img-price-container">
                         <div class="img">
-                            <img src="../img/img-3.jpg" alt="" />
+                            <img src="../img/products/car parts/car wheel/car wheel (2).jpg" alt="" />
                         </div>
 
                         <div class="price-container">
@@ -251,7 +255,7 @@
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Ut et tenetur expedita libero earum porro.
                         </p>
-                        <a href="product.htm" class="more">more</a>
+                        <a href="product.htm?product_type=car parts&filter_type=car wheel" class="more">more</a>
                     </div>
 
                     <div class="actions">
@@ -262,7 +266,7 @@
                 </div>
                 <div class="item exchange">
                     <div class="img">
-                        <img src="../img/img-3.jpg" alt="" />
+                        <img src="../img/products/clothes/shirts/shirts (1).jpg" alt="" />
                     </div>
 
                     <h3 class="product-name">Product Name</h3>
@@ -274,7 +278,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Quia, amet.
                         </p>
-                        <a href="product.htm" class="more">more</a>
+                        <a href="product.htm?product_type=clothes&filter_type=shirts" class="more">more</a>
                     </div>
 
                     <div class="actions">
@@ -286,7 +290,7 @@
                 <div class="item bay">
                     <div class="img-price-container">
                         <div class="img">
-                            <img src="../img/img-3.jpg" alt="" />
+                            <img src="../img/products/furniture/sofa/sofa (1).jpg" alt="" />
                         </div>
 
                         <div class="price-container">
@@ -304,7 +308,7 @@
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Ut et tenetur expedita libero earum porro.
                         </p>
-                        <a href="product.htm" class="more">more</a>
+                        <a href="product.htm?product_type=furniture&filter_type=sofa" class="more">more</a>
                     </div>
 
                     <div class="actions">
@@ -316,7 +320,7 @@
                 <div class="item bay">
                     <div class="img-price-container">
                         <div class="img">
-                            <img src="../img/img-3.jpg" alt="" />
+                            <img src="../img/products/building/electrical/electrical (1).jpg" alt="" />
                         </div>
 
                         <div class="price-container">
@@ -334,7 +338,7 @@
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Ut et tenetur expedita libero earum porro.
                         </p>
-                        <a href="product.htm" class="more">more</a>
+                        <a href="product.htm?product_type=building&filter_type=electrical" class="more">more</a>
                     </div>
 
                     <div class="actions">
@@ -345,7 +349,7 @@
                 </div>
                 <div class="item exchange">
                     <div class="img">
-                        <img src="../img/img-3.jpg" alt="" />
+                        <img src="../img/products/phones/fixed phone/fixed phone (1).jpg" alt="" />
                     </div>
 
                     <h3 class="product-name">Product Name</h3>
@@ -357,7 +361,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Quia, amet.
                         </p>
-                        <a href="product.htm" class="more">more</a>
+                        <a href="product.htm?product_type=phones&filter_type=fixed phone" class="more">more</a>
                     </div>
 
                     <div class="actions">
@@ -369,7 +373,47 @@
             </div>
         </main>
 
-        <footer></footer>
+        <footer>
+            <div class="links">
+                <div class="links-container">
+                    <h3>Links</h3>
+                    <a href="home.htm">Home</a>
+                    <a href="market-place.htm">Market Place</a>
+                    <a href="log-in.htm">Log In</a>
+                    <a href="sign-up.htm">Sign UP</a>
+                </div>
+                <div class="links-container">
+                    <h3>Contact US</h3>
+                    <a href="">Swap@gmail.com</a>
+                    <a href="">+213512345678</a>
+                    <a href="">+213687654321</a>
+                    <a href="">+213756781234</a>
+                </div>
+                <div class="links-container">
+                    <h3>Follow US</h3>
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                    <a href="">Twitter</a>
+                    <a href="">YouTube</a>
+                </div>
+                <div class="links-container">
+                    <h3>Location</h3>
+                    <a
+                        href="https://www.google.com/maps/place/35%C2%B014'32.0%22N+41%C2%B015'29.1%22W/@35.2422384,-41.2559023,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0xe0489fd658df3737!7e2!8m2!3d35.2422341!4d-41.258091"
+                        >887W6PRR+VQ</a
+                    >
+
+                    <a href="">
+                        <img src="../img/social logo/location.png" alt="" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="info">
+                Copyright &#169; 2021-2022 focus Technology <br />
+                All Rights Reserved
+            </div>
+        </footer>
 
         <script src="../js/app.js"></script>
         <script src="../js/animatedBackground.js"></script>

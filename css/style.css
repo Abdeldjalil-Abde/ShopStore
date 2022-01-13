@@ -143,6 +143,8 @@
     left: 10px;
     transition: 0.5s;
     transform-origin: left;
+
+    pointer-events: none;
 }
 
 .input-style-2 input:focus + .text,
