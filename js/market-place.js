@@ -334,7 +334,7 @@ function setMarketNotFiltered(productType) {
         // add the items //
         for (let i = 0; i < 3; i++) {
             let actionType =
-                Math.floor(Math.random() * 2) == 0 ? "exchange" : "bay";
+                Math.floor(Math.random() * 2) == 0 ? "exchange" : "buy";
             marketContent += itemGenerator(
                 filterType["name"],
                 actionType,
@@ -379,7 +379,7 @@ function setMarketFiltered(filterType) {
     // add the items //
     for (let i = 1; i <= 30; i++) {
         let actionType =
-            Math.floor(Math.random() * 2) == 0 ? "exchange" : "bay";
+            Math.floor(Math.random() * 2) == 0 ? "exchange" : "buy";
         marketContent += itemGenerator(filterType, actionType, (i % 3) + 1);
     }
     //  //

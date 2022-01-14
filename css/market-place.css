@@ -424,7 +424,7 @@ section.market .container .item.exchange .img {
 
     overflow: hidden;
 }
-section.market .container .item.bay .img {
+section.market .container .item.buy .img {
     width: 50%;
     height: 100%;
     border-radius: 5px;
@@ -437,7 +437,7 @@ section.market .container .item .img img {
     object-fit: cover;
 }
 
-section.market .container .item.bay .price-container {
+section.market .container .item.buy .price-container {
     width: 50%;
     height: 100%;
 
@@ -445,7 +445,7 @@ section.market .container .item.bay .price-container {
     justify-content: center;
     align-items: center;
 }
-section.market .container .item.bay .price-container h3 {
+section.market .container .item.buy .price-container h3 {
     width: 100%;
     text-align: center;
     text-transform: capitalize;
@@ -548,7 +548,7 @@ section.market .container .item .actions a.get {
 section.market .container .item.exchange .actions a.get {
     background: var(--blue-4);
 }
-section.market .container .item.bay .actions a.get {
+section.market .container .item.buy .actions a.get {
     /* background: var(--green-1); */
     background: var(--orange-4);
 }
