@@ -462,7 +462,7 @@ function addPic() {
         picturesCounter.setAttribute("value", picturesNum);
 
         // add new input //
-        picturesInputsContainer.innerHTML += `<input class="file" type="file" id="img${
+        picturesInputsContainer.innerHTML += `<input class="file" type="file" accept=".png, .jpg" id="img${
             picturesNum + 1
         }" />`;
         //  //
