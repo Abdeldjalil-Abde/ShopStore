@@ -242,6 +242,8 @@ main .dev {
 
     display: flex;
     flex-direction: column;
+
+    display: none;
 }
 
 main .dev > h2 {
