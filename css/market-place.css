@@ -407,6 +407,13 @@ section.market.filtered .container .item {
 
     aspect-ratio: 1/1.25;
 }
+section.market .container .item .product{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .img-price-container {
     width: 95%;
@@ -490,7 +497,7 @@ section.market .container .item .actions {
     height: 10%;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -535,23 +542,27 @@ section.market .container .item .actions .owner:hover .name {
 }
 
 section.market .container .item .actions a.get {
+    width: 90%;
     display: block;
     padding: 7px 10px;
     border-radius: 5px;
-
     font-weight: 700;
+    text-align: center;
     text-transform: capitalize;
-    color: #000;
-
+    color: #062153;
     transition: 0.5s;
 }
 section.market .container .item.exchange .actions a.get {
-    background: var(--blue-4);
+    background: #2ac04080;
+}
+section.market .container .item.exchange .actions a.get:hover {
+    filter: brightness(1.2);
+    transform: scale(1.07)
 }
 section.market .container .item.buy .actions a.get {
     /* background: var(--green-1); */
     background: var(--orange-4);
 }
-section.market .container .item .actions a.get:hover {
+/* section.market .container .item .actions a.get:hover {
     color: #9e0000;
-}
+} */

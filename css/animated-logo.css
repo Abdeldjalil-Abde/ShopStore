@@ -49,7 +49,7 @@
     width: 100%;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: #a00000;
+    background: #7b7676;
 
     position: absolute;
 }
@@ -64,7 +64,7 @@
     width: 80%;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: #5c0033;
+    background: #0433b5c2;
 
     position: absolute;
 }
@@ -99,7 +99,7 @@
 .site-logo .content {
     /* padding-bottom: 15%; */
 
-    width: 100%;
+    width: 127%;
     height: 100%;
 
     display: flex;
@@ -131,6 +131,6 @@
     }
 }
 
-.site-logo .content span::first-letter {
+/* .site-logo .content span::first-letter {
     font-size: 1.3em;
-}
+} */

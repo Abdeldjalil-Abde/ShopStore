@@ -1,5 +1,5 @@
 main {
-    margin: 50px auto 0;
+    /* margin: 50px auto 0; */
     /* padding: 20px; */
 
     width: 100%;
@@ -8,7 +8,7 @@ main {
 
 main header {
     width: 100%;
-    height: 120vh;
+    height: 92vh;
     /* aspect-ratio: 3/1; */
     background: linear-gradient(90deg, #fff7, #0003, #0003);
 
@@ -70,13 +70,14 @@ main header .site-logo .content {
     animation-delay: 0s;
 }
 main header .site-logo .content span {
-    text-shadow: 0px 0px 5px #fff2, 0px 0px 15px #fff2, 0px 0px 20px #fff2,
-        0px 0px 25px #fff2, 0px 0px 30px #fff2;
+    /* text-shadow: 0px 0px 5px #fff2, 0px 0px 15px #fff2, 0px 0px 20px #fff2,
+        0px 0px 25px #fff2, 0px 0px 30px #fff2; */
+        color: #fff;
 }
 
 main header .welcome {
-    padding: 50px 10%;
-
+    padding: 50px 9%;
+    padding-top: 125px;
     flex: 1;
     height: 100%;
 
@@ -141,7 +142,7 @@ main header .welcome .sign-container a {
 
 main header .welcome .sign-container a span {
     font-weight: 700;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 
     position: absolute;
     z-index: 5;
@@ -191,7 +192,8 @@ main header .welcome .sign-container a:hover::after {
 
 main header .bottom {
     width: 100%;
-    flex: 1;
+    height: 78px;
+    margin-top: 100px;
     /* background: linear-gradient(to bottom right, #fff7, #0003, #0003); */
 
     overflow: hidden;
@@ -214,20 +216,6 @@ main header .bottom::before {
     transform: translateX(-50%);
 }
 
-main header .bottom::after {
-    content: "";
-    display: block;
-
-    width: 1000%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #fff;
-
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translateX(-50%);
-}
 
 main header .bottom .inf {
     padding: 10px 70px;
@@ -450,12 +438,10 @@ main .container section.miscellaneous .type span {
 main .container section.reviews {
     margin: 50px auto;
     padding: 30px;
-
-    width: 90%;
-    height: 100vh;
+    width: 80%;
+    height: 80vh;
     border-radius: 10px;
     background: #fff9;
-
     display: flex;
     flex-direction: column;
 }
@@ -466,15 +452,12 @@ main .container section.reviews h2 {
 }
 
 main .container section.reviews .container {
-    margin: 50px auto;
-    padding: 10px;
-
-    width: 90%;
+    margin: auto;
+    width: 100%;
     flex: 1;
-
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
 }
 
 main .container section.reviews .container .item {
