@@ -1,0 +1,97 @@
+body > footer {
+
+    width: 100%;
+    height: 35vh;
+    margin-top: 1px;
+    background: #e8ececf0;
+    display: flex;
+    flex-direction: column;
+}
+
+body > footer .links {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body > footer .links .links-container{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+.Follow{
+    height: 100px;
+    display: flex;
+    flex-direction:initial;
+}
+body > footer .links .links-container > *{
+    margin: 0 auto;
+}
+
+body > footer .links .links-container a,.Follow a{
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #646e7d;
+    display: flex;
+    align-items: center;
+}
+.Follow a{
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+body > footer .links .links-container a:hover  {
+    color: #0000ff;
+}
+
+/* contact us */
+body > footer .links .links-container:nth-child(2) a:nth-child(2) {
+    margin-bottom: 15px;
+}
+/*  */
+
+/* social links */
+body > footer .links .links-container .facebook:hover {
+    color: #3b5998;
+}
+body > footer .links .links-container .instagram:hover {
+    color: #405de6;
+}
+body > footer .links .links-container .youtube:hover {
+   
+    color: #ff0000;
+}
+body > footer .links .links-container .twitter:hover {
+    color: #1da1f2;
+}
+body > footer .links .links-container .linkedin:hover {
+    color: #0077b5;
+}
+body > footer .links .links-container i:hover {
+  transform: scale(1.2);
+	transition: all 0.1s linear;
+}
+/*  */
+
+/* location */
+body > footer .links .links-container a img {
+    width: 156px;
+    aspect-ratio: 2/1;
+}
+/*  */
+
+/* info */
+body > footer .info {
+    margin: 50px auto;
+    font-family: "Cairo";
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+    color: #4c535e;
+}
+/*  */

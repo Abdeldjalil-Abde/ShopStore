@@ -1,0 +1,154 @@
+/* button style 01 */
+.button-style-1 {
+    position: relative;
+}
+.button-style-1::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 3px;
+    background: var(--blue-1);
+
+    position: absolute;
+    bottom: -20%;
+
+    transform: scale(0);
+    transition: 0.5s;
+}
+.button-style-1:hover,
+.button-style-1.click {
+    color: var(--blue-1);
+}
+.button-style-1:hover::after,
+.button-style-1.click::after {
+    transform: scale(1);
+}
+/*  */
+
+/* input style 01 */
+/* html need to > (input + .label > (.text) ) */
+.input-style-1 {
+    position: relative;
+}
+
+.input-style-1 input {
+    padding: 10px;
+
+    width: 100%;
+    height: 100%;
+
+    background: none;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    font-size: var(--text-size-3);
+}
+
+.input-style-1 .label {
+    width: 100%;
+    height: 150%;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.input-style-1 .label::after,
+.input-style-1 .label::before {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 3px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+
+    transition: 1s;
+}
+.input-style-1 .label::before {
+    background: var(--blue-3);
+}
+.input-style-1 .label::after {
+    background: var(--purple-2);
+    transform: translateX(-100%);
+    z-index: 5;
+}
+
+.input-style-1 input:focus + .label::after,
+.input-style-1 input:valid + .label::after {
+    transform: translateX(0);
+}
+
+.input-style-1 .label .text {
+    width: max-content;
+
+    font-size: var(--text-size-3);
+    color: var(--gray-3);
+
+    z-index: 5;
+    position: absolute;
+    left: 5px;
+
+    transform: translateY(180%) scale(1.2);
+    transform-origin: left;
+    transition: 1s;
+}
+
+.input-style-1 input:focus + .label > .text,
+.input-style-1 input:valid + .label > .text {
+    font-size: var(--text-size-2);
+    color: var(--purple-3);
+    text-shadow: 0px 0px 3px var(--dark-3);
+
+    transform: translateY(50%);
+}
+/*  */
+
+/* input style 02 */
+/* html need to > (input + .text) */
+.input-style-2 {
+    box-shadow: 3px 3px 10px #0005;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.input-style-2 input {
+    width: 100%;
+    height: 100%;
+
+    padding: 3px 10px;
+    font-size: var(--text-size-3);
+
+    box-sizing: unset;
+}
+
+.input-style-2 .text {
+    padding: 0 5px;
+    width: max-content;
+    /* height: 100%; */
+    background: #fff;
+
+    position: absolute;
+    left: 10px;
+    transition: 0.5s;
+    transform-origin: left;
+
+    pointer-events: none;
+}
+
+.input-style-2 input:focus + .text,
+.input-style-2 input:valid + .text {
+    transform: translateY(-130%) scale(0.8);
+}
+/*  */

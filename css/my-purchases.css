@@ -1,0 +1,266 @@
+body {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.top-par {
+    border-bottom: 3px solid #0005;
+}
+
+.tools-par {
+    padding: 1% 3%;
+    margin: 85px auto 0;
+
+    width: 100%;
+    height: 20px;
+    /* background: var(--white-2); */
+
+    transition: 0.3s;
+}
+
+.tools-par ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tools-par ul li {
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tools-par ul li a {
+    padding: 5% 7%;
+
+    width: 70%;
+    height: 70%;
+    border: 2px solid var(--blue-4);
+    border-radius: 20px;
+    background: #fff;
+
+    font-weight: 900;
+    color: #000;
+
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+    transition: 0.3s;
+}
+.tools-par ul li a:hover,
+.tools-par ul li a.active {
+    /* border-color: var(--blue-0); */
+    background: #437cd8;
+}
+
+.tools-par ul li a .logo {
+    width: 15%;
+    /* height: 100%; */
+}
+
+.tools-par ul li a .content {
+    margin-left: 20px;
+
+    width: max-content;
+    font-size: var(--text-size-3);
+    font-weight: 700;
+}
+
+main {
+    margin: 15px auto;
+    padding: 5px;
+
+    width: 95%;
+    min-height: 50vh;
+    border-radius: 20px;
+    background: #fff6;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+main .title {
+    padding: 30px 50px 10px;
+
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .title h2 {
+    /* margin: 0 auto; */
+    font-size: var(--title-size-2);
+}
+
+main .title .filter {
+    padding: 10px 20px;
+
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+}
+
+main .container {
+    margin: 20px auto;
+    padding: 30px;
+
+    width: 95%;
+    /* min-height: 100vh; */
+    border-radius: 30px;
+    background: #0006;
+    box-shadow: inset 0px 5px 10px #0006, inset 0px -5px 10px transparent;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .container .pur {
+    padding: 20px;
+    margin-bottom: 20px;
+
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    background: #0006;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+main .container .pur.exchange {
+    background: var(--blue-4);
+}
+main .container .pur.bay {
+    background: var(--green-6);
+}
+
+main .container .pur .item {
+    padding: 5px;
+
+    width: 45%;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--gray-5);
+    box-shadow: inset 0px 5px 10px #0006, inset 0px -5px 10px transparent;
+
+    display: flex;
+    align-items: center;
+}
+main .container .pur.bay .item {
+    width: 55%;
+}
+
+main .container .pur .item .left {
+    padding: 10px;
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .pur .item .left img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+    object-fit: cover;
+}
+
+main .container .pur .item .right {
+    padding: 5px;
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .container .pur.bay .price {
+    padding: 5px;
+
+    width: 35%;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--gray-5);
+    box-shadow: inset 0px 5px 10px #0006, inset 0px -5px 10px transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .container .pur.bay .price > * {
+    margin: 10px auto;
+}
+
+main .container .pur.bay .price h2 {
+    font-size: var(--title-size-2);
+}
+main .container .pur.bay .price p {
+    font-size: var(--title-size-2);
+}
+
+main .container .pur .item .right h2 {
+    font-size: var(--title-size-1);
+    text-align: center;
+}
+
+main .container .pur .item .right ul {
+    margin-top: 10px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .container .pur .item .right ul li {
+    margin-bottom: 10px;
+
+    width: 100%;
+
+    display: flex;
+}
+
+main .container .pur .item .right ul li span {
+    margin-right: 10px;
+}
+
+main .container .pur .center {
+    font-size: var(--text-size-6);
+
+    display: flex;
+    flex-direction: column;
+}
+main .container .pur .center > * {
+    margin: 10px auto;
+}
+
+main .container .pur .date {
+    padding: 2px;
+
+    font-size: var(--text-size-2);
+
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
