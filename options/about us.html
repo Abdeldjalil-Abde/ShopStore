@@ -1,0 +1,138 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>غيار السيارات  | من نحن</title>
+    <link rel="shortcut icon" type="image/png" href="Image/Logo_tap_Algérie_Télécom.png" />
+    <link rel="shortcut icon" type="image/png" href="../img/icon/site logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <link rel="stylesheet" href="../css/animated-background.css" /> 
+    <link rel="stylesheet" href="../css/top-par.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body dir="rtl">
+    <section class="animated-background">
+     </section>
+    <header class="nav_bar">
+        <ul>
+            <li> <a href="#">
+                    <i class="bi bi-cart2"></i>
+                </a></li>
+            <li> <a href="../index.html"> الرئيسية</a></li>
+            <li> <a  href="product.html">المنتجات</a></li>
+            <li> <a class="active" href="#">من نحن؟</a></li>
+            <li> <a href="contact us.html">إتصل بنا</a></li>
+
+        </ul>
+        <div class="account">
+            <a id="login"><samp>تسجيل الدخول</samp></a>
+            <a id="sign_up"><samp>حساب جديد</samp></a>
+        </div>
+    </header>
+
+    <div class="login-wrap" dir="rtl">
+        <div class="delete">x</div>
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">تسجيل
+            الدخول</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">تسجيل حساب
+            جديد</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <form action="Backend/sign in.php" method="post">
+                    <div class="group">
+                        <label for="user" class="label">إسم المستخدم</label>
+                        <input id="user" type="text" class="input" name="user" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">كلمة السر</label>
+                        <input id="pass" type="password" class="input" name="password" required>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="تسجيل الدخول" name="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="sign-up-htm" id="sign-up">
+                <form action="Backend/sign up.php" method="post">
+                    <div class="group">
+                        <label for="user" class="label">إسم المستخدم</label>
+                        <input id="user" type="text" class="input" name="user" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">البريد الإلكتروني</label>
+                        <input id="pass" type="text" class="input" name="email" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">كلمة السر</label>
+                        <input id="pass" type="password" class="input password" name="password" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">إعادة كتابة كلمة السر</label>
+                        <input id="pass" type="password" class="input confirm" required>
+                        <p class="message"></p>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" id="button" value="تسجيل" name="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main>
+        <header>
+            <div class="content">
+                <h1>لمحة حول الموقع</h1>
+                <p>
+                    نضع في متجرنا نصب أعيننا راحتك ورضاؤك، ونحرص على تقديم أفضل تجربة عملاء ممكنة. نوفر لك تشكيلة واسعة 
+                    من قطع غيار السيارات عالية الجودة، تشمل جميع أنواع السيارات و أشكالها، من محركات جديدة <br>
+                    و مستعملة إلى عجلات و إطارات بمختلف المقاسات، وصولاً إلى جميع أنواع إكسسوارات السيارات الداخلية و الخارجية. <br>
+
+                    تصفح موقعنا الآن واكتشف عالمًا واسعًا من قطع غيار السيارات بأسعار تنافسية
+                   تُلبي جميع احتياجاتك. نضمن لك جودة ممتازة و خدمة عملاء استثنائية، ونعدك بتجربة تسوق سهلة و ممتعة. <br>
+                   لا تبحث عن قطع غيار سياراتك في أي مكان آخر، فمتجرنا هو وجهتك المثالية للحصول على كل ما تحتاجه
+                </p>
+            </div>
+        </header>
+    </main>
+</body>
+<footer dir="rtl">
+    <div class="links">
+        <div class="links-container">
+            <p class="links-container info">aaa@gmail.com</p>
+            <p class="links-container info">2136123456789+</p>
+            <p class="links-container info">2136123456789+</p>
+            <p class="links-container info">2136123456789+</p>
+        </div>
+        <div class="links-container info">
+            حقوق الطبع والنشر &#169; 2023-2024<br />
+            جميع الحقوق محفوظة
+        </div>
+        <div class="links-container">
+            <div class="Follow">
+                <a href=""><i class="fa fa-facebook-official facebook"></i></a>
+                <a href=""><i class="fa fa-instagram instagram"></i></a>
+                <a href=""><i class="fa fa-youtube-play youtube"></i></a>
+                <a href=""><i class="fa fa-twitter twitter"></i></a>
+                <a href=""><i class="fa fa-linkedin-square linkedin"></i></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../js/header.js"></script>
+<script src="../js/account.js"></script>
+
+</html>
