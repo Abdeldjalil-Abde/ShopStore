@@ -25,6 +25,7 @@ body {
 
     transition: 0.3s;
 }
+
 .filter-mene.active {
     transform: translateX(100%);
 }
@@ -50,6 +51,7 @@ body {
     /* justify-content: space-between; */
     align-items: center;
 }
+
 .filter-mene .item:hover,
 .filter-mene .item.active {
     background: var(--yellow-1);
@@ -86,6 +88,7 @@ body {
     top: 0;
     left: 100%;
 }
+
 .filter-mene button.open:active {
     opacity: 0.5;
 }
@@ -100,6 +103,7 @@ body {
     transform: translate(3%, -200%) rotate(90deg);
     transform-origin: left bottom;
 }
+
 .filter-mene button.open:hover .content {
     color: var(--blue-0);
 }
@@ -151,6 +155,7 @@ body {
 
     transition: 0.3s;
 }
+
 .tools-par ul li a:hover,
 .tools-par ul li a.active {
     /* border-color: var(--blue-0); */
@@ -233,10 +238,12 @@ body {
 
     transition: 0.3s;
 }
+
 .filter-par .filters .types li a:hover,
 .filter-par .filters .types li a.active {
     background: #80808055;
 }
+
 .filter-par .filters .types li a:active {
     color: var(--blue-0);
 }
@@ -282,6 +289,7 @@ body {
 
     transition: 0.1s;
 }
+
 .filter-par .left.disable button,
 .filter-par .right.disable button,
 .filter-par .left button:active,
@@ -307,13 +315,15 @@ section.market {
 
     transition: 0.3s;
 }
+
 .filter-par.mene-opened,
 .tools-par.mene-opened,
 section.market.mene-opened {
     /* transform: translateX(var(--popup-mene)); */
     transform: scaleX(0.8);
 }
-section.market > * {
+
+section.market>* {
     margin: 0 auto;
 }
 
@@ -330,11 +340,12 @@ section.market .items {
     display: flex;
     flex-direction: column;
 }
-section.market .items > * {
+
+section.market .items>* {
     margin: 5px auto;
 }
 
-section.market .items .type{
+section.market .items .type {
     padding: 7px 20px;
 
     /* width: 100%; */
@@ -347,7 +358,7 @@ section.market .items .type{
 }
 
 
-section.market .items .type img{
+section.market .items .type img {
     width: 30px;
     aspect-ratio: 1;
     object-fit: contain;
@@ -363,7 +374,14 @@ section.market .items .type h2 {
 
 section.market .items .view-all {
     font-size: var(--text-size-4);
+    color: #2358b0;
 }
+
+section.market .items .view-all:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+}
+
 section.market.filtered .items .view-all {
     display: none;
 }
@@ -381,6 +399,7 @@ section.market .container {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 section.market.filtered .container {
     min-height: 400px;
     height: auto;
@@ -398,7 +417,8 @@ section.market .container .item {
     flex-direction: column;
     justify-content: space-between;
 }
-section.market .container .item > * {
+
+section.market .container .item>* {
     margin: 0 auto;
 }
 
@@ -407,7 +427,8 @@ section.market.filtered .container .item {
 
     aspect-ratio: 1/1.25;
 }
-section.market .container .item .product{
+
+section.market .container .item .product {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -431,6 +452,7 @@ section.market .container .item.exchange .img {
 
     overflow: hidden;
 }
+
 section.market .container .item.buy .img {
     width: 50%;
     height: 100%;
@@ -438,6 +460,7 @@ section.market .container .item.buy .img {
 
     overflow: hidden;
 }
+
 section.market .container .item .img img {
     width: 100%;
     height: 100%;
@@ -452,6 +475,7 @@ section.market .container .item.buy .price-container {
     justify-content: center;
     align-items: center;
 }
+
 section.market .container .item.buy .price-container h3 {
     width: 100%;
     text-align: center;
@@ -485,6 +509,7 @@ section.market .container .item .description .more {
 
     transition: 0.3s;
 }
+
 section.market .container .item .description .more:hover {
     transform: scale(1.1);
     color: var(--purple-1);
@@ -521,6 +546,7 @@ section.market .container .item .actions .owner .logo {
 
     overflow: hidden;
 }
+
 section.market .container .item .actions .owner .logo img {
     width: 100%;
     height: 100%;
@@ -537,6 +563,7 @@ section.market .container .item .actions .owner .name {
     font-weight: 700;
     color: #000;
 }
+
 section.market .container .item .actions .owner:hover .name {
     color: var(--blue-0);
 }
@@ -552,17 +579,25 @@ section.market .container .item .actions a.get {
     color: #062153;
     transition: 0.5s;
 }
+
 section.market .container .item.exchange .actions a.get {
     background: #2ac04080;
 }
+
 section.market .container .item.exchange .actions a.get:hover {
     filter: brightness(1.2);
     transform: scale(1.07)
 }
+
 section.market .container .item.buy .actions a.get {
     /* background: var(--green-1); */
     background: var(--orange-4);
 }
+
 /* section.market .container .item .actions a.get:hover {
     color: #9e0000;
 } */
+
+.selected {
+    background-color: #80808055;
+}

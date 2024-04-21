@@ -1,0 +1,182 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> غيار السيارات | إتصل بنا</title>
+    <link rel="shortcut icon" type="image/png" href="../img/icon/site logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <link rel="stylesheet" href="../css/animated-logo.css" />
+    <link rel="stylesheet" href="../css/animated-background.css" />
+    <link rel="stylesheet" href="../css/top-par.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/contact us.css" />
+</head>
+
+<body dir="rtl">
+    <section class="animated-background">
+    </section>
+    <header class="nav_bar">
+        <ul>
+            <li> <a href="#">
+                    <i class="bi bi-cart2"></i>
+                </a></li>
+            <li> <a href="../index.html"> الرئيسية</a></li>
+            <li> <a  href="product.html">المنتجات</a></li>
+            <li> <a href="#">من نحن؟</a></li>
+            <li> <a class="active" href="#">إتصل بنا</a></li>
+
+        </ul>
+        <div class="account">
+            <a id="login"><samp>تسجيل الدخول</samp></a>
+            <a id="sign_up"><samp>حساب جديد</samp></a>
+        </div>
+    </header>
+
+    <div class="login-wrap" dir="rtl">
+        <div class="delete">x</div>
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">تسجيل
+            الدخول</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">تسجيل حساب
+            جديد</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <form action="Backend/sign in.php" method="post">
+                    <div class="group">
+                        <label for="user" class="label">إسم المستخدم</label>
+                        <input id="user" type="text" class="input" name="user" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">كلمة السر</label>
+                        <input id="pass" type="password" class="input" name="password" required>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="تسجيل الدخول" name="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="sign-up-htm" id="sign-up">
+                <form action="Backend/sign up.php" method="post">
+                    <div class="group">
+                        <label for="user" class="label">إسم المستخدم</label>
+                        <input id="user" type="text" class="input" name="user" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">البريد الإلكتروني</label>
+                        <input id="pass" type="text" class="input" name="email" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">كلمة السر</label>
+                        <input id="pass" type="password" class="input password" name="password" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">إعادة كتابة كلمة السر</label>
+                        <input id="pass" type="password" class="input confirm" required>
+                        <p class="message"></p>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" id="button" value="تسجيل" name="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="contactInfo">
+            <div class="contact">
+                <div class="icon">
+                    <span class="fa fa-map-marker"></span>
+                </div>
+                <div class="text">
+                    <a href="https://goo.gl/maps/8ALuG6TZMtYzTcZ29" target='_blank'>
+                        <span>العنوان</span>
+                        <p> محل محمد لغيار السيارات شارع 62 ولاية جلفة
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="icon">
+                    <span class="fa fa-phone"></span>
+                </div>
+                <div class="text">
+                    <span>الهاتف</span>
+                    <p>213612345678+</p>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="icon">
+                    <span class="fa fa-paper-plane"></span>
+                </div>
+                <div class="text">
+                    <span>البريد الإلكتروني</span>
+                    <p>aaaa@gamil.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="from">
+            <h3>ابق على تواصل معنا</h3>
+            <form method="POST" name="contactForm" class="contactForm" action="../Backend/visitor message.php">
+                <div class="info">
+                    <input type="text" name="name" id="name" placeholder="الإسم" required>
+                </div>
+
+                <div class="info">
+                    <input type="email" name="email" id="email" placeholder="البريد الإلكتروني" required>
+                </div>
+
+                <div class="info">
+                    <input type="text" name="subject" id="subject" placeholder="الموضوع" required>
+                </div>
+
+                <div class="info textarea">
+                    <textarea name="message" id="message" cols="30" rows="8" placeholder="الرسالة" required></textarea>
+                </div>
+                <div class="info ">
+                    <input type="submit" class="btn" name="submit" value="إرسال">
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+
+<footer dir="rtl" style="background-color: #acb0b0f0;">
+    <div class="links">
+        <div class="links-container">
+            <p class="links-container info">aaa@gmail.com</p>
+            <p class="links-container info">2136123456789+</p>
+            <p class="links-container info">2136123456789+</p>
+            <p class="links-container info">2136123456789+</p>
+        </div>
+        <div class="links-container info">
+            حقوق الطبع والنشر &#169; 2023-2024<br />
+            جميع الحقوق محفوظة
+        </div>
+
+        <div class="links-container">
+            <div class="Follow">
+                <a href=""><i class="fa fa-facebook-official facebook"></i></a>
+                <a href=""><i class="fa fa-instagram instagram"></i></a>
+                <a href=""><i class="fa fa-youtube-play youtube"></i></a>
+                <a href=""><i class="fa fa-twitter twitter"></i></a>
+                <a href=""><i class="fa fa-linkedin-square linkedin"></i></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../js/header.js"></script>
+<script src="../js/account.js"></script>
+
+</html>
