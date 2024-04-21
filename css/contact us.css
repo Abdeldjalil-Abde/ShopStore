@@ -1,0 +1,128 @@
+body>section{
+    width: 100%;
+    height: 135vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1px 0 1px 0;
+    background-color: #dfe6e9;
+    /* background: linear-gradient(90deg, #fff7, #0003, #0003); */
+
+  }
+  
+body>section > .contactInfo{
+    width: 60%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin: 1px 0 1px 0;
+  }
+body>section > .contactInfo .contact{
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+body>section > .contactInfo .contact .icon{
+    width: 60px;
+    height: 60px;
+    background-color: #2556a2;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+  }
+body>section > .contactInfo .contact .text{
+    width: 200px;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+body>section > .contactInfo .contact .text a{
+    height: 100%;
+    width: 132%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+body>section > .contactInfo .contact .text a:hover{
+    filter: brightness(1.5);
+  }
+body>section > .contactInfo .contact .text span{
+    color: #2556a2;
+    font-size: 20px;
+
+}
+body>section > .contactInfo .contact .text p{
+    color: #4c4848;
+    font-size: 20px;
+    text-align: center;
+
+}
+body>section > .from{
+    width: 60%;
+    height: 53%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 1px 0 1px 0;
+}
+body>section > .from h3{
+    font-size: 25px;
+    color: #2556a2;
+}
+body>section > .from form{
+    width: 80%;
+    height: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+body>section > .from form .info{
+    width: 100%;
+    height: 50px;
+}
+body>section > .from form .textarea{
+    height: 200px;
+}
+body>section > .from form .info input, body>section > .from form .info textarea{
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+    outline: none;
+    border: none;
+    background-color: #2556a2cf;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 18px;
+}
+body>section > .from form .info textarea{
+   
+    padding-top: 15px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+  }
+body>section > .from form .info .btn{
+    background-color: #00aa5b;
+    cursor: pointer;
+}
+body>section > .from form .info input:focus,body>section > .from form .info textarea:focus{
+    filter: brightness(1.3);
+}
+body>section > .from form .info .btn:hover{
+    filter: brightness(1.3);
+}
+

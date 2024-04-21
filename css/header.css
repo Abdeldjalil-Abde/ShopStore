@@ -19,7 +19,6 @@ body {
     position: absolute;
     top: 0%;
     list-style-type: none;
-    z-index: 4;
 }
 
 .nav_bar>ul li {
@@ -52,6 +51,7 @@ body {
 
 .nav_bar>ul li a:hover {
     color: #bac4dd;
+    
 }
 
 .nav_bar>.account {
@@ -64,6 +64,7 @@ body {
     flex-direction: row;
     margin-left: 26px;
     float: left;
+    z-index: 1;
 }
 
 
