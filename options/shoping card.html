@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#33b5e5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel='stylesheet' id='roboto-subset.css-css'
+        href='https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5'
+        type='text/css' media='all' />
+    <title> سلة المنتجات</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <link rel="stylesheet" href="../css/animated-background.css" />
+    <link rel="stylesheet" href="../css/top-par.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/shoping card.css">
+
+</head>
+
+<body>
+    <section class="animated-background">
+    </section>
+    <header class="nav_bar">
+        <ul>
+            <li> <a href="#" class="active">
+                    <i class="bi bi-cart2"></i>
+                </a></li>
+            <li> <a href="../index.html"> الرئيسية</a></li>
+            <li> <a href="product.html">المنتجات</a></li>
+            <li> <a  href="about us.html">من نحن؟</a></li>
+            <li> <a href="contact us.html">إتصل بنا</a></li>
+
+        </ul>
+        <div class="account">
+            <a id="login"><samp>تسجيل الدخول</samp></a>
+            <a id="sign_up"><samp>حساب جديد</samp></a>
+        </div>
+    </header>
+
+    <div class="login-wrap" dir="rtl">
+        <div class="delete">x</div>
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">تسجيل
+            الدخول</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">تسجيل حساب
+            جديد</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <form action="Backend/sign in.php" method="post">
+                    <div class="group">
+                        <label for="user" class="label">إسم المستخدم</label>
+                        <input id="user" type="text" class="input" name="user" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">كلمة السر</label>
+                        <input id="pass" type="password" class="input" name="password" required>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="تسجيل الدخول" name="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="sign-up-htm" id="sign-up">
+                <form action="Backend/sign up.php" method="post">
+                    <div class="group">
+                        <label for="user" class="label">إسم المستخدم</label>
+                        <input id="user" type="text" class="input" name="user" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">البريد الإلكتروني</label>
+                        <input id="pass" type="text" class="input" name="email" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">كلمة السر</label>
+                        <input id="pass" type="password" class="input password" name="password" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">إعادة كتابة كلمة السر</label>
+                        <input id="pass" type="password" class="input confirm" required>
+                        <p class="message"></p>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" id="button" value="تسجيل" name="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section dir="rtl">
+        <div class="card">
+            <div class="cardShoping">
+                <div class="product-information">
+                    <div class="title">
+                        <h3 class="mb-3">سلة التسوق </h3>
+                    </div>
+
+                    <hr>
+                    <div class="listProducts" dir="rtl">
+                        <div class="Product " style="margin-top: 25px;">
+                            <div class="nameProduct">
+                                <img src="../img/products/car parts/car engine/car engine (2).jpg"
+                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                <h5>car engine</h5>
+                            </div>
+                            <h4 class="mb-0">5580دج</h4>
+                            <a href="#!"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="Product ">
+                            <div class="nameProduct">
+                                <img src="../img/products/vehicles/car/car (3).jpg"
+                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                <h5>car</h5>
+                            </div>
+                            <h4 class="mb-0">587دج</h4>
+                            <a href="#!"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="Product ">
+                            <div class="nameProduct">
+                                <img src="../img/products/car parts/car wheel/car wheel (2).jpg"
+                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                <h5>car wheel</h5>
+                            </div>
+                            <h4 class="mb-0">580دج</h4>
+                            <a href="#!"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="Product ">
+                            <div class="nameProduct">
+                                <img src="../img/products/car parts/spare parts/spare parts (2).jpg"
+                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                <h5>spare parts</h5>
+                            </div>
+                            <h4 class="mb-0">900دج</h4>
+                            <a href="#!"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-information">
+                    <div class="card-background">
+                        <div class="title">
+                            <h3>طريقة الدفع</h3>
+                        </div>
+                        <div class="cart-type">
+                            <p class="small mb-2">البطاقة المقبولة لدفع</p>
+                            <div>
+                                <a href="#!" type="submit" class="text-white"><i
+                                        class="fab fa-cc-mastercard fa-2x me-2"></i></a>
+                                <a href="#!" type="submit" class="text-white"><i
+                                        class="fab fa-cc-visa fa-2x me-2"></i></a>
+                                <a href="#!" type="submit" class="text-white"><i
+                                        class="fab fa-cc-amex fa-2x me-2"></i></a>
+                                <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div class="type-payment">
+                            <div class="choose">
+                                <button class="btn btn-lg btn-primary" id="employee">الدفع
+                                    الإلكتروني</button>
+                                <button class="btn btn-lg btn-primary btnChoose" id="client">الدفع عند الاستلام</button>
+                            </div>
+                            <div class="List" id="List-employee">
+                                <form action="">
+                                    <div class="center">
+                                        <div class="info">
+                                            <input type="text" name="first_name" required autocomplete="off" value="" />
+                                            <label class="label" for="">
+                                                <span class="txt">اسم حامل البطاقة</span>
+                                            </label>
+                                        </div>
+                                        <div class="info">
+                                            <input type="text" name="last_name" required autocomplete="off" value="" />
+                                            <label class="label" for="">
+                                                <span class="txt">الرقم التسلسلي للبطاقة</span>
+                                            </label>
+                                        </div>
+                                        <div class="sousInfo">
+                                            <div class="info">
+                                                <input type="text" name="last_name" required autocomplete="off"
+                                                    value="" />
+                                                <label class="label" for="" size="7" minlength="7" maxlength="7">
+                                                    <span class="txt">تاريخ انتهاء الصلاحية</span>
+                                                </label>
+                                            </div>
+                                            <div class="info">
+                                                <input type="text" name="last_name" required autocomplete="off"
+                                                    value="" />
+                                                <label class="label" for="" size="1" minlength="3" maxlength="3">
+                                                    <span class="txt">CVV</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="List" id="List-client">
+                                <form action="">
+                                    <form action="">
+                                        <div class="center">
+                                            <div class="info">
+                                                <input type="text" name="first_name" required autocomplete="off"
+                                                    value="" />
+                                                <label class="label" for="">
+                                                    <span class="txt">الاسم </span>
+                                                </label>
+                                            </div>
+                                            <div class="info">
+                                                <input type="text" name="last_name" required autocomplete="off"
+                                                    value="" />
+                                                <label class="label" for="">
+                                                    <span class="txt">القب</span>
+                                                </label>
+                                            </div>
+                                            <div class="sousInfo">
+                                                <div class="info">
+                                                    <input type="text" name="last_name" required autocomplete="off"
+                                                        value="" />
+                                                    <label class="label" for="">
+                                                        <span class="txt">العنوان</span>
+                                                    </label>
+                                                </div>
+                                                <div class="info">
+                                                    <input type="text" name="last_name" required autocomplete="off"
+                                                        value="" />
+                                                    <label class="label" for="">
+                                                        <span class="txt">رقم الهتف</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </form>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="price">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">السعر الكلي</p>
+                                <p class="mb-2">$4798.00</p>
+                            </div>
+                            <button type="button" class="price-btn">
+                                    تاكيد
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<footer dir="rtl">
+    <div class="links">
+        <div class="links-container">
+            <p class="links-container info">aaa@gmail.com</p>
+            <p class="links-container info">2136123456789+</p>
+            <p class="links-container info">2136123456789+</p>
+            <p class="links-container info">2136123456789+</p>
+        </div>
+        <div class="links-container info">
+            حقوق الطبع والنشر &#169; 2023-2024<br />
+            جميع الحقوق محفوظة
+        </div>
+
+        <div class="links-container">
+            <div class="Follow">
+                <a href=""><i class="fa fa-facebook-official facebook"></i></a>
+                <a href=""><i class="fa fa-instagram instagram"></i></a>
+                <a href=""><i class="fa fa-youtube-play youtube"></i></a>
+                <a href=""><i class="fa fa-twitter twitter"></i></a>
+                <a href=""><i class="fa fa-linkedin-square linkedin"></i></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../js/account.js"></script>
+<script src="../js/choose.js"></script>
+
+</html>
