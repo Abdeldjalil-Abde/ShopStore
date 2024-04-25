@@ -9,95 +9,7 @@
     align-items: center;
 }
 
-.site-logo .circles {
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    animation: rotating 10s ease-out infinite alternate;
-    animation-delay: 10s;
-}
-@keyframes rotating {
-    0% {
-        transform: rotate(0deg);
-    }
-    30%,
-    100% {
-        transform: rotate(calc(1 * 360deg));
-    }
-}
-
-.site-logo .circle-container {
-    width: 7%;
-    height: 100%;
-
-    position: absolute;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-
-    transform: rotate(calc(var(--i) * (360deg / 18)));
-}
-
-.site-logo .circle-container .big-circle {
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #7b7676;
-
-    position: absolute;
-}
-.site-logo .circle-container .big-circle.first {
-    top: 5%;
-}
-.site-logo .circle-container .big-circle.second {
-    bottom: 5%;
-}
-
-.site-logo .circle-container .small-circle {
-    width: 80%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #0433b5c2;
-
-    position: absolute;
-}
-.site-logo .circle-container .small-circle.first {
-    top: 20%;
-}
-.site-logo .circle-container .small-circle.second {
-    bottom: 20%;
-}
-
-.site-logo .circles .circle-container:nth-child(4) .big-circle.first,
-.site-logo .circles .circle-container:nth-child(4) .small-circle.first,
-.site-logo .circles .circle-container:nth-child(5) .big-circle.first,
-.site-logo .circles .circle-container:nth-child(5) .small-circle.first {
-    /* opacity: 0; */
-
-    animation: hide 10s ease-out infinite alternate;
-    animation-delay: 10s;
-}
-@keyframes hide {
-    0%,
-    30% {
-        opacity: 1;
-    }
-    31%,
-    100% {
-        opacity: 0;
-    }
-}
-/*  */
-
 .site-logo .content {
-    /* padding-bottom: 15%; */
 
     width: 127%;
     height: 100%;
@@ -112,10 +24,11 @@
     position: absolute;
     left: 70%;
 
-    animation: content 10s ease-out infinite alternate;
-    animation-delay: 10s;
+    animation: content 5s ease-out infinite alternate;
+    animation-delay: 5s;
     opacity: 0;
 }
+
 @keyframes content {
     0%,
     30% {
@@ -130,7 +43,3 @@
         font-size: 1.2em;
     }
 }
-
-/* .site-logo .content span::first-letter {
-    font-size: 1.3em;
-} */

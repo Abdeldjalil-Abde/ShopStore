@@ -19,44 +19,25 @@ main header {
 main header .top {
     width: 100%;
     height: 63%;
-    /* background: linear-gradient(90deg, #fff7, #0003, #0003); */
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-main header .site-logo-container {
-    padding: 0 100px;
-
-    width: 35%;
+main header .site-logo-container { 
+    width: 38%;
     height: 100%;
-    /* background: #0003; */
-
+   
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
 main header .site-logo {
-    /* padding: 20%; */
-    margin-left: 40px;
-    width: 100%;
-
+    padding: 20%;
+    margin-left: 0px;
+    width: 70%;
     font-size: 4rem;
-
-    animation: shifting 10s ease-out infinite alternate;
-    /* animation-delay: 0s; */
-}
-@keyframes shifting {
-    0%,
-    30% {
-        transform: translateX(0);
-    }
-    35%,
-    100% {
-        transform: translateX(-37%);
-    }
 }
 
 main header .site-logo .circles {
@@ -70,9 +51,9 @@ main header .site-logo .content {
     animation-delay: 0s;
 }
 main header .site-logo .content span {
-    /* text-shadow: 0px 0px 5px #fff2, 0px 0px 15px #fff2, 0px 0px 20px #fff2,
-        0px 0px 25px #fff2, 0px 0px 30px #fff2; */
-        color: #fff;
+    margin-top: 14%;
+    color: #040233;
+    text-shadow: 0 0 10px #0a91ad, 0 0 7px #f9fcfe;
 }
 
 main header .welcome {
@@ -86,7 +67,6 @@ main header .welcome {
 
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 main header .welcome h2 {
