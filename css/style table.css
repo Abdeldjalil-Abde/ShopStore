@@ -1,0 +1,125 @@
+section{
+    width: 100%;
+    height: 100vh;
+}
+section>.head{
+    width: 70%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+  }
+section>.head h2{
+    font-size: 2em;
+    color: #fff;
+  }
+
+  .List{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tbody {
+    width: 83%;
+    border: 1px solid #777;
+    max-height: 350px;
+    overflow: auto;
+  }
+  
+  .List .tr {
+    display: flex;
+    background-color: #b4c7e7a6;
+  }
+  
+  .List .tr:hover {
+    background: #e5ebf9;
+  
+  }
+  
+  .List .th {
+    width: 83%;
+    display: flex;
+    background: #0263a9;
+    color: white;
+  }
+  
+  .List .td {
+    width: 160px;
+    padding: 10px 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .List .td a img {
+    width: 20px;
+    height: 20px;
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+  }
+  
+  .List .td a img:hover {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+  }
+  
+  .List .td a {
+    cursor: pointer;
+    color: blue;
+  }
+  .List .td a:hover{
+    text-decoration: underline;
+  }
+  
+  .List .long {
+    width: 300px;
+  }
+  
+  .List .small {
+    width: 90px;
+  }
+  
+  .List .td img {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .List .tr:nth-of-type(even) {
+    background: #f4f8fc;
+  }
+  
+  .List .tr:nth-of-type(even):hover {
+    background: #e5ebf9;
+  }
+  
+/*                   btn   return */
+.return a{
+    width: 8%;
+    height: 6.5%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 13%;
+    right: 6%;
+    font-size: 25px;
+    color: white;
+    background-color: #0a58ca;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+  
+  }
+  
+  .return a:hover {
+    filter: brightness(1.3);
+    cursor: pointer;
+  }
+  
+  .return span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }

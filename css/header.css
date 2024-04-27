@@ -51,7 +51,45 @@ body {
 
 .nav_bar>ul li a:hover {
     color: #bac4dd;
-    
+
+}
+
+.nav_bar>ul .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    background-color: #fbf8f745;
+    min-width: 133px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    right: 24%;
+}
+
+.nav_bar>ul .dropdown .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+/* .nav_bar>ul .dropdown a samp:nth-child(1) {
+    display: none;
+} */
+.nav_bar >ul .dropdown a samp:nth-child(1){
+    display: block;
+    margin-right: 14%;
+    width: 14%;
+    transform: rotate(-90deg);
+    font-size: 21px;
+  }
+.nav_bar>ul li .dropdown-content a:hover {
+    color: #bac4dd
+}
+
+.nav_bar>ul .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .nav_bar>.account {
